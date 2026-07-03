@@ -6,19 +6,44 @@ draft: false
 
 import Quote from '../../../components/Quote.astro';
 import { Note } from '../../../components/MarginNote/index.js';
+import Table from '../../../components/Table.astro';
 
 
 ## Table of Contents
 
 1. [Historical Context and Paradigm Shift](#1-historical-context-and-paradigm-shift)
 2. [The Lactate Shuttle Theory – Conceptual Foundations](#2-the-lactate-shuttle-theory--conceptual-foundations)
+   - [Brooks (2018) – The Science and Translation of Lactate Shuttle Theory](#brooks-2018--the-science-and-translation-of-lactate-shuttle-theory)
+   - [Brooks et al. (2022) – Tracing the Lactate Shuttle to the Mitochondrial Reticulum](#brooks-et-al-2022--tracing-the-lactate-shuttle-to-the-mitochondrial-reticulum)
 3. [Lactate as the Primary TCA Substrate – Systemic Evidence](#3-lactate-as-the-primary-tca-substrate--systemic-evidence)
+   - [Hui et al. (2017) – Glucose Feeds the TCA Cycle via Circulating Lactate](#hui-et-al-2017--glucose-feeds-the-tca-cycle-via-circulating-lactate)
 4. [Lactate as a Mitochondrial Activator – Beyond Metabolism](#4-lactate-as-a-mitochondrial-activator--beyond-metabolism)
+   - [Cai et al. (2023) – Lactate Activates the Mitochondrial Electron Transport Chain Independently of Its Metabolism](#cai-et-al-2023--lactate-activates-the-mitochondrial-electron-transport-chain-independently-of-its-metabolism)
 5. [The Postprandial Lactate Shuttle – Lactate as a Dietary Carbon Vehicle](#5-the-postprandial-lactate-shuttle--lactate-as-a-dietary-carbon-vehicle)
+   - [Leija et al. (2024) – Enteric and Systemic Postprandial Lactate Shuttle Phases and Dietary Carbohydrate Carbon Flow in Humans](#leija-et-al-2024--enteric-and-systemic-postprandial-lactate-shuttle-phases-and-dietary-carbohydrate-carbon-flow-in-humans)
 6. [Implications for Sports Nutrition](#6-implications-for-sports-nutrition)
+   - [Brooks (2023) – What the Lactate Shuttle Means for Sports Nutrition](#brooks-2023--what-the-lactate-shuttle-means-for-sports-nutrition)
 7. [The Anaerobic Threshold: Definitions, Methods, and Practical Applications](#7-the-anaerobic-threshold-definitions-methods-and-practical-applications)
+   - [Background and Rationale](#background-and-rationale)
+   - [Definitions: Aerobic and Anaerobic Threshold](#definitions-aerobic-and-anaerobic-threshold)
+   - [Methodological Aspects and Quality Criteria](#methodological-aspects-and-quality-criteria)
+   - [Physiological Significance as a Breakpoint](#physiological-significance-as-a-breakpoint)
+   - [Training Intensity Prescription: The Two-Threshold Model](#training-intensity-prescription-the-two-threshold-model)
+   - [Anaerobic Threshold and Fat Oxidation](#anaerobic-threshold-and-fat-oxidation)
+   - [Preventive and Rehabilitative Applications](#preventive-and-rehabilitative-applications)
+   - [Summary](#summary)
 8. [The Lactate Performance Curve: Diagnostic Logic and Training Zone Allocation](#8-the-lactate-performance-curve-diagnostic-logic-and-training-zone-allocation)
+   - [Figure Description](#figure-description)
+   - [Dual-Axis Presentation: Lactate and Heart Rate](#dual-axis-presentation-lactate-and-heart-rate)
+   - [Training Zone Architecture](#training-zone-architecture)
+   - [Longitudinal Interpretation: Right vs. Left Shift](#longitudinal-interpretation-right-vs-left-shift)
+   - [Methodological Considerations](#methodological-considerations)
+   - [Integration with Lactate Shuttle Theory (Brooks)](#integration-with-lactate-shuttle-theory-brooks)
 9. [Synthesis and Learning Objectives](#9-synthesis-and-learning-objectives)
+   - [Conceptual Overview](#conceptual-overview)
+   - [Learning Objectives](#learning-objectives)
+10. [References](#references)
+11. [One-Minute-Paper Topics](#one-minute-paper-topics)
 
 ---
 
@@ -47,11 +72,18 @@ Three core functions are now well established:
 
 This comprehensive review synthesizes four decades of research from the Brooks Lab (UC Berkeley) and describes three nested shuttle systems:
 
+<Table>
+
 | Shuttle Level | Description |
 |---|---|
 | **Cell-Cell Lactate Shuttle (CCLS)** | Lactate transfer between producing cells (e.g., glycolytic muscle fibers) and consuming cells (heart, brain, liver) along concentration gradients |
 | **Intracellular Lactate Shuttle (ILS)** | Intracellular transfer of cytosolically produced lactate to the mitochondrial matrix for oxidative metabolism within the same cell |
 | **Organ-Organ Lactate Shuttle** | Systemic redistribution between organs (muscle → liver, muscle → brain) via the bloodstream |
+
+<Fragment slot="caption">
+The three lactate shuttle systems.
+</Fragment>
+</Table>
 
 **Key Findings:**
 - Lactate is produced **continuously under fully aerobic conditions** — not only during oxygen deficiency
@@ -95,6 +127,8 @@ This landmark study using systemic ¹³C isotope tracing in mice delivers a fund
 
 **Main Findings:**
 
+<Table>
+
 | Parameter | Result |
 |---|---|
 | Molar turnover flux of lactate vs. glucose (fed) | Lactate exceeds glucose by a **factor of 1.1** |
@@ -102,6 +136,11 @@ This landmark study using systemic ¹³C isotope tracing in mice delivers a fund
 | TCA labeling by ¹³C-lactate | Extensive in **all tissues** (fed and fasted) |
 | Glucose contribution to TCA cycle (fasted) | Primarily **indirect** — via circulating lactate — in all tissues except the brain |
 | Situation in tumors (lung, pancreas) | Lactate exceeds glucose as TCA substrate; in pancreatic tumors, glutamine contributes even more |
+
+<Fragment slot="caption">
+Lactate turnover flux relative to glucose (tracer study).
+</Fragment>
+</Table>
 
 **Conclusion:** Glycolysis and the TCA cycle are **decoupled at the level of lactate**. Glucose can make its TCA contribution predominantly via the detour of circulating lactate, without entering the mitochondria directly as pyruvate. This enables independent regulation of ATP production and glucose catabolism.
 
@@ -171,10 +210,17 @@ This human study provides the first direct in vivo evidence for the Postprandial
 
 **Main Findings – Two Phases of the PLS:**
 
+<Table>
+
 | Phase | Timing | Mechanism | Interpretation |
 |---|---|---|---|
 | **Enteric PLS** | Blood lactate rises **before** blood glucose | Intestinal epithelial cells immediately metabolize glucose to lactate | Gut lumen → portal vein → liver/systemic circulation |
 | **Systemic PLS** | Second lactate rise, synchronous with glucose rise | Hepatic glucose release → peripheral glycolysis → lactate | Liver → muscle/organs → lactate redistribution |
+
+<Fragment slot="caption">
+The two phases of the postprandial lactate shuttle.
+</Fragment>
+</Table>
 
 **Quantitative Significance:**
 - The systemic PLS represents approximately **38% of the 75-g glucose load** appearing as lactate in the circulation
@@ -209,6 +255,8 @@ Hexose (glucose/glycogen) → Lactate → oxidative utilization OR liver glycoge
 
 **Practical Implications:**
 
+<Table>
+
 | Question | Answer Based on the Lactate Shuttle Concept |
 |---|---|
 | Which carbohydrate form is optimal? | The form plays a secondary role; all carbohydrates pass through lactate as an intermediate |
@@ -216,6 +264,11 @@ Hexose (glucose/glycogen) → Lactate → oxidative utilization OR liver glycoge
 | Why does training increase carbohydrate tolerance? | Increased MCT expression → improved lactate clearance without lactatemia |
 | What is the role of fructose? | Converted to lactate and glucose in the gut; enters systemic circulation primarily as lactate |
 | Ketones as an alternative to lactate? | No advantage when carbohydrates are sufficiently available; lactate and carbohydrates are more efficiently and directly available |
+
+<Fragment slot="caption">
+Sports-nutrition questions answered through the lactate shuttle concept.
+</Fragment>
+</Table>
 
 **Training-Specific Aspects:**
 - Endurance training increases the capacity for simultaneous lactate production and clearance → higher performance without hyperlactatemia
@@ -262,12 +315,19 @@ The anaerobic threshold is a reliable, motivation-independent marker of enduranc
 
 The dual-threshold model (Kindermann, Simon & Keul, 1979) provides a practical framework for training intensity zonation based on the aerobic-anaerobic transition. Key zones are defined as follows:
 
+<Table>
+
 | Zone | Intensity (% IAS) | Lactate (mmol/l) | Description |
 |---|---|---|---|
 | Regenerative training | < 70% | < 2 | Below aerobic threshold; recovery-oriented |
 | Basic Endurance I (GA I) | 70–90% | ~1.5–2.5 | Extensive aerobic training |
 | Basic Endurance II (GA II) / Tempo runs (TDL) | 90–100% | ~3–5 | Intensive aerobic with anaerobic contribution |
 | Interval Training (IVT) | > 100% | Variable | Supra-threshold; varies with intensity and recovery |
+
+<Fragment slot="caption">
+Endurance training zones by lactate and % IAS.
+</Fragment>
+</Table>
 
 In applied sport contexts, elite marathon runners compete at approximately their anaerobic threshold, and regional-level marathon athletes (~3:00 h finish time) run at roughly 95% of threshold speed. Training intensity recommendations should be expressed as heart rate targets. Notably, beta-blocker use does not influence the lactate-power curve, enabling accurate training prescription even in this clinical population.
 
@@ -292,10 +352,17 @@ The anaerobic threshold — particularly when determined as the individual anaer
 In the paper of Kindermann (2004) Figure 1 shows a representative lactate performance curve derived from five serial cycle ergometer tests in a single subject (starting at 100 W, incremental steps of 20 W every 3 minutes). Two physiologically distinct thresholds are identified.  
 Link: https://www.germanjournalsportsmedicine.com/fileadmin/content/archiv2004/heft06/Standards_Kindermann.pdf
 
+<Table>
+
 | Threshold | Abbreviation | Operational Definition |
 |---|---|---|
 | Lactate Threshold | **LT** | First systematic rise in blood lactate above resting baseline; aerobic–anaerobic transition (Wasserman & McIlroy 1964) |
 | Individual Anaerobic Threshold | **IAS** | Maximal lactate steady-state power; highest workload at which lactate production and clearance remain in dynamic equilibrium |
+
+<Fragment slot="caption">
+Operational definitions of the lactate and individual anaerobic thresholds.
+</Fragment>
+</Table>
 
 In this individual, **LT occurred at 200 W** and **IAS at 250 W**, both determined on 22.12.2013.
 
@@ -312,12 +379,19 @@ The simultaneous capture of both signals is considered standard practice in thre
 
 The colored background zones map metabolic states to practical training categories:
 
+<Table>
+
 | Zone | German Label | Physiological Basis |
 |---|---|---|
 | Light green | **Regeneratives Training (KB)** | Below aerobic threshold; active recovery; lactate ≈ 1.5–2.0 mmol/l |
 | Yellow | **Extensive Grundlagen (GA1)** | Aerobic base development; LT to mid-aerobic range; lactate 2–3 mmol/l |
 | Orange | **Intensive Grundlagen (GA2)** | Approach to IAS; highest tolerable steady-state intensity; lactate 3–4 mmol/l |
 | Pale red | **Schwellentraining (EB)** | At or near IAS; maximal lactate steady state; lactate ~4 mmol/l (interindividual variation ±1–2 mmol/l) |
+
+<Fragment slot="caption">
+Colour-coded training zones and their physiological basis.
+</Fragment>
+</Table>
 
 Training above the EB zone leads to progressive lactate accumulation and cannot be sustained beyond minutes — this is the domain of interval and competition training, not base endurance development.
 
@@ -382,6 +456,8 @@ After completing this unit, you should be able to:
 
 ## References
 
+<Table>
+
 | Reference | DOI / Journal |
 |---|---|
 | Brooks, G.A. (2018). The Science and Translation of Lactate Shuttle Theory. *Cell Metabolism*, 27, 757–785. | [10.1016/j.cmet.2018.03.008](https://doi.org/10.1016/j.cmet.2018.03.008) |
@@ -393,6 +469,11 @@ After completing this unit, you should be able to:
 | Kindermann, W. (2004). Anaerobe Schwelle. *Deutsche Zeitschrift für Sportmedizin*, 55(6), 161–162. | DZSM 55(6) |
 | Wasserman, K. & McIlroy, M.B. (1964). Detecting the threshold of anaerobic metabolism in cardiac patients during exercise. *American Journal of Cardiology*, 14, 844–852. | [10.1016/0002-9149(64)90012-8](https://doi.org/10.1016/0002-9149(64)90012-8) |
 
+<Fragment slot="caption">
+Key references.
+</Fragment>
+</Table>
+
 ---
 
 ## One-Minute-Paper Topics
@@ -400,23 +481,23 @@ After completing this unit, you should be able to:
   A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
 </Note>
 
-1. The prevailing view until the 1980s held that lactate was a toxic waste product of anaerobic glycolysis. Summarise the three core functions now attributed to lactate (Brooks, 2018) and explain what fundamentally changed in our understanding.
-2. Distinguish the Cell-Cell Lactate Shuttle (CCLS), the Intracellular Lactate Shuttle (ILS), and the Organ-Organ Lactate Shuttle. For each, name the producing cell/organ and the primary consuming cell/organ.
-3. The key insight of the lactate shuttle theory is that lactate is produced continuously even under fully aerobic conditions. What fraction of produced lactate is oxidatively utilised at rest, and how does this change during intense exercise?
-4. Describe the roles of monocarboxylate transporters MCT1 and MCT4 in the cell-cell lactate shuttle. Which transporter mediates import into mitochondria-rich cells, and what co-factor (CD147) is required?
-5. Brooks et al. describe a mitochondrial lactate oxidation complex (LDH + MCT1 + CD147). What is its functional significance, and how does it support the intracellular lactate shuttle concept?
-6. The Nature study by Hui et al. used ¹³C isotope tracing to demonstrate that lactate — not glucose — is the primary TCA cycle substrate in most tissues. Summarise their key finding using the molar turnover flux ratios in the fed vs. fasted state.
-7. What does it mean that "glycolysis and the TCA cycle are uncoupled at the level of lactate"? Give one physiological advantage of this decoupling for energy regulation.
-8. The Molecular Cell paper by Cai et al. showed that lactate activates the mitochondrial electron transport chain independently of its own metabolism. What was the key evidence (D-lactate experiments), and what does this imply for OXPHOS regulation?
-9. Cai et al. showed that D-lactate suppressed aerobic glycolysis (the Warburg effect) in tumour cell lines. Describe the ATP-mediated mechanism and discuss why this finding is relevant for exercise physiology and oncology.
-10. Describe the two temporal phases of the postprandial lactate shuttle (PLS): the enteric PLS and the systemic PLS. What percentage of a 75 g glucose load appears as circulating lactate in the systemic PLS?
-11. Leija et al. identified intestinal epithelial cells as the "first actor" in dietary carbohydrate carbon flux. Explain the physiological mechanism and its implication for understanding blood glucose responses after meals.
-12. According to Brooks (2023), which carbohydrate form is optimal for sports nutrition from a lactate shuttle perspective? What does this mean for the "form vs. function" debate on sports drinks and energy gels?
-13. Endurance training increases MCT1 and MCT4 expression. How does this adaptation shift the lactate performance curve, and why can pro-cyclists sustain power outputs at which untrained individuals accumulate hyperlactatemia?
-14. Define the aerobic threshold (AeS, first lactate rise) and the anaerobic threshold / individual anaerobic threshold (IAS, corresponding to MLSS). What are their approximate %V̇O₂max equivalents in trained and untrained individuals?
-15. Explain why fixed-lactate threshold methods (e.g., the 4 mmol/L criterion) are inferior to individual anaerobic threshold determination (Stegmann et al., 1981). Under what condition does the fixed criterion lead to incorrect training prescription?
-16. Map the four training zones from Kindermann's dual-threshold model (regenerative, GA I, GA II/TDL, interval) to their lactate ranges, % IAS, and physiological purpose. Where does elite marathon running fall?
-17. What does a rightward shift in the lactate performance curve indicate physiologically? What does a leftward shift indicate, and in which clinical populations is a persistent left shift consistent with post-exertional malaise?
-18. The lecture states that exceeding the anaerobic threshold triggers disproportionate increases in plasma catecholamines and significant immunological changes. Name two immune parameters that respond to supra-threshold exercise.
-19. Maximum absolute fat oxidation occurs at approximately 55–72% V̇O₂max — within the aerobic-anaerobic transition zone. What training strategy exploits this zone simultaneously to maximise fat oxidation and endurance adaptation?
-20. Describe how persistent left-shifted lactate curves and abnormally low IAS values in ME/CFS and Long COVID patients are consistent with impaired oxidative metabolism. Why does this make conventional lactate-guided exercise prescription potentially harmful without individualised assessment?
+1. In one sentence, why is the idea that "lactate is a waste product" considered outdated?
+2. Explain the concept of continuous aerobic lactate production at rest.
+3. Describe the lactate shuttle hypothesis in your own words.
+4. Which tissues are major lactate consumers, and which are major producers?
+5. How does lactate function as a signaling molecule (lactormone)?
+6. Define the lactate threshold and explain why it is individualised.
+7. Compare maximal lactate steady state (MLSS) and the second lactate threshold (LT2).
+8. What does a left- vs. right-shifted lactate curve tell you about training adaptation?
+9. Why can resting lactate be elevated in patients with mitochondrial dysfunction?
+10. How might lactate kinetics differ between healthy controls and ME/CFS patients?
+11. What does delayed lactate clearance suggest about oxidative metabolism?
+12. Which methodological factors (sampling site, analyser, protocol) most influence lactate values?
+13. Explain why blood lactate alone is insufficient to characterise an athlete's metabolic profile.
+14. How does the monocarboxylate transporter (MCT) family enable lactate exchange between cells?
+15. Describe one role of lactate in the immune system.
+16. What was today's most surprising fact about lactate?
+17. Which concept from today's lecture do you find still confusing?
+18. How would you design a lactate-based diagnostic protocol for a Long COVID patient?
+19. Name one limitation of using lactate thresholds in untrained or clinical populations.
+20. What follow-up question about lactate would you like to explore further?
