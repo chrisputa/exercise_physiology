@@ -4,6 +4,7 @@ description: Provides a detailed treatment of energy expenditure, from basal and
   Links oxygen uptake (V̇O₂) to daily behaviour, physical activity levels, and energy supply under normoxic and hypoxic conditions, including the MET concept and MET-minutes.
   Covers threshold concepts — ventilatory, lactate, and anaerobic thresholds — and their physiological significance for exercise prescription and performance diagnostics.
   Presents standardised exercise intensity terminology (Very Low to Very High) based on the joint ACSM/ESSA consensus, with methods for determining and monitoring cardiorespiratory and resistance exercise intensity using metabolic thresholds, RIR, and RPE.
+examRelevant: false
 draft: false
 ---
 
@@ -14,38 +15,28 @@ import { Note } from '../../../components/MarginNote/index.js';
 ## Table of Contents
 
 1. [Energy Expenditure](#1-energy-expenditure)
-   - 1.1 [Basal Metabolic Rate (BMR)](#11-basal-metabolic-rate-bmr)
-   - 1.2 [Basal vs. Resting Metabolic Rate](#12-basal-vs-resting-metabolic-rate)
-   - 1.3 [Total Daily Energy Expenditure (TDEE)](#13-total-daily-energy-expenditure-tdee)
-   - 1.4 [Energy and Physical Activity](#14-energy-and-physical-activity)
-   - 1.5 [Energy Expenditure Measurement](#15-energy-expenditure-measurement)
-   - 1.6 [V̇O₂ and Energy](#16-v̇o₂-and-energy)
-   - 1.7 [Energy Expenditure Calculation — Weir Formula](#17-energy-expenditure-calculation--weir-formula)
-   - 1.8 [RQ vs. RER](#18-rq-vs-rer)
-2. [Behaviour and V̇O₂](#2-behaviour-and-v̇o₂)
-   - 2.1 [Physical Performance, Activity and Behaviour](#21-physical-performance-activity-and-behaviour)
-   - 2.2 [Oxygen — Essential for Energy Supply](#22-oxygen--essential-for-energy-supply)
-   - 2.3 [V̇O₂ and Daily Behaviour](#23-v̇o₂-and-daily-behaviour)
-   - 2.4 [V̇O₂ as a Measure of Energy Expenditure](#24-v̇o₂-as-a-measure-of-energy-expenditure)
-   - 2.5 [Normoxia and Energy Supply](#25-normoxia-and-energy-supply)
-   - 2.6 [O₂ Deficiency and Energy Supply](#26-o₂-deficiency-and-energy-supply)
-   - 2.7 [Breathing and Gas Exchange](#27-breathing-and-gas-exchange)
-   - 2.8 [MET — Metabolic Equivalents of Task](#28-met--metabolic-equivalents-of-task)
-   - 2.9 [MET-min](#29-met-min)
+2. [Behaviour and V̇O₂](#2-behaviour-and-v̇o)
 3. [Threshold Concepts](#3-threshold-concepts)
-4. [How to Determine and Monitor the Different Exercise Intensities](#4-how-to-determine-and-monitor-the-different-exercise-intensities)
+4. [Determining and Monitoring Exercise Intensity](#4-determining-and-monitoring-exercise-intensity)
 
 ---
 
 ## 1 Energy Expenditure
 
+<Note>
+**Learning objectives:**
+- BMR and RMR: measurement conditions, the FAO/WHO prediction equations, and their determinants
+- The five factors affecting metabolic rate, and typical total daily energy expenditure
+- Calorimetry, the caloric equivalent of oxygen, the Weir formula, and RQ versus RER
+</Note>
+
 Any physical activity consumes energy. Even in an apparently inactive state, the organism needs energy. The energy consumption during physical inactivity and physical activity can be estimated and measured. Both exact measurements and estimates can be useful and valuable in practice, depending on the goal.
 
 ### 1.1 Basal Metabolic Rate (BMR)
 
-The **basal metabolic rate (BMR)** reflects the sum total of the body's many avenues for heat production — measured under stringent laboratory conditions (postabsorptive state, no prior physical activity, supine rest for 30 min in a thermoneutral environment). Oxygen consumption values for BMR typically range between 160–290 mL·min⁻¹ (0.8–1.43 kcal·min⁻¹) depending on gender, age, body size, and fat-free body mass (FFM).
+The **basal metabolic rate (BMR)** reflects the sum total of the body's many avenues for heat production — measured under stringent laboratory conditions (postabsorptive state, no prior physical activity, supine rest for 30 min in a thermoneutral environment). Oxygen consumption values for BMR typically range between 160–290 mL·min⁻¹ (0.8–1.43 kcal·min⁻¹) depending on sex, age, body size, and fat-free body mass (FFM).
 
-**BMR prediction formulae (FAO/WHO):**
+**BMR prediction formulae (FAO/WHO/UNU 2004):**
 
 <Table>
 
@@ -61,7 +52,7 @@ The **basal metabolic rate (BMR)** reflects the sum total of the body's many ave
 | Men | >60 | BMR = 0.049 × body mass [kg] + 2.459 |
 
 <Fragment slot="caption">
-FAO/WHO equations for predicting basal metabolic rate by sex and age. To convert MJ·day⁻¹ to kcal·day⁻¹, multiply the result by 239.
+FAO/WHO/UNU equations for predicting basal metabolic rate by sex and age. To convert MJ·day⁻¹ to kcal·day⁻¹, multiply the result by 239.
 </Fragment>
 </Table>
 
@@ -72,6 +63,7 @@ The **resting metabolic rate (RMR)** is measured 3–4 hours after a light meal 
 ### 1.3 Total Daily Energy Expenditure (TDEE)
 
 Five major factors affect metabolic rate:
+
 1. Physical activity
 2. Diet-induced thermogenesis
 3. Calorigenic effect of food on exercise metabolism
@@ -93,6 +85,7 @@ Different classification systems rate the strenuousness of physical activities b
 ### 1.6 V̇O₂ and Energy
 
 Oxygen uptake directly measures energy expenditure. Average caloric yield:
+
 - 1 litre O₂ from mixed diet ≈ **4.8 kcal (≈20 kJ)**
 - 1 litre O₂ from glucose exclusively ≈ **5.0 kcal (≈21 kJ)** — caloric equivalent of glucose
 - 1 litre O₂ from fat ≈ **4.7 kcal (≈19.6 kJ)**
@@ -100,14 +93,13 @@ Oxygen uptake directly measures energy expenditure. Average caloric yield:
 
 ### 1.7 Energy Expenditure Calculation — Weir Formula
 
-John Brash de Vere Weir (1949) presented a simple method accurate to within ±1 % of the traditional RQ method:
+Weir (1949) presented a simple method accurate to within ±1 % of the traditional RQ method:
 
-**kcal·min⁻¹ = V̇E(STPD) × (1.044 − 0.0499 × %O₂E)**
+> **kcal·min⁻¹ = V̇E(STPD) × (1.044 − 0.0499 × %O₂E)**
 
-where V̇E(STPD) = expired minute ventilation (L·min⁻¹) corrected to STPD conditions, and %O₂E = expired oxygen percentage. The value in parentheses is the "Weir factor."
+where V̇E(STPD) = expired minute ventilation (L·min⁻¹) corrected to STPD conditions, and %O₂E = expired oxygen percentage. The value in parentheses is the "Weir factor." Alternatively:
 
-Alternatively:
-**kcal·min⁻¹ = ([1.1 × RQ] + 3.9) × V̇O₂**
+> **kcal·min⁻¹ = ([1.1 × RQ] + 3.9) × V̇O₂**
 
 ### 1.8 RQ vs. RER
 
@@ -128,9 +120,31 @@ Respiratory quotient (RQ) for the complete catabolism of carbohydrate, fat, and 
 
 The **respiratory exchange ratio (RER)** reflects pulmonary gas exchange and may diverge from RQ during hyperventilation or exhaustive exercise (RER > 1.00). RER does not fully mirror the macronutrient mixture catabolised under all physiological conditions.
 
+### One-Minute-Paper Topics
+<Note>
+  A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
+</Note>
+- What stringent conditions must be met to measure a true basal metabolic rate? Using the FAO/WHO/UNU equations, estimate the BMR of a 30-year-old man weighing 75 kg and convert the result to kcal·day⁻¹.
+- The lecture identifies five major factors affecting metabolic rate. Rank them by quantitative impact on TDEE for a recreational endurance athlete, and justify your ranking.
+- State the Weir formula. Which two variables does it require, and why is indirect calorimetry more practical than direct calorimetry in an exercise setting?
+- Distinguish the respiratory quotient (RQ) from the respiratory exchange ratio (RER). Under what conditions do they diverge, and what does an RER > 1.00 indicate during exhaustive exercise?
+- The caloric yield per litre of O₂ differs by substrate (~4.7 kcal for fat, ~5.0 kcal for glucose). Why is a mixed-diet average of ~4.8 kcal·L⁻¹ used in practice, and when would substrate-specific values matter?
+- What does the doubly labelled water technique measure, and why does it serve as a gold standard for validating long-term energy expenditure estimates?
+
+### Key References
+- FAO/WHO/UNU. *Human Energy Requirements — Report of a Joint FAO/WHO/UNU Expert Consultation.* FAO Food and Nutrition Technical Report Series 1, Rome, 2004.
+- Weir JB de V. *New Methods for Calculating Metabolic Rate with Special Reference to Protein Metabolism.* Journal of Physiology 109 (1–2), 1949: 1–9.
+
 ---
 
 ## 2 Behaviour and V̇O₂
+
+<Note>
+**Learning objectives:**
+- Oxygen as the essential substrate of energy supply: organ utilisation, deficiency tolerance, and ROS
+- Normoxia, tissue acidosis, and pulmonary gas exchange after Fick's first law
+- V̇O₂ and MET as intensity measures — the 3.5 mL·kg⁻¹·min⁻¹ convention, MET ≠ MET, and MET-minutes
+</Note>
 
 ### 2.1 Physical Performance, Activity and Behaviour
 
@@ -141,21 +155,20 @@ From a biological point of view, movement is a vital skill enabling physical per
 Oxygen (O₂) is essential for the energy supply of cells. A prolonged lack of O₂ — usually the result of a circulatory disorder — initially leads to functional failures and later to irreversible cell and organ damage. There are no significant oxygen stores in cells, and oxygen-independent metabolism is insufficient for energy requirements. Therefore, sufficient O₂ must be constantly supplied via the circulatory system.
 
 **O₂ utilisation by organ:**
+
 - Kidneys: ~25 % O₂ utilisation
 - Cerebral cortex, skeletal muscles, myocardium (rest): 40–60 %
 - Working skeletal muscles and myocardium (heavy exercise): up to ~90 %
 
 During exercise, O₂ consumption of cardiac muscle tissue increases 3–4 times above resting conditions; working skeletal muscle groups increase to more than 20–50 times the resting value.
 
-**Adaptation to O₂ deficiency:** Depending on duration and extent, O₂ deficiency leads to limitations in organ function or cell death. In neurons, irreversible damage occurs after less than 10 minutes of anoxia; in skeletal muscles only after several hours. For the whole organism, the resuscitation time is approximately 4 minutes at normal body temperature.
+**Adaptation to O₂ deficiency.** Depending on duration and extent, O₂ deficiency leads to limitations in organ function or cell death. In neurons, irreversible damage occurs after less than 10 minutes of anoxia; in skeletal muscles only after several hours. For the whole organism, the resuscitation time is approximately 4 minutes at normal body temperature.
 
 **Too much oxygen can be harmful** — oxygen radicals damage cell membranes, enzymes and DNA. Reactive oxygen species continuously formed in cells play an important role as signalling molecules at low concentrations but cause cell damage at high concentrations.
 
 ### 2.3 V̇O₂ and Daily Behaviour
 
 Any type of physical activity and therefore behaviour requires energy. The amount of oxygen required for energy metabolism is supplied via pulmonary respiration and transported via blood to organs such as skeletal muscles.
-
-**Exercise intensity classification by V̇O₂ (ACSM Guidelines):**
 
 <Table>
 
@@ -168,7 +181,7 @@ Any type of physical activity and therefore behaviour requires energy. The amoun
 | Near-maximal to maximal | ≥ 30.8 |
 
 <Fragment slot="caption">
-Exercise intensity classification by oxygen uptake (V̇O₂), after ACSM guidelines.
+Exercise intensity classification by oxygen uptake (V̇O₂), after the ACSM Guidelines for Exercise Testing and Prescription.
 </Fragment>
 </Table>
 
@@ -185,8 +198,6 @@ The short-term increase in O₂ supply can be achieved through increased blood f
 ### 2.6 O₂ Deficiency and Energy Supply
 
 O₂ deficiency leads to severely restricted ATP formation. Anaerobic glycolysis cannot compensate for a disruption in O₂ supply in the long term. The resulting lactate and protons transported from cells into the extracellular space can lead to **tissue acidosis**.
-
-**Air composition and partial pressures at sea level (dry air):**
 
 <Table>
 
@@ -207,6 +218,7 @@ Composition and partial pressures of the main constituents of dry air at sea lev
 Gas exchange occurs in the alveoli by diffusion. After ventilation transports O₂-rich gas into the alveoli, O₂ is absorbed into the blood and CO₂ released. The **1st Fick diffusion law** describes pulmonary gas exchange: diffusion current is proportional to the partial pressure difference and exchange area, and inversely proportional to layer thickness. The Krogh diffusion constant for CO₂ is approximately 20 times that of O₂.
 
 At rest:
+
 - Alveolar O₂ fraction: 14 % by volume; O₂ partial pressure: ~100 mmHg
 - Alveolar CO₂ fraction: 5.6 % by volume; CO₂ partial pressure: ~40 mmHg
 
@@ -216,9 +228,7 @@ The diffusion capacity for adults at rest is normally 30 mL·min⁻¹·mmHg⁻¹
 
 #### 2.8.1 Physical Activity Levels
 
-The metabolic equivalent (MET) is an index of energy expenditure. One MET is the rate of EE while sitting at rest; by scientific convention, 1 MET = 3.5 mL·kg⁻¹·min⁻¹ O₂ uptake = 1 kcal·kg·h⁻¹ body weight.
-
-**Physical activity (PA) classification by MET (Compendium of Physical Activities):**
+The metabolic equivalent (MET) is an index of energy expenditure. One MET is the rate of EE while sitting at rest; by scientific convention, 1 MET = 3.5 mL·kg⁻¹·min⁻¹ O₂ uptake = 1 kcal·kg⁻¹·h⁻¹.
 
 <Table>
 
@@ -230,17 +240,17 @@ The metabolic equivalent (MET) is an index of energy expenditure. One MET is the
 | Vigorous | ≥ 6 |
 
 <Fragment slot="caption">
-Physical activity classification by MET range (Compendium of Physical Activities).
+Physical activity (PA) classification by MET range, after the Compendium of Physical Activities (Ainsworth et al. 2011).
 </Fragment>
 </Table>
 
 #### 2.8.2 What Is MET?
 
-1 MET corresponds to 3.5 mL·kg⁻¹·min⁻¹. Most source studies catalogued in the 2011 Compendium reported energy costs as either V̇O₂ (mL·kg⁻¹·min⁻¹) or MET using 3.5 as the denominator. There are differences between the standard denominator and the real RMR. For an individual with a predicted RMR = 2.8 mL·kg⁻¹·min⁻¹, the corrected MET would be 3.5/2.8 = 125 % of Compendium values.
+1 MET corresponds to 3.5 mL·kg⁻¹·min⁻¹. Most source studies catalogued in the 2011 Compendium reported energy costs as either V̇O₂ (mL·kg⁻¹·min⁻¹) or MET using 3.5 as the denominator (Ainsworth et al. 2011). There are differences between the standard denominator and the real RMR. For an individual with a predicted RMR = 2.8 mL·kg⁻¹·min⁻¹, the corrected MET would be 3.5/2.8 = 125 % of Compendium values.
 
 #### 2.8.3 MET ≠ MET?
 
-1 MET is not always the same amount of V̇O₂. The standard 3.5 mL·kg⁻¹·min⁻¹ is a convention; individual resting metabolic rate differs. The Compendium MET level for any PA can be multiplied by the ratio (standard MET / individual predicted RMR) for individual correction.
+1 MET is not always the same amount of V̇O₂. The standard 3.5 mL·kg⁻¹·min⁻¹ is a convention; individual resting metabolic rate differs. The Compendium MET level for any physical activity can be multiplied by the ratio (standard MET / individual predicted RMR) for individual correction.
 
 ### 2.9 MET-min
 
@@ -250,17 +260,39 @@ Example: Jogging at 7 METs for 30 min on 3 days/week = **7 × 30 × 3 = 630 MET�
 
 MET-minutes are usually standardised per week or per day and used in physical activity guidelines and epidemiological studies.
 
+### One-Minute-Paper Topics
+<Note>
+  A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
+</Note>
+- Define 1 MET in mL·kg⁻¹·min⁻¹ and in kcal·kg⁻¹·h⁻¹. Calculate the weekly MET-minutes for a student who cycles at 8 METs for 30 minutes on three days per week.
+- Why does the standard 1 MET = 3.5 mL·kg⁻¹·min⁻¹ misrepresent the energy cost for a person whose predicted RMR is 2.8 mL·kg⁻¹·min⁻¹? State the correction factor and for whom it matters.
+- Using the ACSM V̇O₂ classification (very light < 7.0 to near-maximal ≥ 30.8 mL·kg⁻¹·min⁻¹), assign an intensity level to walking at 5 km/h, climbing stairs, and a maximal cycling sprint.
+- What happens to ATP formation when the O₂ supply is insufficient, and how does tissue acidosis arise from lactate and proton transport?
+- Define normoxia and describe how O₂ delivery is increased in the short term versus the medium term. Name one hormone that increases O₂ consumption.
+- State Fick's first diffusion law as applied to pulmonary gas exchange. Given that the Krogh diffusion constant of CO₂ is about 20 times that of O₂, which gas is affected first when the diffusion distance increases?
+
+### Key References
+- Ainsworth BE, Haskell WL, Herrmann SD, et al. *2011 Compendium of Physical Activities — A Second Update of Codes and MET Values.* Medicine & Science in Sports & Exercise 43 (8), 2011: 1575–1581.
+- American College of Sports Medicine. *ACSM's Guidelines for Exercise Testing and Prescription.*
+
 ---
 
 ## 3 Threshold Concepts
 
-### Background
+<Note>
+**Learning objectives:**
+- The anaerobic threshold as the maximum lactate steady state
+- The physiological responses that appear above the anaerobic threshold
+- First (T1) and second (T2) thresholds across the lactate, gas-exchange, ventilatory and power–duration models
+</Note>
 
-The **anaerobic threshold** is a conceptual approach developed to determine the exercise intensity at which arterial blood lactate concentration begins to increase sharply during an incremental exercise test. During such tests, blood lactate accumulation is attributed to inadequate oxygen delivery to contracting muscle resulting in increased rates of glycolysis and lactate production.
+### 3.1 The Anaerobic Threshold
 
-The anaerobic threshold represents the maximum lactate steady state — the metabolic point at which muscular lactate formation and elimination from skeletal muscles are just about balanced. From the perspective of gas exchange, this point also represents the maximum equilibrium of oxygen uptake in the organism.
+The **anaerobic threshold** is a conceptual approach developed to determine the exercise intensity at which arterial blood lactate concentration begins to increase sharply during an incremental exercise test (Wasserman and McIlroy 1964). During such tests, blood lactate accumulation is attributed to inadequate oxygen delivery to contracting muscle resulting in increased rates of glycolysis and lactate production.
 
-### Physiological Responses Above the Anaerobic Threshold
+The anaerobic threshold represents the maximum lactate steady state — the metabolic point at which muscular lactate formation and elimination from skeletal muscles are just about balanced. From the perspective of gas exchange, this point also represents the maximum equilibrium of oxygen uptake in the organism (Poole et al. 2021).
+
+### 3.2 Physiological Responses Above the Anaerobic Threshold
 
 1. Accelerated muscle glycogen utilisation and anaerobic regeneration of ATP
 2. Reduced exercise endurance
@@ -270,12 +302,12 @@ The anaerobic threshold represents the maximum lactate steady state — the meta
 6. Increased PaCO₂ and PETCO₂ with time
 7. Bohr effect — increasing O₂ extraction from blood rather than decreasing capillary PO₂
 8. Increased plasma electrolyte concentration
-9. Hemoconcentration
+9. Haemoconcentration
 10. Increased production of metabolic intermediaries (e.g. glycerol phosphate, alanine)
 11. Increased catecholamine levels
 12. Increased double product (systolic blood pressure × heart rate)
 
-### Threshold Concepts — Overview
+### 3.3 Threshold Concepts — T1 and T2
 
 <Table>
 
@@ -289,22 +321,46 @@ The anaerobic threshold represents the maximum lactate steady state — the meta
 | T2 | Respiratory compensation point (RCP) | Second breakpoint of systematic increase in V̇E/V̇O₂ |
 
 <Fragment slot="caption">
-First (T1) and second (T2) threshold concepts across the lactate, gas-exchange, ventilatory, and power–duration models.
+First (T1) and second (T2) threshold concepts across the lactate, gas-exchange, ventilatory, and power–duration models (Faude et al. 2009; Meyer et al. 2005).
 </Fragment>
 </Table>
 
-### Key References (Section 8)
+### One-Minute-Paper Topics
+<Note>
+  A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
+</Note>
+- Who first described the anaerobic threshold in cardiac patients, and how is it defined physiologically as the maximum lactate steady state?
+- Why does blood lactate accumulate during an incremental test above the threshold? What does the "maximum equilibrium of oxygen uptake" mean from the perspective of gas exchange?
+- List five of the twelve physiological responses that occur above the anaerobic threshold, and explain which of them most directly limits endurance performance.
+- Compare the first (T1) and second (T2) thresholds across the lactate, ventilatory and gas-exchange models. What does each model measure, and are the concepts interchangeable?
+- The responses above the threshold include an increase in the double product. What is the double product, and what does its rise indicate?
 
-- Wassermann K, McIlroy MB. Detecting the threshold of anaerobic metabolism in cardiac patients during exercise. *Am J Cardiol*. 1964;14:844–852.
-- Faude O, Kindermann W, Meyer T. Lactate threshold concepts: how valid are they? *Sports Medicine*. 2009;39(6):469–490.
-- Poole DC, Rossiter HB, Brooks GA, Gladden LB. The anaerobic threshold: 50+ years of controversy. *J Physiol*. 2021;599(3):737–767.
-- Meyer T, Lucía A, Earnest CP, Kindermann W. A conceptual framework for performance diagnosis and training prescription from submaximal gas exchange parameters. *Int J Sports Med*. 2005;26(S1):S38–S48.
+### Key References
+- Faude O, Kindermann W, Meyer T. *Lactate Threshold Concepts — How Valid Are They?* Sports Medicine 39 (6), 2009: 469–490.
+- Meyer T, Lucía A, Earnest CP, Kindermann W. *A Conceptual Framework for Performance Diagnosis and Training Prescription from Submaximal Gas Exchange Parameters.* International Journal of Sports Medicine 26 (S1), 2005: S38–S48.
+- Poole DC, Rossiter HB, Brooks GA, Gladden LB. *The Anaerobic Threshold — 50+ Years of Controversy.* Journal of Physiology 599 (3), 2021: 737–767.
+- Wasserman K, McIlroy MB. *Detecting the Threshold of Anaerobic Metabolism in Cardiac Patients During Exercise.* American Journal of Cardiology 14, 1964: 844–852.
 
 ---
 
-## 4 How to Determine and Monitor the Different Exercise Intensities
+## 4 Determining and Monitoring Exercise Intensity
 
-There is currently no consensus regarding which of the many commonly used methods to establish different exercise intensities for different populations is best [1]. Traditional methods for determining exercise intensity include: (a) threshold-based approaches, using the first and second metabolic thresholds (MT1 and MT2) to demarcate exercise domains; (b) percentages of different anchor measurements, such as %VO₂max, %HRmax, or %HRR, which — despite widespread use — do not achieve category-specific cardiovascular and metabolic responses in all individuals; (c) fixed values, such as metabolic equivalents (METs), which do not adequately consider individual differences in age, sex, body mass, and fitness; and (d) perceptual measures, most notably the Rating of Perceived Exertion (RPE), which integrates feelings of effort, strain, and fatigue from peripheral muscles, the cardiopulmonary system, and the central nervous system [1]. A joint American College of Sports Medicine (ACSM) Expert Statement and Exercise and Sports Science Australia (ESSA) Consensus Statement proposed a standardised five-level exercise intensity terminology — Very Low, Low, Moderate, High, and Very High — applicable to both cardiorespiratory and resistance exercise, together with five corresponding perception-of-effort descriptors: very easy, easy, somewhat hard, hard, and very hard [1]. The preferred method for prescribing cardiorespiratory exercise intensity is the direct measurement of metabolic thresholds and the work rate associated with the attainment of VO₂max during a graded exercise test (GXT), as this produces similar physiological stresses across individuals with different exercise capacities [1]. For resistance exercise, the statement recommends prescribing intensity via repetitions in reserve (RIR) rather than percentage of one-repetition maximum (%1-RM), since RIR better captures both load and proximity to neuromuscular failure [1]. RPE is recommended as a useful adjunct method to help monitor both cardiorespiratory and resistance exercise, particularly when laboratory-based assessments are not available [1]. Tables 7 and 8 summarise the current descriptors and criteria from leading organisations, while Table 9 presents the proposed standardised classifications anchored to metabolic thresholds, RIR, and RPE scales [1].
+<Note>
+**Learning objectives:**
+- The four traditional families of intensity methods, and why percentage anchors fail
+- The ACSM/ESSA five-level terminology and its physiological anchors (MT1, MT2, W_max)
+- Repetitions in reserve rather than %1-RM for resistance exercise, and RPE as an adjunct
+</Note>
+
+### 4.1 Methods for Determining Exercise Intensity
+
+There is currently no consensus regarding which of the many commonly used methods to establish different exercise intensities for different populations is best (Bishop et al. 2025). Traditional methods for determining exercise intensity include: (a) **threshold-based approaches**, using the first and second metabolic thresholds (MT1 and MT2) to demarcate exercise domains; (b) **percentages of anchor measurements**, such as %VO₂max, %HRmax, or %HRR, which — despite widespread use — do not achieve category-specific cardiovascular and metabolic responses in all individuals; (c) **fixed values**, such as metabolic equivalents (METs), which do not adequately consider individual differences in age, sex, body mass, and fitness; and (d) **perceptual measures**, most notably the Rating of Perceived Exertion (RPE), which integrates feelings of effort, strain, and fatigue from peripheral muscles, the cardiopulmonary system, and the central nervous system (Bishop et al. 2025).
+
+### 4.2 The ACSM/ESSA Standardised Terminology
+
+A joint American College of Sports Medicine (ACSM) Expert Statement and Exercise and Sports Science Australia (ESSA) Consensus Statement proposed a standardised five-level exercise intensity terminology — Very Low, Low, Moderate, High, and Very High — applicable to both cardiorespiratory and resistance exercise, together with five corresponding perception-of-effort descriptors: very easy, easy, somewhat hard, hard, and very hard (Bishop et al. 2025). The preferred method for prescribing cardiorespiratory exercise intensity is the direct measurement of metabolic thresholds and the work rate associated with the attainment of VO₂max during a graded exercise test (GXT), as this produces similar physiological stresses across individuals with different exercise capacities. For resistance exercise, the statement recommends prescribing intensity via repetitions in reserve (RIR) rather than percentage of one-repetition maximum (%1-RM), since RIR better captures both load and proximity to neuromuscular failure. RPE is recommended as a useful adjunct method to help monitor both cardiorespiratory and resistance exercise, particularly when laboratory-based assessments are not available (Bishop et al. 2025).
+
+Tables 7 and 8 summarise the current descriptors and criteria from leading organisations, while Table 9 presents the proposed standardised classifications anchored to metabolic thresholds, RIR, and RPE scales.
 
 <Table>
 
@@ -320,7 +376,7 @@ There is currently no consensus regarding which of the many commonly used method
 | Maximal | 100 | 100 | 100 | 100 | 100 | 100 | 20 | 20 | — | — |
 
 <Fragment slot="caption">
-Current descriptors and criteria for cardiorespiratory exercise intensity. Suggested values assume VO₂max = 10 METs or 35 mL O₂·kg⁻¹·min⁻¹. Sources: ESSA position statement (2010); ACSM Guidelines for Exercise Testing and Prescription (2020); Howley (2001). Adapted from Bishop et al. [1].
+Current descriptors and criteria for cardiorespiratory exercise intensity. Suggested values assume VO₂max = 10 METs or 35 mL O₂·kg⁻¹·min⁻¹. Adapted from Bishop et al. (2025).
 </Fragment>
 </Table>
 
@@ -336,7 +392,7 @@ Current descriptors and criteria for cardiorespiratory exercise intensity. Sugge
 | Maximal | 100 | 100 | 100 |
 
 <Fragment slot="caption">
-Current descriptors and criteria for resistance exercise intensity. Sources: ESSA position statement (2010); ACSM Guidelines for Exercise Testing and Prescription (2020); Howley (2001). Adapted from Bishop et al. [1].
+Current descriptors and criteria for resistance exercise intensity. Adapted from Bishop et al. (2025).
 </Fragment>
 </Table>
 
@@ -352,42 +408,35 @@ Current descriptors and criteria for resistance exercise intensity. Sources: ESS
 | Very High | > W_max | < 2 | 8–10 | ≥ 17 |
 
 <Fragment slot="caption">
-Proposed standardised classifications for exercise intensity. MT1, first metabolic threshold; MT2, second metabolic threshold; W_max, work rate associated with VO₂max attainment during a graded exercise test. Source: Bishop et al. [1].
+Proposed standardised classifications for exercise intensity. MT1, first metabolic threshold; MT2, second metabolic threshold; W_max, work rate associated with VO₂max attainment during a graded exercise test. Source: Bishop et al. (2025).
 </Fragment>
 </Table>
 
-**Practical insight:** The direct measurement of metabolic thresholds via GXT remains the gold standard for individualised exercise prescription in cardiorespiratory exercise, because percentage-based anchors (%VO₂max, %HRmax, %HRR, METs) do not reliably elicit the same metabolic stress across individuals. For resistance exercise, RIR provides a more ecologically valid measure of intensity than %1-RM alone. When laboratory assessment is unavailable, RPE serves as a practical adjunct for monitoring both exercise modalities.
+**Practical insight.** The direct measurement of metabolic thresholds via GXT remains the gold standard for individualised exercise prescription in cardiorespiratory exercise, because percentage-based anchors (%VO₂max, %HRmax, %HRR, METs) do not reliably elicit the same metabolic stress across individuals. For resistance exercise, RIR provides a more ecologically valid measure of intensity than %1-RM alone. When laboratory assessment is unavailable, RPE serves as a practical adjunct for monitoring both exercise modalities.
+
+### One-Minute-Paper Topics
+<Note>
+  A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
+</Note>
+- The ACSM/ESSA consensus argues that percentage-based anchors (%V̇O₂max, %HRmax, %HRR, METs) fail to produce consistent physiological stress across individuals. Why? What is the preferred alternative for cardiorespiratory exercise?
+- Describe the five-level (Very Low → Very High) framework. Which physiological anchors define the category boundaries for cardiorespiratory exercise?
+- Explain why the consensus recommends RIR rather than %1-RM for prescribing resistance exercise intensity. Which RIR range corresponds to the "High" category?
+- Which RPE₂₀ range corresponds to the "High" category of the proposed classification, and which physiological signals does RPE integrate?
+- Name one situation in which RPE is the method of choice, and explain why the consensus positions it as an adjunct rather than as a primary method.
+
+### Key References
+- Bishop DJ et al. *Physical Activity and Exercise Intensity Terminology — ACSM/ESSA Joint Expert Statement.* Journal of Science and Medicine in Sport 28, 2025: 980–991.
 
 ---
 
 ## References
 
-- [1] Bishop DJ, Beck B, Biddle SJH, Denay KL, Ferri A, Jones AM, Jung M, Lee MJ-C, Moholdt T, Newton RU, Nimphius S, Pescatello LS, Saner NJ, Tzarimas C. Physical activity and exercise intensity terminology: a joint American College of Sports Medicine (ACSM) Expert Statement and Exercise and Sport Science Australia (ESSA) Consensus Statement. *Med Sci Sports Exerc*. 2025;57(11):2599–2613. doi:10.1016/j.jsams.2024.11.004.
-
----
-
-## One-Minute-Paper Topics
-<Note>
-  A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
-</Note>
-
-1. What stringent conditions must be met to measure true basal metabolic rate (BMR)? Using the FAO/WHO formula, estimate the BMR for a 30-year-old male weighing 75 kg and convert the result to kcal·day⁻¹.
-2. The lecture identifies five major factors affecting metabolic rate beyond BMR. Rank them in order of quantitative impact on TDEE for a recreational endurance athlete, and justify your ranking.
-3. State the Weir formula for calculating energy expenditure from respiratory gas exchange. What two variables are required, and why is this method preferred over direct calorimetry in exercise settings?
-4. Distinguish between the respiratory quotient (RQ) and the respiratory exchange ratio (RER). Under what physiological conditions do they diverge, and what does an RER > 1.0 indicate during exhaustive exercise?
-5. The caloric yield per litre of O₂ differs by substrate (~4.7 kcal for fat, ~5.0 kcal for glucose). Why is a mixed-diet average of ~4.8 kcal·L⁻¹ used clinically, and when would substrate-specific values matter?
-6. Define 1 MET in ml·kg⁻¹·min⁻¹ and kcal·kg⁻¹·h⁻¹. Calculate MET-minutes for a 45 kg student who cycles at 8 METs for 30 minutes three times per week.
-7. The standard 1 MET = 3.5 mL·kg⁻¹·min⁻¹ is a convention that underestimates energy cost for individuals with below-average RMR. Explain the correction factor and for whom this matters clinically.
-8. Using the ACSM classification table (very light < 7.0 to near-maximal ≥ 30.8 mL·kg⁻¹·min⁻¹), assign a V̇O₂ range to the following activities: walking at 5 km/h, climbing stairs, a maximal cycling sprint.
-9. What happens to ATP production when O₂ supply is insufficient? Explain the concept of tissue acidosis arising from lactate and proton transport, and at what threshold this becomes limiting.
-10. Define normoxia and describe how the body adjusts O₂ delivery in the short term (increased blood flow) versus medium term (increased blood O₂ capacity). Name one hormone that acutely increases O₂ consumption.
-11. State Fick's first diffusion law as applied to pulmonary gas exchange. Why is the Krogh diffusion constant for CO₂ approximately 20 times that of O₂, and what are the practical implications for ventilation?
-12. Who first described the anaerobic threshold clinically (Wasserman & McIlroy, 1964)? Define it physiologically as the maximum lactate steady state, and explain why it is described as "motivation-independent."
-13. List five of the twelve physiological responses that occur when exercise intensity exceeds the anaerobic threshold. Which of these has direct relevance for exercise immunology?
-14. Compare the first and second metabolic thresholds (T1/T2) across three threshold models: lactate, ventilatory, and gas exchange. What does each model measure, and are they interchangeable?
-15. The ACSM/ESSA consensus statement argues that percentage-based anchors (%V̇O₂max, %HRmax, METs) fail to produce consistent physiological stress across individuals. Why? What is the preferred alternative for cardiorespiratory exercise intensity?
-16. Describe the five-zone (Very Low → Very High) ACSM/ESSA framework. For cardiorespiratory exercise, what physiological anchors (MT1, MT2, Wmax) define each zone boundary?
-17. Explain why the ACSM/ESSA consensus recommends RIR rather than %1-RM for prescribing resistance exercise intensity. What is the RPE₂₀ equivalent for a "Hard" resistance session?
-18. When laboratory assessment is unavailable, RPE is recommended as an adjunct for monitoring both cardiorespiratory and resistance exercise. What physiological signals does RPE integrate, and what are its limitations?
-19. What is the doubly labelled water (DLW) technique, and why is it considered a gold standard for validating long-term energy expenditure estimates? What practical limitation prevents its routine clinical use?
-20. Current guidelines recommend ≥500–1000 MET·min·week⁻¹ of moderate-to-vigorous physical activity. Design a weekly exercise schedule for a sedentary office worker that meets this target using only activities achievable without gym equipment.
+- Ainsworth BE, Haskell WL, Herrmann SD, et al. *2011 Compendium of Physical Activities — A Second Update of Codes and MET Values.* Medicine & Science in Sports & Exercise 43 (8), 2011: 1575–1581.
+- American College of Sports Medicine. *ACSM's Guidelines for Exercise Testing and Prescription.*
+- Bishop DJ et al. *Physical Activity and Exercise Intensity Terminology — ACSM/ESSA Joint Expert Statement.* Journal of Science and Medicine in Sport 28, 2025: 980–991.
+- FAO/WHO/UNU. *Human Energy Requirements — Report of a Joint FAO/WHO/UNU Expert Consultation.* FAO Food and Nutrition Technical Report Series 1, Rome, 2004.
+- Faude O, Kindermann W, Meyer T. *Lactate Threshold Concepts — How Valid Are They?* Sports Medicine 39 (6), 2009: 469–490.
+- Meyer T, Lucía A, Earnest CP, Kindermann W. *A Conceptual Framework for Performance Diagnosis and Training Prescription from Submaximal Gas Exchange Parameters.* International Journal of Sports Medicine 26 (S1), 2005: S38–S48.
+- Poole DC, Rossiter HB, Brooks GA, Gladden LB. *The Anaerobic Threshold — 50+ Years of Controversy.* Journal of Physiology 599 (3), 2021: 737–767.
+- Wasserman K, McIlroy MB. *Detecting the Threshold of Anaerobic Metabolism in Cardiac Patients During Exercise.* American Journal of Cardiology 14, 1964: 844–852.
+- Weir JB de V. *New Methods for Calculating Metabolic Rate with Special Reference to Protein Metabolism.* Journal of Physiology 109 (1–2), 1949: 1–9.
