@@ -9,32 +9,12 @@ draft: false
 
 import Figure from '../../../components/Figure.astro';
 import Table from '../../../components/Table.astro';
-import fig1 from '../../../assets/L05_Fig01_Measurement_bw.png';
-import fig1Dark from '../../../assets/generated/L05_Fig01_Measurement_bw_dark.png';
-import fig2a from '../../../assets/L05_Fig02a_METs_Intensity 2_bw.png';
-import fig2aDark from '../../../assets/generated/L05_Fig02a_METs_Intensity 2_bw_dark.png';
-import fig2b from '../../../assets/L05_Fig02b_METs_HR_Formula_bw.png';
-import fig2bDark from '../../../assets/generated/L05_Fig02b_METs_HR_Formula_bw_dark.png';
-import fig3a from '../../../assets/L05_Fig3a_WearableAccuracy_BarChart_bw.png';
-import fig3aDark from '../../../assets/generated/L05_Fig3a_WearableAccuracy_BarChart_bw_dark.png';
-import fig3b from '../../../assets/L05_Fig3b_Fig12b_WearableAccuracy_MAPERange_bw.png';
-import fig3bDark from '../../../assets/generated/L05_Fig3b_Fig12b_WearableAccuracy_MAPERange_bw_dark.png';
-import fig4 from '../../../assets/L05_Fig4_JAMA2009_HazardRatio_bw.png';
-import fig4Dark from '../../../assets/generated/L05_Fig4_JAMA2009_HazardRatio_bw_dark.png';
-import fig5a from '../../../assets/L05_Fig5a_CC_Mortality_MenVsWomen_bw.png';
-import fig5aDark from '../../../assets/generated/L05_Fig5a_CC_Mortality_MenVsWomen_bw_dark.png';
-import fig5b from '../../../assets/L05_Fig5b_CC_Mortality_Gradient_bw.png';
-import fig5bDark from '../../../assets/generated/L05_Fig5b_CC_Mortality_Gradient_bw_dark.png';
-import fig6a from '../../../assets/L05_Fig6a_Kokkinos2022_BarChart_bw.png';
-import fig6aDark from '../../../assets/generated/L05_Fig6a_Kokkinos2022_BarChart_bw_dark.png';
-import fig6b from '../../../assets/L05_Fig6b_Kokkinos2022_LogScale_bw.png';
-import fig6bDark from '../../../assets/generated/L05_Fig6b_Kokkinos2022_LogScale_bw_dark.png';
-import fig7a from '../../../assets/L05_Fig7a_Meta2024_Participants_bw.png';
-import fig7aDark from '../../../assets/generated/L05_Fig7a_Meta2024_Participants_bw_dark.png';
-import fig7b from '../../../assets/L05_Fig7b_Meta2024_Studies_bw.png';
-import fig7bDark from '../../../assets/generated/L05_Fig7b_Meta2024_Studies_bw_dark.png';
-import fig7c from '../../../assets/L05_Fig7c_Meta2024_EffectSize_bw.png';
-import fig7cDark from '../../../assets/generated/L05_Fig7c_Meta2024_EffectSize_bw_dark.png';
+import fig1 from '../../../assets/fitness_01_met_mortality.png';
+import fig1Dark from '../../../assets/fitness_01_met_mortality_dark.png';
+import fig2 from '../../../assets/fitness_02_mortality_cohorts.png';
+import fig2Dark from '../../../assets/fitness_02_mortality_cohorts_dark.png';
+import fig3 from '../../../assets/fitness_03_met_vs_vo2max.png';
+import fig3Dark from '../../../assets/fitness_03_met_vs_vo2max_dark.png';
 import { Note } from '../../../components/MarginNote/index.js';
 
 
@@ -65,20 +45,7 @@ This lecture distils that critical analysis into an evidence-based framework cov
 
 ### 1.2 Cardiorespiratory Fitness (CRF)
 
-<Figure src={fig1} srcDark={fig1Dark} alt="Measurement Comparison: CRF/METs vs VO₂ Max vs Wearable">
-Conceptual comparison of CRF/METs vs. VO₂ max measurement approaches. CRF can be assessed freely on any treadmill or ergometer, requires no specialist, and represents >99 % of the mortality outcome literature. VO₂ max requires a calibrated metabolic cart, exhaled-gas mask, and trained staff.
-</Figure>
-
-CRF reflects the integrated capacity of the cardiovascular, pulmonary, and musculoskeletal systems to sustain aerobic exercise (Ross et al. 2016). It is assessed via graded exercise testing and expressed as metabolic equivalents of task (METs), where 1 MET equals the resting metabolic rate.
-
-<Figure
-	src={fig2a}
-	srcDark={fig2aDark}
-	alt="MET Intensity Classification"
-	panels={[{ src: fig2b, srcDark: fig2bDark, alt: 'MET Heart-Rate Estimation Formula' }]}
->
-MET intensity classification and heart-rate estimation formula. MET ≈ 0.05 × HR_bpm + 2; every 10-bpm HR increment corresponds to approximately 1 additional MET. Light &lt;3, Moderate 3–6, Vigorous >6 METs (Topol 2026).
-</Figure>
+CRF reflects the integrated capacity of the cardiovascular, pulmonary, and musculoskeletal systems to sustain aerobic exercise (Ross et al. 2016). It is assessed via graded exercise testing and expressed as metabolic equivalents of task (METs), where 1 MET equals the resting metabolic rate. CRF can be assessed on any treadmill or ergometer without a specialist, whereas VO₂ max requires a calibrated metabolic cart, an exhaled-gas mask, and trained staff. The MET intensity bands and the heart-rate estimate MET ≈ 0.05 × HR_bpm + 2 are treated in [Lecture 3](/lectures/lecture-3), §2.8.
 
 The American Heart Association classifies CRF as a **clinical vital sign** (Ross et al. 2016).
 
@@ -88,14 +55,7 @@ Maximal oxygen uptake (VO₂ max) is the ceiling of aerobic power, determined vi
 
 ### 1.4 VO₂ Max — Wearable Estimation
 
-<Figure
-	src={fig3a}
-	srcDark={fig3aDark}
-	alt="Wearable Accuracy"
-	panels={[{ src: fig3b, srcDark: fig3bDark, alt: 'Wearable Accuracy' }]}
->
 Consumer smartwatches impute VO₂ max from population-based algorithms (heart rate + GPS/accelerometry), not gas exchange (Tedesco et al. 2025). Accuracy is poor: mean absolute percentage error (MAPE) is typically 7–16 %.
-</Figure>
 
 Because wearables estimate rather than measure VO₂ max, their values carry directional biases and extrinsic confounders that make them unreliable for clinical or lifestyle decisions.
 
@@ -129,22 +89,13 @@ Because wearables estimate rather than measure VO₂ max, their values carry dir
 
 ### 2.1 Meta-Analysis: 33 Studies, 102,980 Participants (JAMA 2009)
 
-<Figure src={fig4} srcDark={fig4Dark} alt="CRF and Mortality Risk — JAMA 2009">
-Cardiorespiratory fitness and mortality risk. Each 1-MET increment in exercise capacity is associated with a **14–15 % reduction in all-cause mortality**. Individuals achieving ≥7.9 METs showed markedly lower all-cause and cardiovascular mortality. Shaded area = 95 % CI. Meta-analysis of 33 studies (n = 102,980; Kodama et al. 2009).
+<Figure src={fig1} srcDark={fig1Dark} alt="CRF and Mortality Risk — JAMA 2009">
+Cardiorespiratory fitness and mortality risk. Each 1-MET increment in exercise capacity is associated with a **14–15 % reduction in all-cause mortality**, plotted here relative to the 7.9-MET reference. Shaded band = 95 % CI. Meta-analysis of 33 studies (n = 102,980; Kodama et al. 2009).
 </Figure>
 
 The landmark meta-analysis by Kodama et al. (2009) established METs as a potent and graded prognostic variable for all-cause and cardiovascular mortality.
 
 ### 2.2 Cleveland Clinic Cohort: 122,007 Patients (JAMA Network Open 2018)
-
-<Figure
-	src={fig5a}
-	srcDark={fig5aDark}
-	alt="Cleveland Clinic: All-Cause Mortality Men vs Women"
-	panels={[{ src: fig5b, srcDark: fig5bDark, alt: 'Cleveland Clinic: Mortality Gradient' }]}
->
-All-cause mortality hazard ratios by fitness category, Cleveland Clinic cohort. The above-average vs. below-average hazard ratio of 1.41 equates to the excess mortality risk of **smoking or diabetes**. The Low-to-Elite gradient exceeds 5-fold. The protective effect is more pronounced in women. No upper mortality risk at any fitness level (Mandsager et al. 2018).
-</Figure>
 
 > **Cleveland Clinic Key Results**
 >
@@ -156,13 +107,8 @@ All-cause mortality hazard ratios by fitness category, Cleveland Clinic cohort. 
 
 ### 2.3 Veterans Affairs Cohort: 750,000+ Veterans (Kokkinos et al. 2022)
 
-<Figure
-	src={fig6a}
-	srcDark={fig6aDark}
-	alt="VA Cohort: Kokkinos 2022 Bar Chart"
-	panels={[{ src: fig6b, srcDark: fig6bDark, alt: 'VA Cohort: Kokkinos 2022 Log Scale' }]}
->
-All-cause mortality hazard ratios across six fitness categories in the US Veterans Affairs cohort (n = 750,302; mean follow-up 10.2 years). The Very-Low to Very-High gradient is ≈4-fold. No ceiling mortality risk at highest fitness. Error bars = 95 % CI (Kokkinos et al. 2022).
+<Figure src={fig2} srcDark={fig2Dark} alt="All-cause mortality by fitness category — Cleveland Clinic and Veterans Affairs cohorts">
+All-cause mortality hazard ratios by fitness category on a common logarithmic axis. **Left**: Cleveland Clinic cohort (n = 122,007); the above-average vs. below-average hazard ratio of 1.41 equates to the excess mortality risk of **smoking or diabetes**, and the Low-to-Elite gradient exceeds 5-fold (Mandsager et al. 2018). **Right**: US Veterans Affairs cohort (n = 750,302; mean follow-up 10.2 years) with a ≈4-fold Very-Low to Very-High gradient and no ceiling risk at the top; error bars = 95 % CI (Kokkinos et al. 2022).
 </Figure>
 
 Across all three datasets, the fitness–survival relationship is **graded and continuous with no ceiling**: higher CRF is associated with lower mortality at every level, and the largest absolute gains accrue at the low-fitness end of the spectrum.
@@ -195,16 +141,8 @@ Across all three datasets, the fitness–survival relationship is **graded and c
 
 ### 3.1 Meta-Analysis: 42 Studies, CRF vs. VO₂ Max (2024)
 
-<Figure
-	src={fig7a}
-	srcDark={fig7aDark}
-	alt="Meta-Analysis 2024: Participants"
-	panels={[
-		{ src: fig7b, srcDark: fig7bDark, alt: 'Meta-Analysis 2024: Studies' },
-		{ src: fig7c, srcDark: fig7cDark, alt: 'Meta-Analysis 2024: Effect Size' },
-	]}
->
-Data imbalance between METs-based CRF and direct VO₂ max evidence. **a**: >99 % of outcome-linked participants contributed MET data; &lt;1 % contributed direct VO₂ max data. **b**: Study count comparison. **c**: Point estimates for cardiovascular mortality reduction are remarkably similar (≈14 %), confirming construct validity — but the evidence base rests almost entirely on METs (Swain and Franklin 2024; 234-fold more participants in the MET arm).
+<Figure src={fig3} srcDark={fig3Dark} alt="Meta-Analysis 2024: METs versus direct VO₂ max — participants, imbalance and effect size">
+Data imbalance between METs-based CRF and direct VO₂ max evidence. **a**: >99 % of outcome-linked participants contributed MET data; &lt;1 % contributed direct VO₂ max data. **b**: The same imbalance as a relative participant count — 234-fold more participants in the MET arm. **c**: Point estimates for cardiovascular mortality reduction are remarkably similar (≈14 %), confirming construct validity — but the evidence base rests almost entirely on METs (Swain and Franklin 2024).
 </Figure>
 
 > **Critical Finding: Data Imbalance**

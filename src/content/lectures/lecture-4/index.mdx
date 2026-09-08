@@ -8,7 +8,14 @@ examRelevant: false
 draft: false
 ---
 
+import Figure from '../../../components/Figure.astro';
 import Table from '../../../components/Table.astro';
+import fig1 from '../../../assets/intensity_01_bmr_body_mass.png';
+import fig1Dark from '../../../assets/intensity_01_bmr_body_mass_dark.png';
+import fig2 from '../../../assets/intensity_02_met_zones.png';
+import fig2Dark from '../../../assets/intensity_02_met_zones_dark.png';
+import fig3 from '../../../assets/intensity_03_lactate_thresholds.png';
+import fig3Dark from '../../../assets/intensity_03_lactate_thresholds_dark.png';
 import { Note } from '../../../components/MarginNote/index.js';
 
 
@@ -55,6 +62,10 @@ The **basal metabolic rate (BMR)** reflects the sum total of the body's many ave
 FAO/WHO/UNU equations for predicting basal metabolic rate by sex and age. To convert MJ·day⁻¹ to kcal·day⁻¹, multiply the result by 239.
 </Fragment>
 </Table>
+
+<Figure src={fig1} srcDark={fig1Dark} alt="Predicted basal metabolic rate as a function of body mass">
+The FAO/WHO/UNU equations plotted for the two adult age bands. BMR rises linearly with body mass, and the sex difference is larger than the age difference across the whole range. Worked example: a 30-year-old man of 75 kg is predicted at 7.62 MJ·day⁻¹ ≈ 1821 kcal·day⁻¹ (FAO/WHO/UNU 2004).
+</Figure>
 
 ### 1.2 Basal vs. Resting Metabolic Rate
 
@@ -230,19 +241,9 @@ The diffusion capacity for adults at rest is normally 30 mL·min⁻¹·mmHg⁻¹
 
 The metabolic equivalent (MET) is an index of energy expenditure. One MET is the rate of EE while sitting at rest; by scientific convention, 1 MET = 3.5 mL·kg⁻¹·min⁻¹ O₂ uptake = 1 kcal·kg⁻¹·h⁻¹.
 
-<Table>
-
-| PA Level | MET range |
-|---|---|
-| Sedentary behaviour | 1.0–1.5 |
-| Light | 1.6–2.9 |
-| Moderate | 3.0–5.9 |
-| Vigorous | ≥ 6 |
-
-<Fragment slot="caption">
-Physical activity (PA) classification by MET range, after the Compendium of Physical Activities (Ainsworth et al. 2011).
-</Fragment>
-</Table>
+<Figure src={fig2} srcDark={fig2Dark} alt="MET zones for physical activity and the effect of an individual RMR correction">
+**Left**: physical activity classification by MET range, after the Compendium of Physical Activities (Ainsworth et al. 2011), with the corresponding ACSM V̇O₂ cut-points on the upper axis. **Right**: the same activities recalculated for an individual whose resting metabolic rate is 2.8 instead of the conventional 3.5 mL·kg⁻¹·min⁻¹ — every tabulated MET value rises by 25 %.
+</Figure>
 
 #### 2.8.2 What Is MET?
 
@@ -309,6 +310,10 @@ The anaerobic threshold represents the maximum lactate steady state — the meta
 
 ### 3.3 Threshold Concepts — T1 and T2
 
+<Figure src={fig3} srcDark={fig3Dark} alt="Blood lactate and ventilatory equivalents against work rate, with T1 and T2 marked">
+The same two thresholds read from two different signals on one work-rate axis. **Top**: blood lactate first rises above baseline at T1 and reaches the maximal lactate steady state at T2. **Bottom**: V̇E/V̇O₂ turns upward at the first ventilatory (gas-exchange) threshold and V̇E/V̇CO₂ follows at the respiratory compensation point. The shaded band between them is the transition zone in which metabolism is neither purely aerobic nor sustainably anaerobic (Faude et al. 2009; Meyer et al. 2005).
+</Figure>
+
 <Table>
 
 | Threshold | Concept | Description |
@@ -360,7 +365,7 @@ There is currently no consensus regarding which of the many commonly used method
 
 A joint American College of Sports Medicine (ACSM) Expert Statement and Exercise and Sports Science Australia (ESSA) Consensus Statement proposed a standardised five-level exercise intensity terminology — Very Low, Low, Moderate, High, and Very High — applicable to both cardiorespiratory and resistance exercise, together with five corresponding perception-of-effort descriptors: very easy, easy, somewhat hard, hard, and very hard (Bishop et al. 2025). The preferred method for prescribing cardiorespiratory exercise intensity is the direct measurement of metabolic thresholds and the work rate associated with the attainment of VO₂max during a graded exercise test (GXT), as this produces similar physiological stresses across individuals with different exercise capacities. For resistance exercise, the statement recommends prescribing intensity via repetitions in reserve (RIR) rather than percentage of one-repetition maximum (%1-RM), since RIR better captures both load and proximity to neuromuscular failure. RPE is recommended as a useful adjunct method to help monitor both cardiorespiratory and resistance exercise, particularly when laboratory-based assessments are not available (Bishop et al. 2025).
 
-Tables 7 and 8 summarise the current descriptors and criteria from leading organisations, while Table 9 presents the proposed standardised classifications anchored to metabolic thresholds, RIR, and RPE scales.
+Tables 6 and 7 summarise the current descriptors and criteria from leading organisations, while Table 8 presents the proposed standardised classifications anchored to metabolic thresholds, RIR, and RPE scales.
 
 <Table>
 

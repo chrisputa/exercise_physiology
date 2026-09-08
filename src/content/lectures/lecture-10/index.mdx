@@ -6,10 +6,12 @@ draft: false
 ---
 
 import Figure from '../../../components/Figure.astro';
-import fig1 from '../../../assets/fig1_daily_protein.png';
-import fig1Dark from '../../../assets/generated/fig1_daily_protein_dark.png';
-import fig2 from '../../../assets/fig2_training_vs_protein.png';
-import fig2Dark from '../../../assets/generated/fig2_training_vs_protein_dark.png';
+import fig1 from '../../../assets/protein_01_intake_ranges.png';
+import fig1Dark from '../../../assets/protein_01_intake_ranges_dark.png';
+import fig2 from '../../../assets/protein_03_training_vs_protein.png';
+import fig2Dark from '../../../assets/protein_03_training_vs_protein_dark.png';
+import fig3 from '../../../assets/protein_02_dose_response.png';
+import fig3Dark from '../../../assets/protein_02_dose_response_dark.png';
 import { Note } from '../../../components/MarginNote/index.js';
 
 
@@ -50,12 +52,12 @@ Recommendations for protein intake are among the most common and detailed nutrie
 - **Post-exercise:** 0.4 g/kg (combined with 0.8 g/kg carbohydrates for targeted muscle glycogen recovery)
 - **Injury:** 1.6–2.0 g/kg/day (depending on the type of injury)
 
-<Figure src={fig1} srcDark={fig1Dark} alt="Daily Protein">
-Recommended daily protein intake by body weight and exercise type. Puta C (2025), based on Egan (2016); Delany et al. (2025); Jäger et al. (2017).
+<Figure src={fig1} srcDark={fig1Dark} alt="Daily protein intake ranges by population and athletic discipline">
+Recommended daily protein intake by population and exercise type, against the general-population RDA of 0.8 g·kg⁻¹·d⁻¹ and the evidence-based ceiling of 1.6 g·kg⁻¹·d⁻¹. The shaded region above 1.5 g·kg⁻¹·d⁻¹ marks the range in which leucine-driven mTORC1 activation in macrophages has been described. Puta C (2025), based on Egan (2016); Delany et al. (2025); Jäger et al. (2017).
 </Figure>
 
 <Figure src={fig2} srcDark={fig2Dark} alt="Training vs Protein Effects">
-What is the principal driver for building muscle mass and strength? The training stimulus, not protein intake per se. Puta C (2025), based on Egan (2016); Delany et al. (2025); Jäger et al. (2017).
+What is the principal driver for building muscle mass and strength? The training stimulus, not protein intake per se. Without a training stimulus, extra protein moves lean mass and maximal strength barely at all; with it, the increment from extra protein is real but small next to the increment from training. Puta C (2025), based on Egan (2016); Delany et al. (2025); Jäger et al. (2017).
 </Figure>
 
 ### One-Minute-Paper Topics
@@ -102,6 +104,10 @@ What is the principal driver for building muscle mass and strength? The training
 A high protein intake exceeding 1.5 g/kg/day has been shown to activate the mammalian target of rapamycin (mTOR) in macrophages (via elevated leucine levels), thereby promoting atherosclerosis progression through inhibition of damaged mitochondrial clearance (mitophagy) (Zhang et al. 2024; Mittendorfer et al. 2020). This suggests that while protein is essential for recovery and performance, excessive intake may exert adverse effects on cardio-metabolic processes.
 
 Notably, the identified threshold of dietary leucine-activated mTORC1 signaling in macrophages appears to coincide with the maximal stimulatory effect of dietary protein on muscle protein synthesis at approximately 25–30 g per meal. This implies a complex, integrated metabolic network of multi-organ physiological functions that ensures optimal health (Zhang et al. 2024). Therefore, while protein is of critical importance for athletes, careful consideration of intake is necessary to balance performance benefits against potential health risks.
+
+<Figure src={fig3} srcDark={fig3Dark} alt="Muscle protein synthesis and macrophage mTORC1 signalling against protein per meal">
+Two dose–response curves on one axis. Muscle protein synthesis saturates at roughly 25–30 g of protein per meal — beyond the plateau, further protein in the same meal adds no measurable anabolic response. Leucine-driven mTORC1 signalling in macrophages rises steeply across the same dose range, so the point at which extra protein stops helping muscle is also the point at which it begins to act elsewhere (Zhang et al. 2024).
+</Figure>
 
 ### 2.2 The Evidence-Based Ceiling
 
