@@ -1,228 +1,231 @@
 ---
-title: Cardiorespiratory Fitness measured in metabolic equivalent task
-description: Evidence-based comparison of cardiorespiratory fitness (CRF) measured in METs versus VO₂ max, based on Eric Topol's *Ground Truths* analysis and reconstructed figures from major cohort studies.
-  Demonstrates that CRF/METs underpins >99% of the outcome literature linking fitness to all-cause and cardiovascular mortality, drawing on the JAMA 2009 meta-analysis (n=102,980), the Cleveland Clinic cohort (n=122,007), and the Veterans Affairs cohort (n=750,302).
-  Critically evaluates consumer wearable VO₂ max estimates (7–16% MAPE) and the data imbalance between METs-based and direct VO₂ max evidence, concluding that METs are clinically superior for most healthy adults.
-examRelevant: false
+title: (Pre)Diabetes as Focus Disease – Inactivity and Low-Grade Inflammation
+description: Frames prediabetes as an active cardiometabolic risk state rather than a benign waiting period, emphasising physical inactivity as a primary driver through reduced GLUT4 translocation, visceral adiposity and low-grade inflammation. Introduces continuous glucose monitoring as a teaching tool for illustrating postprandial dynamics, counter-regulatory hormone responses and the acute glucose-lowering effect of exercise. Explains the dual insulin- and contraction-mediated GLUT4 pathways, highlighting that the contraction-mediated route remains functional in insulin-resistant muscle and forms the molecular rationale for exercise prescription. Distinguishes obese phenotypes by visceral fat and insulin sensitivity rather than BMI alone, and presents waist circumference as a practical frontline diagnostic for cardiometabolic risk stratification.
 draft: false
+tags:
+  - Lecture
 ---
 
-import Figure from '../../../components/Figure.astro';
 import Table from '../../../components/Table.astro';
-import fig1 from '../../../assets/fitness_01_met_mortality.png';
-import fig1Dark from '../../../assets/fitness_01_met_mortality_dark.png';
-import fig2 from '../../../assets/fitness_02_mortality_cohorts.png';
-import fig2Dark from '../../../assets/fitness_02_mortality_cohorts_dark.png';
-import fig3 from '../../../assets/fitness_03_met_vs_vo2max.png';
-import fig3Dark from '../../../assets/fitness_03_met_vs_vo2max_dark.png';
 import { Note } from '../../../components/MarginNote/index.js';
 
 
 ## Table of Contents
 
-1. [How Fitness Is Measured — and the Conflation Problem](#1-how-fitness-is-measured--and-the-conflation-problem)
-2. [The Evidence — Cardiorespiratory Fitness and Mortality](#2-the-evidence--cardiorespiratory-fitness-and-mortality)
-3. [The VO₂ Max Verdict and Practical Recommendations](#3-the-vo-max-verdict-and-practical-recommendations)
+1. [Learning Objectives and Clinical Framing](#1-learning-objectives-and-clinical-framing)
+2. [Continuous Glucose Monitoring – Reading a 24-Hour Profile](#2-continuous-glucose-monitoring--reading-a-24-hour-profile)
+3. [Fact Sheets on Exercise, Insulin and GLUT4](#3-fact-sheets-on-exercise-insulin-and-glut4)
+4. [Energy Balance and Obese Phenotypes](#4-energy-balance-and-obese-phenotypes)
+5. [Anthropometric Diagnostics – Waist Circumference](#5-anthropometric-diagnostics--waist-circumference)
+6. [Synthesis – Inactivity as a Driver of Prediabetes](#6-synthesis--inactivity-as-a-driver-of-prediabetes)
 
 ---
 
-## 1 How Fitness Is Measured — and the Conflation Problem
+## 1 Learning Objectives and Clinical Framing
 
-<Note>
-**Learning objectives:**
-- The conflation of VO₂ max with cardiorespiratory fitness (CRF), and why it matters clinically
-- CRF: definition, graded-exercise/MET measurement, and its status as a clinical vital sign
-- Direct laboratory VO₂ max versus wearable estimation, and the accuracy gap between them
-</Note>
+### Learning Objectives (Lernziele)
 
-### 1.1 Introduction and Clinical Context
+By the end of this lecture, students will be able to:
 
-**Clinical takeaway.** Cardiorespiratory fitness (CRF), measured in metabolic equivalents of task (METs) on a treadmill or bicycle ergometer, is the evidence-based metric underpinning more than 99 % of the outcome literature linking physical fitness to all-cause and cardiovascular mortality. VO₂ max — especially as estimated by consumer wearables — is poorly validated, frequently inaccurate, and conflated with CRF in popular health narratives. METs are free, universally accessible, and clinically superior for most healthy adults.
+1. Identify **(pre)diabetes as a focus disease** in contemporary sports medicine.
+2. Explain how **physical inactivity** is a primary cause of **prediabetes and low-grade inflammation**.
+3. Interpret a continuous glucose monitoring (CGM) profile in terms of hyper- and hypoglycaemia, the responsible counter-regulatory hormones, and the modifying effects of physical activity.
+4. Distinguish obese phenotypes by anthropometric and metabolic criteria.
+5. Place prediabetes within the broader frame of cardiometabolic disease.
 
-Wearable fitness devices increasingly report VO₂ max values to consumers, prompting anxiety and clinical inquiries when those values decline. Topol (2026) describes two recent patients who contacted him concerned about a falling VO₂ max displayed by their smartwatches — a scenario that illustrates a far broader problem: the widespread conflation of **VO₂ max** (maximal oxygen uptake) with **cardiorespiratory fitness (CRF)**, two related but methodologically and evidentially distinct constructs.
+### Why Prediabetes Matters
 
-This lecture distils that critical analysis into an evidence-based framework covering: (1) how each metric is defined and measured; (2) the strength and size of the supporting outcome datasets; (3) the origin and consequences of conflation in popular media; and (4) practical recommendations grounded in peer-reviewed evidence. The figures throughout are reconstructed from published data; they are not reproductions of the original article graphics.
+Prediabetes — defined by elevated fasting glucose, impaired glucose tolerance or elevated HbA1c below the diabetes threshold — is **not a benign waiting state**. It is associated with elevated cardiovascular risk, accelerated micro- and macrovascular damage, and a high annual conversion rate to type 2 diabetes [1, 2]. Crucially, conversion is **largely modifiable by physical activity, nutrition and weight loss** [3, 4].
 
-### 1.2 Cardiorespiratory Fitness (CRF)
-
-CRF reflects the integrated capacity of the cardiovascular, pulmonary, and musculoskeletal systems to sustain aerobic exercise (Ross et al. 2016). It is assessed via graded exercise testing and expressed as metabolic equivalents of task (METs), where 1 MET equals the resting metabolic rate. CRF can be assessed on any treadmill or ergometer without a specialist, whereas VO₂ max requires a calibrated metabolic cart, an exhaled-gas mask, and trained staff. The MET intensity bands and the heart-rate estimate MET ≈ 0.05 × HR_bpm + 2 are treated in [Lecture 3](/lectures/lecture-3), §2.8.
-
-The American Heart Association classifies CRF as a **clinical vital sign** (Ross et al. 2016).
-
-### 1.3 VO₂ Max — Direct Laboratory Measurement
-
-Maximal oxygen uptake (VO₂ max) is the ceiling of aerobic power, determined via *direct gas exchange* during a ramp-protocol exercise test to volitional exhaustion (Topol 2026). Requirements: calibrated metabolic cart, tight mask, and trained exercise physiologist. Cost: ~$150 per test. Result expressed in mL O₂ · kg⁻¹ · min⁻¹. These requirements make routine clinical screening impractical.
-
-### 1.4 VO₂ Max — Wearable Estimation
-
-Consumer smartwatches impute VO₂ max from population-based algorithms (heart rate + GPS/accelerometry), not gas exchange (Tedesco et al. 2025). Accuracy is poor: mean absolute percentage error (MAPE) is typically 7–16 %.
-
-Because wearables estimate rather than measure VO₂ max, their values carry directional biases and extrinsic confounders that make them unreliable for clinical or lifestyle decisions.
-
-### One-Minute-Paper Topics
-<Note>
-  A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
-</Note>
-- The lecture's core argument is that METs-based CRF — not VO₂max — is the evidence-based metric for linking fitness to mortality outcomes. Summarise this argument in three sentences suitable for a patient consultation.
-- Define CRF in terms of the integrated capacity it reflects. How is it measured clinically, how is it expressed, and why does the American Heart Association classify it as a "clinical vital sign"?
-- What equipment, personnel, and procedural conditions are needed for a valid direct VO₂max measurement? Why do these requirements make routine clinical screening impractical?
-- Consumer smartwatches estimate VO₂max from HR and GPS/accelerometry rather than direct gas exchange. What is MAPE (mean absolute percentage error), and what is the typical MAPE range for wearable VO₂max estimates (7–16%)? What are the clinical consequences of this inaccuracy?
-- Using the formula MET ≈ 0.05 × HR_bpm + 2, estimate the MET value for a heart rate of 120 bpm and 160 bpm. To which intensity categories (light, moderate, vigorous) do these values correspond?
-- Outline three specific reasons why consumer-wearable VO₂max estimates should not be used for clinical or lifestyle decision-making. Relate your answer to both technical and epistemological limitations.
-- The American Heart Association proposed CRF as a clinical vital sign. What are the implications for routine care? Should every GP appointment include a fitness assessment, and how could this be implemented practically?
-
-### Key References
-- Ross R, Blair SN, Arena R, et al. *Importance of assessing cardiorespiratory fitness in clinical practice: a case for fitness as a clinical vital sign — a scientific statement from the American Heart Association.* Circulation 134 (24), 2016: e653–e699.
-- Tedesco S, Sica M, Ancillao A, et al. *Accuracy of consumer-grade wearables for VO₂ max estimation: a systematic review.* Electronics 14 (15), 2025: 3081.
-- Topol E. *The flawed VO₂ max craze: conflation with cardiorespiratory fitness.* Ground Truths (Substack), 23 February 2026.
+The lecture takes the position — following Stefan and colleagues [2] — that prediabetes warrants active management rather than expectant observation, particularly in the presence of additional cardiometabolic risk factors.
 
 ---
 
-## 2 The Evidence — Cardiorespiratory Fitness and Mortality
+## 2 Continuous Glucose Monitoring – Reading a 24-Hour Profile
 
-<Note>
-**Learning objectives:**
-- The Kodama (2009) meta-analysis: each 1-MET increment and mortality risk
-- The Cleveland Clinic cohort: the 1.41 hazard ratio, the >5-fold gradient, and the sex difference
-- The Veterans Affairs cohort and the graded, no-ceiling dose–response between fitness and survival
-</Note>
+### A Practical Teaching Tool
 
-### 2.1 Meta-Analysis: 33 Studies, 102,980 Participants (JAMA 2009)
+Continuous glucose monitoring devices such as the **FreeStyle Libre 3** produce a 14-day, near-continuous plasma-glucose surrogate. For teaching, a single 24-hour trace is sufficient to anchor four phenomena:
 
-<Figure src={fig1} srcDark={fig1Dark} alt="CRF and Mortality Risk — JAMA 2009">
-Cardiorespiratory fitness and mortality risk. Each 1-MET increment in exercise capacity is associated with a **14–15 % reduction in all-cause mortality**, plotted here relative to the 7.9-MET reference. Shaded band = 95 % CI. Meta-analysis of 33 studies (n = 102,980; Kodama et al. 2009).
-</Figure>
+1. **Post-prandial hyperglycaemic spikes** following high-glycaemic-index meals.
+2. **Reactive hypoglycaemic troughs** in some individuals following large insulin responses.
+3. **The exercise effect** — an acute or post-acute reduction in glucose excursions following physical activity.
+4. **Diurnal patterns** — typically lower glucose excursions in morning than evening (cf. Lecture 2).
 
-The landmark meta-analysis by Kodama et al. (2009) established METs as a potent and graded prognostic variable for all-cause and cardiovascular mortality.
-
-### 2.2 Cleveland Clinic Cohort: 122,007 Patients (JAMA Network Open 2018)
-
-> **Cleveland Clinic Key Results**
->
-> - Five MET strata: Low, Below-Average, Above-Average, High, Elite.
-> - HR (above-average vs. below-average): **1.41** — equivalent to **smoking or diabetes**.
-> - HR (Low vs. Elite): **>5-fold**.
-> - Protective effect **more pronounced in women** at every stratum.
-> - **No ceiling mortality risk** even at elite fitness.
-
-### 2.3 Veterans Affairs Cohort: 750,000+ Veterans (Kokkinos et al. 2022)
-
-<Figure src={fig2} srcDark={fig2Dark} alt="All-cause mortality by fitness category — Cleveland Clinic and Veterans Affairs cohorts">
-All-cause mortality hazard ratios by fitness category on a common logarithmic axis. **Left**: Cleveland Clinic cohort (n = 122,007); the above-average vs. below-average hazard ratio of 1.41 equates to the excess mortality risk of **smoking or diabetes**, and the Low-to-Elite gradient exceeds 5-fold (Mandsager et al. 2018). **Right**: US Veterans Affairs cohort (n = 750,302; mean follow-up 10.2 years) with a ≈4-fold Very-Low to Very-High gradient and no ceiling risk at the top; error bars = 95 % CI (Kokkinos et al. 2022).
-</Figure>
-
-Across all three datasets, the fitness–survival relationship is **graded and continuous with no ceiling**: higher CRF is associated with lower mortality at every level, and the largest absolute gains accrue at the low-fitness end of the spectrum.
-
-### One-Minute-Paper Topics
-<Note>
-  A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
-</Note>
-- The Kodama et al. meta-analysis (n = 102,980) established a graded inverse relationship between CRF and mortality. State the key quantitative finding: what does each 1-MET increment in exercise capacity correspond to in terms of mortality risk reduction?
-- The Cleveland Clinic study (n = 122,007) found a hazard ratio of 1.41 for all-cause mortality when comparing above-average vs. below-average fitness categories. To which two well-known risk factors is this mortality excess equivalent? Is there a ceiling effect at high fitness levels?
-- The Cleveland Clinic data showed that the protective effect of fitness was more pronounced in women than in men at every fitness stratum. Why might this sex difference exist, and what are the practical implications for exercise prescription in women?
-- The Kokkinos et al. cohort (n = 750,302; mean follow-up 10.2 years) reported approximately a 4-fold mortality gradient from Very-Low to Very-High fitness. What does this gradient tell us about the dose–response between fitness and survival?
-- Patients recovering from Long COVID or ME/CFS often show severely reduced exercise capacity (&lt;5 METs). Using the Cleveland Clinic mortality gradient data, explain the clinical urgency of safe, individualised CRF rehabilitation in these populations.
-
-### Key References
-- Kodama S, Saito K, Tanaka S, et al. *Cardiorespiratory fitness as a quantitative predictor of all-cause and cardiovascular mortality in healthy men and women: a meta-analysis.* JAMA 301 (19), 2009: 2024–2035.
-- Kokkinos P, Faselis C, Samuel IBH, et al. *Cardiorespiratory fitness and mortality risk across the spectra of age, race, and sex.* J Am Coll Cardiol 80 (6), 2022: 598–609.
-- Mandsager K, Harb S, Cremer P, et al. *Association of cardiorespiratory fitness with long-term mortality among adults undergoing exercise treadmill testing.* JAMA Netw Open 1 (6), 2018: e183605.
-
----
-
-## 3 The VO₂ Max Verdict and Practical Recommendations
-
-<Note>
-**Learning objectives:**
-- The 2024 CRF-vs-VO₂ max meta-analysis and the 234-fold participant imbalance
-- The similar ~14 % effect as construct validity — and why it does not license wearable VO₂ max
-- Metric-by-metric recommendations, and the clinical niches where direct VO₂ max retains value
-</Note>
-
-### 3.1 Meta-Analysis: 42 Studies, CRF vs. VO₂ Max (2024)
-
-<Figure src={fig3} srcDark={fig3Dark} alt="Meta-Analysis 2024: METs versus direct VO₂ max — participants, imbalance and effect size">
-Data imbalance between METs-based CRF and direct VO₂ max evidence. **a**: >99 % of outcome-linked participants contributed MET data; &lt;1 % contributed direct VO₂ max data. **b**: The same imbalance as a relative participant count — 234-fold more participants in the MET arm. **c**: Point estimates for cardiovascular mortality reduction are remarkably similar (≈14 %), confirming construct validity — but the evidence base rests almost entirely on METs (Swain and Franklin 2024).
-</Figure>
-
-> **Critical Finding: Data Imbalance**
->
-> **234-fold more participants** contributed data via METs than via direct VO₂ max measurement. Over 99 % of all evidence linking fitness to mortality derives from **METs-based CRF** — not VO₂ max.
-
-The evidence base is profoundly imbalanced. The 2024 meta-analysis by Swain and Franklin (2024), comparing CRF and VO₂ max across 42 studies, revealed that 234-fold more study participants contributed METs-based CRF data than direct VO₂ max data. This asymmetry reflects both the practical accessibility of METs testing and the specialized requirements for direct VO₂ max measurement. The near-identical ≈14 % effect estimates confirm **construct validity** — the two metrics capture the same underlying aerobic capacity — but this similarity does *not* justify replacing an accessible, well-evidenced measure (METs) with an inaccurate wearable estimate of the other.
-
-### 3.2 Specific Clinical Applications of VO₂ Max
-
-In selected clinical populations, direct VO₂ max measurement has demonstrated utility: in heart failure for risk stratification and transplant listing; in pulmonary hypertension as a prognostic marker (Topol 2026); and in pre-operative evaluation for predicting post-surgical cardiopulmonary complications (Older et al. 1993).
-
-### 3.3 Practical Recommendations
+### Hormonal Regulation of Blood Glucose
 
 <Table>
 
-| **Metric** | **Recommendation** |
-|---|---|
-| **METs (CRF)** | **Preferred for most healthy adults.** Free, universally accessible, best studied for all-cause and cardiovascular mortality outcomes (>99 % of evidence base). Use treadmill/bicycle speed-incline charts, Bruce protocol, or HR formula. |
-| **VO₂ Max (lab)** | Reserve for: (a) high-performance athletes; (b) heart failure/pulmonary hypertension risk stratification; (c) pre-operative evaluation. |
-| **Wearable VO₂ Max** | **Not recommended** for clinical or lifestyle decision-making. MAPE 7–16 %, directional biases, and extrinsic confounders render it unreliable. |
-| **Strength & Balance** | Include alongside CRF. Combined aerobic + strength training is superior to aerobic training alone for mortality reduction (Kim et al. 2023). |
+| Hormone | Source | Effect on glucose | Stimulus |
+| --- | --- | --- | --- |
+| Insulin | β-cells, pancreas | ↓ blood glucose; promotes uptake and storage | Hyperglycaemia |
+| Amylin | β-cells | ↓ gastric emptying, ↓ glucagon | Postprandial |
+| GLP-1 | L-cells, gut | ↑ insulin, ↓ glucagon, ↓ gastric emptying | Postprandial |
+| GIP | K-cells, gut | ↑ insulin | Postprandial |
+| Glucagon | α-cells, pancreas | ↑ blood glucose; glycogenolysis, gluconeogenesis | Hypoglycaemia |
+| Cortisol | Adrenal cortex | ↑ blood glucose; gluconeogenesis, insulin resistance | Stress, low glucose |
+| Catecholamines | Adrenal medulla, SNS | ↑ blood glucose; glycogenolysis | Acute stress, exercise |
+| Somatostatin | δ-cells | ↓ both insulin and glucagon | Local pancreatic |
 
 <Fragment slot="caption">
-Evidence-based fitness-monitoring recommendations by metric.
+Major hormones regulating blood glucose. Adapted from clinical physiology references and integrated with the Fact-Sheets used in the Planetary Health OSCE 2024 [5].
 </Fragment>
 </Table>
 
-Topol's bottom line: *"Perhaps the better strategy is to be as physically active as possible and **not worry about any metric**!"* (Topol 2026). The emphasis should be on building a comprehensive, enjoyable activity habit rather than chasing a single number from a device whose accuracy is demonstrably limited.
+### A Teaching Exercise
 
-### 3.4 Summary Comparison: CRF vs. VO₂ Max
+Using a CGM trace, students are asked to:
+
+* annotate breakfast, lunch and dinner spikes;
+* identify any reactive hypoglycaemia;
+* mark the time and intensity of any documented physical activity;
+* describe expected effects on insulin, glucagon, catecholamines and cortisol at each annotated time point.
+
+---
+
+## 3 Fact Sheets on Exercise, Insulin and GLUT4
+
+### Fact Sheet 1 — Exercise, Insulin and GLUT4
+
+**Mechanism of GLUT4 activation.** GLUT4 is the major insulin-responsive glucose transporter in skeletal muscle and adipose tissue. Its insertion into the plasma membrane is triggered by two **independent** signalling routes [6]:
+
+1. **Insulin-mediated**: insulin → IRS-1 → PI3K → Akt → AS160 phosphorylation → GLUT4 vesicle exocytosis.
+2. **Contraction-mediated**: muscle contraction → AMPK activation, calcium signalling, mechanical strain → GLUT4 vesicle exocytosis.
+
+The clinical importance of the second route cannot be overstated: in **insulin-resistant** muscle, the contraction-mediated pathway remains largely **functional**. This is the molecular basis for prescribing exercise in prediabetes and type 2 diabetes.
+
+### Fact Sheet 2 — Exercise and Insulin (Historical)
+
+Lawrence (1926) first documented that **exercise increases insulin action** in diabetic patients [7]. The empirical observation predated the molecular explanation by seven decades. Modern data confirm:
+
+* Acute exercise: insulin sensitivity rises for up to **48 hours** after a single moderate-to-vigorous bout.
+* Chronic exercise: a structured training programme increases peripheral insulin sensitivity and reduces HbA1c by clinically meaningful margins [3].
+
+### Fact Sheet 3 — Energy Balance
+
+Total daily energy expenditure (TDEE) is the sum of:
+
+* **Basal metabolic rate (BMR)**,
+* **Thermic effect of food (TEF)**,
+* **Activity energy expenditure (AEE)**,
+* **Non-exercise activity thermogenesis (NEAT)**.
+
+Of these, **AEE and NEAT** are the most modifiable. Habitually sedentary individuals can double daily AEE through modest behavioural changes — climbing stairs, walking meetings, and the "exercise snacks" addressed in Lecture 6.
+
+---
+
+## 4 Energy Balance and Obese Phenotypes
+
+### Fact Sheet 4 / 5 — Obese Phenotypes and Energy Balance
+
+Obesity is **not a single condition**. Metabolic obesity in people with normal body weight (MONW), metabolically healthy obesity (MHO), and metabolically unhealthy obesity (MUO) differ in clinically meaningful ways [8].
 
 <Table>
 
-| **Dimension** | **CRF / METs** | **VO₂ Max** |
-|---|---|---|
-| Measurement | Treadmill/bike; HR formula | Direct gas exchange in metabolic lab |
-| Cost | Free | ≈$150/test |
-| Accessibility | Universal | Specialist lab only |
-| Wearable estimate | Indirect (step count, HR) | Algorithmic imputation (MAPE 7–16 %) |
-| Evidence base | >750,000 per large study | &lt;1,300 per study (direct measure) |
-| Fraction of outcome data | >99 % | &lt;1 % |
-| AHA recommendation | Clinical vital sign | Niche clinical/sports use |
-| Target population | All healthy adults | Elite athletes; HF/PH patients; pre-op |
-| AI platform misuse | Rare | Frequent |
+| Phenotype | BMI | Visceral fat | Insulin sensitivity | Cardiometabolic risk |
+| --- | --- | --- | --- | --- |
+| Lean, metabolically healthy | &lt;25 | Low | Preserved | Low |
+| MONW (normal-weight obesity) | &lt;25 | Elevated | Reduced | Elevated |
+| Metabolically healthy obesity (MHO) | ≥30 | Variable | Largely preserved | Intermediate |
+| Metabolically unhealthy obesity (MUO) | ≥30 | High | Reduced | High |
 
 <Fragment slot="caption">
-Head-to-head comparison of CRF/METs and VO₂ max across measurement, cost, evidence base, and application.
+Phenotypes of obesity by anthropometric and metabolic criteria. Adapted from Pluta et al. [8].
 </Fragment>
 </Table>
 
-### One-Minute-Paper Topics
-<Note>
-  A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
-</Note>
-- The 2024 meta-analysis revealed that 234-fold more participants contributed data via METs than via direct VO₂max measurement. Why does this imbalance matter for evidence-based practice, and what does it imply for the popular "VO₂max craze"?
-- Both METs and direct VO₂max show similar cardiovascular mortality reduction (~14%). What does this tell us about construct validity? And why does the similarity NOT justify replacing METs with wearable VO₂max estimates in clinical practice?
-- In which three clinical populations does direct VO₂max measurement retain value according to the lecture (heart failure, pulmonary hypertension, pre-operative evaluation)? For each, state the specific clinical question it addresses.
-- The summary table recommends including strength and balance alongside CRF. What is the evidence for combined aerobic + strength training vs. aerobic training alone for mortality reduction? Name one relevant study cited.
-- Using only a stopwatch and a standard staircase, how could a clinician estimate a patient's METs without laboratory equipment?
-- Topol concludes: "Perhaps the better strategy is to be as physically active as possible and not worry about any metric!" Do you agree with this statement from a public health communication standpoint? What are its advantages and risks?
-- For each of the following scenarios, which fitness metric (METs, direct VO₂max, wearable VO₂max) would you recommend and why: (a) population-level epidemiological study; (b) elite cyclist planning periodisation; (c) heart failure patient pre-transplant listing; (d) healthy middle-aged adult wanting to monitor personal fitness.
-- Topol describes a widespread conflation of VO₂max with CRF in popular health media. Give two concrete examples of how this conflation could harm individual health behaviour, and propose one public communication strategy to correct it.
+**Clinical implication.** Body mass alone is a poor proxy for cardiometabolic risk. Visceral adiposity, ectopic fat (especially hepatic, see Lecture 9), and physical fitness — particularly cardiorespiratory fitness (CRF) — together provide a more accurate stratification [3, 8].
 
-### Key References
-- Kim J, Park Y, Lee K, et al. *Combined cardiorespiratory fitness and muscle strength in relation to all-cause and cardiovascular mortality: findings from the UK Biobank.* Br J Sports Med, 2023 (Epub ahead of print).
-- Older P, Hall A, Hader R. *Cardiopulmonary exercise testing as a screening test for perioperative management of major surgery in the elderly.* Chest 104 (3), 1993: 701–704.
-- Swain DP, Franklin BA. *Comparison of cardiorespiratory fitness expressed in METs versus measured VO₂ max in the prediction of mortality.* J Sci Med Sport, 2024. (citation to be completed)
-- Topol E. *The flawed VO₂ max craze: conflation with cardiorespiratory fitness.* Ground Truths (Substack), 23 February 2026.
+---
+
+## 5 Anthropometric Diagnostics – Waist Circumference
+
+### Fact Sheet 6 — How to Measure Waist Circumference
+
+A reproducible procedure is essential for clinical use [9]:
+
+1. **Stand upright** with feet close together and arms at the side.
+2. **Locate** the bottom of the last rib and the top of the iliac crest.
+3. **Place the tape measure midway** between these two points and wrap it around the waist (typically just above the umbilicus).
+4. **Read at the end of normal expiration**, with the tape parallel to the floor and not compressing the skin.
+
+### Fact Sheet 7 — Interpretation of Waist Measurement
+
+Independent of weight, recommended waist circumference thresholds [9]:
+
+<Table>
+
+| Sex | Recommended | Substantially increased risk |
+| --- | --- | --- |
+| Men | < 94 cm (37 in) | ≥ 102 cm (40 in) |
+| Women | < 80 cm (31.5 in) | ≥ 88 cm (34.5 in) |
+
+<Fragment slot="caption">
+Waist circumference thresholds for cardiometabolic risk.
+</Fragment>
+</Table>
+
+**Practical insight.** A 10-minute consultation that includes blood pressure, waist circumference, fasting glucose, HbA1c and a brief activity history captures the bulk of modifiable cardiometabolic risk in primary care. Cardiorespiratory fitness should be added wherever feasible (see Lecture 5) [3].
+
+---
+
+## 6 Synthesis – Inactivity as a Driver of Prediabetes
+
+### The Causal Chain
+
+1. **Sedentary behaviour** reduces daily AEE and NEAT.
+2. Reduced muscle contraction lowers **GLUT4 translocation** through the contraction-mediated pathway.
+3. Visceral adiposity accumulates, with **chronic low-grade inflammation** (adipose macrophage infiltration, ↑ TNF-α, ↑ IL-6 in pro-inflammatory mode).
+4. Insulin sensitivity falls; fasting glucose and HbA1c drift upward.
+5. The clinical state of **prediabetes** emerges, often without symptoms.
+
+Each step is **reversible** by behavioural intervention, particularly by adding structured exercise and breaking up sedentary time [3, 4].
+
+### Bridging to the Next Lectures
+
+* **Lecture 5** — formalises the metabolic syndrome and explores cardiorespiratory fitness as a vital sign and the mechanisms of weight-loss-induced remission.
+* **Lecture 6** — develops "exercise snacks" as a practical entry point for the deconditioned, time-poor patient.
+* **Lecture 7** — translates these findings into the DDG-Praxisempfehlung framework for prescribing exercise in diabetes.
 
 ---
 
 ## References
 
-- Kim J, Park Y, Lee K, et al. *Combined cardiorespiratory fitness and muscle strength in relation to all-cause and cardiovascular mortality: findings from the UK Biobank.* Br J Sports Med, 2023 (Epub ahead of print).
-- Kodama S, Saito K, Tanaka S, et al. *Cardiorespiratory fitness as a quantitative predictor of all-cause and cardiovascular mortality in healthy men and women: a meta-analysis.* JAMA 301 (19), 2009: 2024–2035.
-- Kokkinos P, Faselis C, Samuel IBH, et al. *Cardiorespiratory fitness and mortality risk across the spectra of age, race, and sex.* J Am Coll Cardiol 80 (6), 2022: 598–609.
-- Mandsager K, Harb S, Cremer P, et al. *Association of cardiorespiratory fitness with long-term mortality among adults undergoing exercise treadmill testing.* JAMA Netw Open 1 (6), 2018: e183605.
-- Older P, Hall A, Hader R. *Cardiopulmonary exercise testing as a screening test for perioperative management of major surgery in the elderly.* Chest 104 (3), 1993: 701–704.
-- Ross R, Blair SN, Arena R, et al. *Importance of assessing cardiorespiratory fitness in clinical practice: a case for fitness as a clinical vital sign — a scientific statement from the American Heart Association.* Circulation 134 (24), 2016: e653–e699.
-- Swain DP, Franklin BA. *Comparison of cardiorespiratory fitness expressed in METs versus measured VO₂ max in the prediction of mortality.* J Sci Med Sport, 2024. (citation to be completed)
-- Tedesco S, Sica M, Ancillao A, et al. *Accuracy of consumer-grade wearables for VO₂ max estimation: a systematic review.* Electronics 14 (15), 2025: 3081.
-- Topol E. *The flawed VO₂ max craze: conflation with cardiorespiratory fitness.* Ground Truths (Substack), 23 February 2026.
+* [1] International Diabetes Federation. *IDF Diabetes Atlas, 10th Edition.* 2021. https://diabetesatlas.org/idfawp/resource-files/2021/07/IDF_Atlas_10th_Edition_2021.pdf
+* [2] Stefan N. Fragwürdige Erkrankung oder auf der Schwelle zum Diabetes — Ist Prädiabetes behandlungsbedürftig? *CARDIOVASC.* 2022;22(3).
+* [3] Ross R, Blair SN, Arena R, et al.; American Heart Association. Importance of assessing cardiorespiratory fitness in clinical practice: a case for fitness as a clinical vital sign — a Scientific Statement from the American Heart Association. *Circulation.* 2016;134(24):e653–e699.
+* [4] Sandforth A, von Schwartzenberg RJ, Arreola EV, et al. Mechanisms of weight loss-induced remission in people with prediabetes: a post-hoc analysis of the randomised, controlled, multicentre Prediabetes Lifestyle Intervention Study (PLIS). *Lancet Diabetes & Endocrinology.* 2023;11(11):798–810.
+* [5] Planetary Health OSCE 2024. *Sportmedizin Exercise Nutrition Immune Function — Fact Sheets.* Friedrich-Schiller-University Jena.
+* [6] Richter EA, Hargreaves M. Exercise, GLUT4, and skeletal muscle glucose uptake. *Physiological Reviews.* 2013;93(3):993–1017. doi:10.1152/physrev.00038.2012.
+* [7] Lawrence RD. The effect of exercise on insulin action in diabetes. *British Medical Journal.* 1926;1(3406):648–650. doi:10.1136/bmj.1.3406.648.
+* [8] Pluta W, Dudzińska W, Lubkowska A. Metabolic obesity in people with normal body weight (MONW) — review of diagnostic criteria. *International Journal of Environmental Research and Public Health.* 2022;19:624. doi:10.3390/ijerph19020624.
+* [9] World Health Organization. *Waist Circumference and Waist–Hip Ratio: Report of a WHO Expert Consultation.* Geneva; 2008.
+
+---
+
+## One-Minute-Paper Topics
+
+<Note>
+  A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
+</Note>
+
+1. Define prediabetes by the three accepted biochemical criteria. Why is the diagnosis often missed in primary care?
+2. Describe two independent signalling routes to GLUT4 translocation. Why does insulin resistance leave one of them largely intact?
+3. List the four components of TDEE and rank them by modifiability.
+4. Reproduce Table 1: name three glucose-lowering and three glucose-raising hormones with their sources.
+5. Walk through a 24-hour CGM trace and predict where exercise should be timed to flatten the largest excursion. Justify your timing with hormonal reasoning.
+6. Lawrence (1926) showed exercise increases insulin action. What was the molecular explanation, and how long did it take to emerge?
+7. Distinguish the four obese phenotypes in Table 2 by BMI, visceral fat, insulin sensitivity and risk profile.
+8. Why is BMI alone an inadequate measure of cardiometabolic risk? Provide two empirical examples.
+9. Describe the four steps of waist measurement. Where are the most common procedural errors?
+10. State the WHO-recommended waist thresholds for men and women and the thresholds for substantially increased risk.
+11. Name three lifestyle interventions that have been shown to reduce conversion from prediabetes to type 2 diabetes.
+12. Explain how visceral adiposity drives chronic low-grade inflammation. Which exerkines and cytokines are most directly involved (cf. Lecture 3)?
+13. What is *MONW*, and why is it clinically important? How would you screen for it?
+14. Why is cardiorespiratory fitness called a "clinical vital sign"? Which test would you use in routine practice?
+15. Sketch the five-step causal chain "sedentary behaviour → prediabetes" from Section 6 in five sentences.
+16. After an acute bout of moderate-intensity exercise, insulin sensitivity is elevated for how long? What is the practical implication for medication timing in type 2 diabetes?
+17. A patient presents with BMI 27, waist 102 cm, fasting glucose 102 mg/dL, and a sedentary office job. Outline a four-component lifestyle prescription.
+18. How would you operationalise "breaking up sedentary time" in a working day? Refer forward to the exercise-snacks concept (Lecture 6).
+19. Discuss the position of Stefan (2022) that prediabetes warrants active management. What are the strongest counter-arguments?
+20. Design a 12-week prevention programme for prediabetes that integrates nutrition, structured exercise and continuous glucose monitoring feedback.

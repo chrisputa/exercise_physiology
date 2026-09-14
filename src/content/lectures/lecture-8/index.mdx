@@ -1,704 +1,184 @@
 ---
-title: Long-Term Athlete Development - A Conceptual Model for Resistance Training Across Biological Maturation
-description: Resistance training should be implemented across all stages of athlete development, guided by biological age (PHV, Tanner staging) rather than chronological age. The Youth Physical Development model confirms that all fitness components are trainable at every maturational stage — with emphasis shifting from neuromotor coordination in childhood to complex, heavy, and sport-specific loading in adulthood. Free weight training produces the largest gains in muscular strength (ES = 2.97), while complex training (RT + plyometrics) yields the greatest improvements in power and athletic performance. Early specialisation, inadequate tendon-load monitoring, and neglected immunological stress recovery represent the central risks to safe and effective youth athletic development.
-examRelevant: false
+title: Sleep, the Circadian Clock and Exercise
+description: Frames sleep as an active, quantifiable performance reserve with dose-response effects on strength, glucose tolerance and immune function. Frames sleep as an active, quantifiable performance reserve with dose-response effects on strength, glucose tolerance and immune function. Situates the circadian system — from the SCN pacemaker to peripheral muscle oscillators — as a regulatory layer that exercise can entrain or disrupt depending on timing. Presents Saner et al.'s finding that acute sleep restriction impairs mitochondrial respiration, glucose tolerance and muscle protein synthesis. Demonstrates that a structured HIIE protocol can partially rescue these deficits, while emphasising that exercise serves as mitigation rather than a substitute for sleep, with distinct implications for athletes and clinical populations.
 draft: false
+tags:
+  - Lecture
 ---
 
-import { Note } from '../../../components/MarginNote/index.js';
 import Table from '../../../components/Table.astro';
+import { Note } from '../../../components/MarginNote/index.js';
 
 
 ## Table of Contents
 
-1. [Foundations — The LTAD Framework and Biological Maturation](#1-foundations--the-ltad-framework-and-biological-maturation)
-2. [Resistance Training Across the LTAD Stages](#2-resistance-training-across-the-ltad-stages)
-3. [The Evidence — Effect Sizes by Training Type](#3-the-evidence--effect-sizes-by-training-type)
-4. [Practice, Risks and Immunology](#4-practice-risks-and-immunology)
+1. [Sleep as a Performance Reserve in High-Performance Sport](#1-sleep-as-a-performance-reserve-in-high-performance-sport)
+2. [The Circadian Clock and Diurnal Physiology](#2-the-circadian-clock-and-diurnal-physiology)
+3. [Sleep Loss Impairs Glucose Tolerance and Mitochondrial Function](#3-sleep-loss-impairs-glucose-tolerance-and-mitochondrial-function)
+4. [HIIE as a Counter-Strategy to Sleep Loss](#4-hiie-as-a-counter-strategy-to-sleep-loss)
+5. [Translational Implications for the Athletic and Clinical Population](#5-translational-implications-for-the-athletic-and-clinical-population)
 
 ---
 
-## 1 Foundations — The LTAD Framework and Biological Maturation
+## 1 Sleep as a Performance Reserve in High-Performance Sport
 
-<Note>
-**Learning objectives:**
-- Why LTAD matters: demographic and secular decline, and the three goals of youth resistance training
-- The seven sequential LTAD stages, organised by maturation rather than chronological age
-- Biological age via PHV and Tanner staging, and the YPD model's rejection of fixed trainability windows
-</Note>
+In elite endurance and team sport, sleep is increasingly framed not as a passive recovery state but as an **active performance reserve**. The argument is empirical: a measurable share of week-to-week variation in performance, injury and infection susceptibility tracks with sleep duration and sleep quality [1, 2].
 
-### 1.1 Why LTAD Matters
+Three observations anchor this framing:
 
-The pool of youth with athletic potential available for long-term athlete development (LTAD) has been shrinking in western industrialised countries due to two converging forces: **demographic decline** and **secular deterioration of motor performance**. In Germany, for instance, the proportion of the population under 20 years of age fell from 30% in 1950 to 18% in 2013 (German Federal Statistical Office 2015). Alongside this demographic shift, a meta-analysis tracking aerobic endurance in 6–19-year-olds across developed countries between 1981 and 2000 documented a decline of approximately 0.43% per year — with the most pronounced losses in older age groups (Tomkinson et al. 2003). Comparable secular declines have been reported for muscular fitness: Dutch children aged 9–12 years showed reductions of 16–49% in muscular endurance over 26 years (Runhaar et al. 2010), and English children aged 10–11 years exhibited decreases of 6–27% across grip strength, sit-ups, and bent-arm hang over a 10-year period (Cohen et al. 2011).
+1. **Sleep restriction reduces strength, power, sprint performance and time-to-exhaustion** in within-subject crossover designs [1].
+2. **Sleep restriction impairs glucose tolerance and insulin sensitivity** within days, even in metabolically healthy young adults [3].
+3. **Sleep extension and disciplined sleep hygiene improve reaction time, mood and immune function** in athletes with documented sleep debt [2].
 
-These trends are not merely athletic concerns. Meta-analytic evidence links lower muscular fitness to increased total and central adiposity, cardiovascular disease risk, and metabolic risk factors in youth (Smith et al. 2014). Muscular fitness is therefore simultaneously a health marker and a performance prerequisite — which is precisely why **resistance training (RT)** occupies a central position across all stages of LTAD.
-
-Three overarching goals define why youth athletes should implement RT throughout their development (Granacher et al. 2016; Faigenbaum et al. 2016; Büsch et al. 2017):
-
-1. **Stimulating athletic development** — building the neuromuscular foundation for sport-specific performance
-2. **Tolerating training and competition demands** — reducing the risk of acute and overuse injuries
-3. **Inducing long-term health-promoting effects** — adaptations that are robust over time and track into adulthood (LTAD Stage 7: Active for Life)
-
-The present lecture introduces the conceptual model developed by Granacher et al. (2016) — with co-authorship by Christian Puta — for implementing RT during the stages of LTAD, grounded in the Youth Physical Development (YPD) model of Lloyd and Oliver (2012) and its 2018 update (Lloyd 2018).
-
-### 1.2 The LTAD Framework — Seven Sequential Stages
-
-The LTAD model (Balyi et al. 2013) provides a structured pathway from first movement experiences to lifelong athletic participation. It comprises **seven sequential stages** that consider **maturational level rather than chronological age** as the primary organising principle:
-
-<Table>
-
-| Stage | Name | Focus |
-|---|---|---|
-| 1 | **Active Start** | Foundational movement exploration; joy of physical activity |
-| 2 | **FUNdamentals** | ABC of athleticism: Agility, Balance, Coordination, Speed |
-| 3 | **Learn to Train** | Window of accelerated adaptation for motor skills; introduce RT with own bodyweight |
-| 4 | **Train to Train** | Consolidate fitness and skills; begin specialised RT as maturation advances |
-| 5 | **Train to Compete** | Sport-specific conditioning; high-intensity and high-volume RT |
-| 6 | **Train to Win** | Optimise performance for elite competition |
-| 7 | **Active for Life** | Maintain health benefits established throughout career |
-
-<Fragment slot="caption">
-The seven sequential stages of the Long-Term Athlete Development (LTAD) model (Balyi et al. 2013).
-</Fragment>
-</Table>
-
-The model explicitly challenges the myth that children must wait for puberty or a specific chronological age before engaging in structured RT. Current evidence is unambiguous: **when a child is old enough to participate in organised sport, they are old enough to participate in a form of resistance training** (Lloyd 2018; Behm et al. 2008).
-
-### 1.3 Biological Age vs. Chronological Age
-
-#### 1.3.1 Peak Height Velocity as the Central Reference Point
-
-A fundamental principle of LTAD is that **biological age** — not chronological age — governs trainability, adaptation, and injury risk. The primary biological anchor point is **peak height velocity (PHV)**: the moment of maximum linear growth during the pubertal growth spurt.
-
-PHV can be estimated from **anthropometric measurements** (sitting and standing height), allowing practitioners to classify athletes as:
-
-- **Pre-PHV** (years before the growth spurt) — predominantly neural adaptations dominate
-- **Mid-PHV / Pubertal** (during the growth spurt) — combined neural and hormonal adaptations; tissue plasticity is high
-- **Post-PHV** — hormonal, neural, muscular, tendinous, and skeletal adaptations are all accessible
-
-The distinction between early, typical, and late developers within the same chronological age cohort is substantial. Two 14-year-olds may differ by 3–4 years in biological age, with entirely different adaptive capacities, injury risk profiles, and appropriate training loads. Practitioners must therefore **monitor growth rates and training loads** concurrently (Oliver 2018).
-
-#### 1.3.2 Tanner Staging and Training Adaptations
-
-Tanner staging (I–V) provides a clinical measure of pubertal status. Its relationship to LTAD stages and dominant training adaptations is summarised below:
-
-<Table>
-
-| Developmental Period | Tanner Stage | Maturity | Dominant Training Adaptation |
-|---|---|---|---|
-| Early Childhood | I | Pre-pubertal (pre-PHV) | **Neuronal** |
-| Late Childhood | I–II | Pre-pubertal (pre-PHV) | **Neuronal** |
-| Adolescence | III–IV | Pubertal (mid-PHV) | **Hormonal + Neuronal + Muscular + Tendinous** |
-| Adulthood | V | Post-pubertal (post-PHV) | **Hormonal + Neuronal + Muscular + Tendinous + Skeletal** |
-
-<Fragment slot="caption">
-Tanner stage, maturity, and dominant training adaptation across the developmental periods of LTAD.
-</Fragment>
-</Table>
-
-The transition from exclusively neuronal to multi-system adaptation is not abrupt. The **pre-pubertal phase** corresponds to the period of greatest neuroplasticity in the central nervous system (CNS), making it an ideal window for acquiring diverse movement skills, developing coordination, and establishing motor patterns that will underpin later athletic performance (Lloyd 2018; Gogtay et al. 2004). Loading during this phase should prioritise **technique, movement quality, and neuromuscular coordination** rather than maximal force production.
-
-### 1.4 The Youth Physical Development Model (YPD)
-
-The **Youth Physical Development model** (Lloyd and Oliver 2012; updated in Lloyd 2018) was developed to integrate current scientific understanding of training effectiveness in youth with practical programming across all stages of biological maturation. In contrast to earlier LTAD models that suggested "windows of optimal trainability" at specific ages, the YPD model asserts that **all components of fitness can be trained at all stages of development**, with emphasis and methods appropriately adjusted.
-
-#### 1.4.1 Physical Qualities Across Maturation
-
-The YPD model maps the following physical qualities across the continuum from early childhood to adulthood (chronological age 2–21+):
-
-<Table>
-
-| Physical Quality | Early Childhood | Middle Childhood | Adolescence | Adulthood |
-|---|---|---|---|---|
-| **FMS** (fundamental movement skills) | ✓✓ | ✓✓ | ✓ | ✓ |
-| **SSS** (sport-specific skills) | ✓ | ✓✓ | ✓✓ | ✓ |
-| **Mobility** | ✓✓ | ✓✓ | — | ✓ |
-| **Agility** | ✓ | ✓✓ | ✓✓ | ✓✓ |
-| **Speed** | ✓ | ✓✓ | ✓✓ | ✓✓ |
-| **Power** | ✓ | ✓✓ | ✓✓ | ✓✓ |
-| **Strength** | ✓ | ✓✓ | ✓✓ | ✓✓ |
-| **Hypertrophy** | — | ✓ | ✓✓ | ✓✓ |
-| **Endurance & MC** | ✓✓ | ✓✓ | ✓✓ | ✓✓ |
-
-<Fragment slot="caption">
-Physical qualities emphasised across maturation in the Youth Physical Development (YPD) model (Lloyd and Oliver 2012). ✓✓ = high priority, ✓ = supported, — = not primary focus. MC = metabolic conditioning.
-</Fragment>
-</Table>
-
-Key evidence underpinning the YPD model (Lloyd 2018):
-
-- Running speed trainability across pre-, peri-, and post-pubertal phases (Moran et al. 2016; Rumpf et al. 2012)
-- Motor skill development through resistance training in children and adolescents (Behringer et al. 2011; Behringer et al. 2010)
-- Muscular power gains independent of maturation level (Behm et al. 2017)
-- Aerobic endurance trainability at all maturational stages (Armstrong and Barker 2011)
-
-**Adolescent athletes show larger absolute gains** compared to children, but this does not mean RT in childhood is ineffective — relative neuroplasticity in young children yields disproportionately large relative improvements that establish the neuromuscular foundation for later loading.
-
-#### 1.4.2 Training Structure: From Unstructured to Very High Structure
-
-One of the YPD model's most practically important features is its framing of **training structure** across maturation:
-
-<Table>
-
-| Period | Training Structure |
-|---|---|
-| Early Childhood | Predominantly **unstructured** — free play, exploratory gymnastics, game-based movement |
-| Middle Childhood | **Low structure** — deliberate play, guided skill acquisition |
-| Adolescence | **Moderate to High structure** — periodised conditioning programs |
-| Adulthood | **Very High structure** — individualised, high-intensity, sport-specific RT periodization |
-
-<Fragment slot="caption">
-Progression of training structure from unstructured play in early childhood to very high structure in adulthood (YPD model).
-</Fragment>
-</Table>
-
-This gradient reflects the principle that **early formalisation of training is counterproductive**. Unstructured play in early childhood activates neural plasticity and promotes diverse movement pattern acquisition more effectively than rigid conditioning programs. As biological maturation advances and the hormonal environment shifts, structured RT progressively becomes both necessary and safe.
-
-### One-Minute-Paper Topics
-<Note>
-  A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
-</Note>
-- Define LTAD in one sentence. Why is biological age used instead of chronological age as the organising principle?
-- What is peak height velocity (PHV) and why does it serve as the central reference point for RT programming in youth athletes?
-- Explain the difference between predominantly neuronal training adaptations (pre-PHV) and multi-system adaptations (peri-/post-PHV).
-- What are FMS (fundamental movement skills) and SSS (sport-specific skills) in the YPD model, and at which developmental stage does each receive the highest priority?
-- Compare the YPD model (Lloyd and Oliver 2012) with the Balyi et al. (2013) LTAD model: what is the key conceptual difference regarding "windows of optimal trainability"?
-- Secular trends show that aerobic endurance in 6–19-year-olds declined approximately 0.43% per year between 1981 and 2000. How does this demographic context motivate the LTAD framework from a public health perspective?
-
-### Key References
-- Armstrong N, Barker AR. *Endurance training and elite young athletes.* Med Sport Sci 56, 2011: 59–83.
-- Balyi I, Way R, Higgs C. *Long-Term Athlete Development.* Human Kinetics, Champaign (IL), 2013.
-- Behm DG, Faigenbaum AD, Falk B, Klentrou P. *Canadian Society for Exercise Physiology position paper: resistance training in children and adolescents.* Appl Physiol Nutr Metab 33 (3), 2008: 547–561.
-- Behm DG, Young JD, Whitten JHD, et al. *Effectiveness of traditional strength vs. power training on muscle strength, power and speed with youth: a systematic review and meta-analysis.* Front Physiol 8, 2017: 423.
-- Behringer M, vom Heede A, Matthews M, Mester J. *Effects of strength training on motor performance skills in children and adolescents: a meta-analysis.* Pediatr Exerc Sci 23, 2011: 186–206.
-- Behringer M, vom Heede A, Yue Z, Mester J. *Effects of resistance training in children and adolescents: a meta-analysis.* Pediatrics 126, 2010: e1199–e1210.
-- Büsch D, Prieske O, Kriemler S, Puta C, Gabriel H, Granacher U. *Krafttraining im Kindes- und Jugendalter: Bedeutung, Wirkung und Handlungsempfehlungen.* Swiss Sports Exerc Med 65 (3), 2017: 34–42.
-- Cohen DD, et al. *Secular changes in muscular fitness of English children*, 2011. (citation to be completed)
-- Faigenbaum AD, Lloyd RS, MacDonald J, Myer GD. *Citius, Altius, Fortius: beneficial effects of resistance training for young athletes: narrative review.* Br J Sports Med 50 (1), 2016: 3–7.
-- German Federal Statistical Office (Statistisches Bundesamt). *Population data for Germany*, 2015. (citation to be completed)
-- Gogtay N, Giedd JN, Lusk L, et al. *Dynamic mapping of human cortical development during childhood through early adulthood.* Proc Natl Acad Sci USA 101, 2004: 8174–8179.
-- Granacher U, Lesinski M, Büsch D, Muehlbauer T, Prieske O, Puta C, Gollhofer A, Behm DG. *Effects of resistance training in youth athletes on muscular fitness and athletic performance: a conceptual model for long-term athlete development.* Front Physiol 7, 2016: 164.
-- Lloyd RS, Oliver JL. *The Youth Physical Development model: a new approach to long-term athletic development.* Strength Cond J 34, 2012: 61–72.
-- Lloyd RS. *Das Motorische Entwicklungsmodell nach Lloyd: Ein Update.* Leistungssport 48 (5), 2018: 8–9.
-- Moran J, Sandercock G, Rumpf MC, Parry DA. *Variation in responses to sprint training in male youth athletes: a meta-analysis.* Int J Sports Med 38 (1), 2016: 1–11.
-- Oliver J. *Risikoreduktion für maximale Erfolge.* Leistungssport 48 (5), 2018: 6–7.
-- Rumpf MC, Cronin JB, Pinder SD, Oliver J, Hughes M. *Effect of different training methods on running sprint times in male youth.* Pediatr Exerc Sci 24, 2012: 170–186.
-- Runhaar J, Collard DCM, Singh AS, Kemper HCG, van Mechelen W, Chinapaw MJM. *Motor fitness in Dutch youth: differences over a 26-year period (1980–2006).* J Sci Med Sport 13 (3), 2010: 323–328.
-- Smith JJ, Eather N, Morgan PJ, et al. *The health benefits of muscular fitness for children and adolescents: a systematic review and meta-analysis.* Sports Med 44, 2014: 1209–1223.
-- Tomkinson GR, Léger LA, Olds TS, Cazorla G. *Secular trends in the performance of children and adolescents (1980–2000): an analysis of 55 studies of the 20m shuttle run test with 1.1 million children.* Sports Med 33 (4), 2003: 285–300.
+From a sports-medicine standpoint, sleep belongs in the same prescription frame as nutrition and training load: a quantifiable, modifiable input with a dose-response relationship to outcomes that matter clinically and competitively.
 
 ---
 
-## 2 Resistance Training Across the LTAD Stages
+## 2 The Circadian Clock and Diurnal Physiology
 
-<Note>
-**Learning objectives:**
-- The RT methods and loads appropriate to each of the four developmental periods
-- The muscle–tendon mismatch during adolescence and the role of eccentric training
-- The dose-response parameters that mark the upper boundary of the LTAD progression
-</Note>
+### Architecture of the Circadian System
 
-The following conceptual model (Granacher et al. 2016, *Front. Physiol.*, Table 2) provides evidence-based and expert-opinion-grounded recommendations for implementing RT programs during each stage of LTAD. RT programs were allocated to LTAD stages based on Lesinski et al. (2016), Faigenbaum et al. (2016), Balyi et al. (2013), and Kraemer and Fleck (2005); see also Zinke et al. (2018).
+The mammalian timekeeping system is organised hierarchically [4]:
 
-### 2.1 Early Childhood: FUNdamentals Stage
+* The **suprachiasmatic nucleus (SCN)** of the hypothalamus is the central pacemaker, entrained primarily by light through the retinohypothalamic tract.
+* **Peripheral oscillators** in liver, skeletal muscle, adipose tissue, gut and immune organs run autonomous transcriptional–translational feedback loops based on the *BMAL1/CLOCK* and *PER/CRY* gene families.
+* The SCN coordinates peripheral clocks through neural, endocrine (cortisol, melatonin) and behavioural (feeding, activity) cues — the *zeitgebers*.
 
-<Table>
-
-| Parameter | Specification |
-|---|---|
-| **Chronological Age** | Female: 6–8 years / Male: 6–9 years |
-| **Tanner Stage** | I |
-| **Maturity** | Pre-pubertal (pre-PHV) |
-| **LTAD Stage** | FUNdamentals |
-| **Dominant Adaptation** | Neuronal |
-
-<Fragment slot="caption">
-Stage characteristics for Early Childhood (FUNdamentals).
-</Fragment>
-</Table>
-
-**Recommended RT methods:**
-
-- **Coordination training** — multidirectional movement patterns, object manipulation, spatial awareness
-- **Agility training** — reactive changes of direction, sport-game contexts
-- **Balance training** — bilateral and unilateral static and dynamic tasks; forms the prerequisite for all subsequent RT
-- **Muscular endurance training** with own body mass or training tools (e.g., medicine balls) — *focus strictly on correct exercise technique*
-
-**Rationale:** The pre-pubertal CNS has exceptional neuroplasticity (Gogtay et al. 2004). This window should be used to establish diverse motor patterns, coordinate neuromuscular activation sequences, and build movement efficiency — not to maximise force production. Children who develop broad movement competency at this stage are better positioned to safely absorb higher training loads during adolescence and achieve greater absolute force production as adults (Faigenbaum et al. 2016).
-
-> **Key principle:** If a child is old enough to play a sport, they are old enough to participate in RT — with appropriate technique emphasis and low external loads.
-
-### 2.2 Late Childhood: Learning to Train Stage
+### Diurnal Rhythms Relevant to Exercise
 
 <Table>
 
-| Parameter | Specification |
-|---|---|
-| **Chronological Age** | Female: 9–11 years / Male: 10–13 years |
-| **Tanner Stage** | I–II |
-| **Maturity** | Pre-pubertal (pre-PHV) |
-| **LTAD Stage** | Learning to Train |
-| **Dominant Adaptation** | Neuronal |
+| Variable | Typical diurnal pattern |
+| --- | --- |
+| Core body temperature | Trough ~04:00–06:00, peak ~18:00–20:00 |
+| Cortisol | Peak shortly after waking (CAR), nadir near midnight |
+| Melatonin | Peak ~02:00–04:00, suppressed by light |
+| Heart rate variability | Higher during sleep, lower during active morning hours |
+| Muscle strength / power | Typically peaks late afternoon |
+| Insulin sensitivity | Higher in the morning than in the evening |
 
 <Fragment slot="caption">
-Stage characteristics for Late Childhood (Learning to Train).
+Approximate diurnal pattern of variables relevant to exercise prescription. Values are population averages; individual chronotype shifts the curves.
 </Fragment>
 </Table>
 
-**Recommended RT methods:**
+### Why This Matters for Exercise Prescription
 
-- **Balance training** — continued across all stages as a preparatory and concurrent training component
-- **Plyometric training as part of deliberate play** (e.g., rope skipping, bilateral jumps) — *focus on correct jumping and landing mechanics*
-- **Core strength training** — foundational trunk stability for all subsequent athletic movements
-- **Muscular endurance training** with own body mass or tools (e.g., medicine balls)
-- **Free weight training** — introduction of barbells and dumbbells *with exclusive focus on technique*; external load is secondary
-
-**Sequencing evidence (Hammami et al. 2016):** A 4-week balance training phase preceding 4 weeks of plyometric training led to significantly greater improvements in reactive strength index, leg stiffness, triple hop test, and Y-Balance test compared to the reversed sequence (plyometrics → balance) in 12–13-year-old male soccer players. **Balance before plyometrics** is the evidence-based recommendation at this stage.
-
-**Free weight introduction:** The meta-analysis by Lesinski et al. (2016) identified free weight training as producing the largest effects on muscular strength (ES = 2.97) in youth athletes — substantially larger than machine-based (ES = 0.36) or plyometric training alone (ES = 0.39). Introduction at this stage, with technique as the non-negotiable priority, builds the foundation for safe and effective loading in adolescence.
-
-### 2.3 Adolescents: Training to Train Stage
-
-<Table>
-
-| Parameter | Specification |
-|---|---|
-| **Chronological Age** | Female: 12–18 years / Male: 14–18 years |
-| **Tanner Stage** | III–IV |
-| **Maturity** | Pubertal (mid-PHV) |
-| **LTAD Stage** | Training to Train |
-| **Dominant Adaptation** | Hormonal + Neuronal + Muscular + Tendinous |
-
-<Fragment slot="caption">
-Stage characteristics for Adolescence (Training to Train).
-</Fragment>
-</Table>
-
-**Recommended RT methods:**
-
-- **Balance training** — maintained throughout; particularly important as rapid growth can temporarily disrupt balance and coordination during the growth spurt
-- **Plyometric training** — depth jumps from *low* drop heights; progressing to moderate with technique confirmation
-- **Core strength training** — progressing from stability to dynamic trunk loading
-- **Free weight training** at **light to moderate loads** (30–60% 1 RM initially, progressing)
-- **Heavy resistance strength training (hypertrophy focus)** — training programs of 5 sets × 6–10 RM; introduced once technique is consolidated
-- **Eccentric resistance training** — specifically targets the tendon and connective tissue, which adapt more slowly than muscle during rapid growth phases
-- **Sport-specific resistance training** — increasing integration of sport-relevant movement patterns
-
-**Critical consideration — the muscle–tendon unit during adolescence:** Adolescence is characterised by non-uniform development of muscle strength and tendon mechanical properties (Mersmann et al. 2017). Muscle strength can increase rapidly, while tendons adapt more slowly due to their low tissue renewal rate. This mismatch elevates the mechanical strain on tendons during maximal contractions and increases the risk of overuse injuries (tendinopathy). **Eccentric training** is the most targeted method for stimulating tendon adaptation and should be introduced systematically during this stage (Arampatzis et al. 2018).
-
-**Evidence highlight (Sander et al. 2013):** A 2-year longitudinal study with male elite soccer players across three age groups (U13, U15, U17) demonstrated the largest RT-induced strength gains in the youngest cohort (U13): ES = 1.9–2.0 for front and back squat, with relative percentage increases of 230–250%. This finding reflects the heightened neural plasticity and relative strength-gain potential that characterises the early Training to Train stage.
-
-### 2.4 Adulthood: Training to Compete Stage
-
-<Table>
-
-| Parameter | Specification |
-|---|---|
-| **Chronological Age** | Female and Male: >18 years |
-| **Tanner Stage** | V |
-| **Maturity** | Post-pubertal (post-PHV) |
-| **LTAD Stage** | Training to Compete (and beyond) |
-| **Dominant Adaptation** | Hormonal + Neuronal + Muscular + Tendinous + Skeletal |
-
-<Fragment slot="caption">
-Stage characteristics for Adulthood (Training to Compete and beyond).
-</Fragment>
-</Table>
-
-**Recommended RT methods:**
-
-- **Balance training** — maintained as an integral component for injury prevention and motor control
-- **Plyometric training** — depth jumps from *moderate to high* drop heights; reactive strength development
-- **Core strength training** — high-intensity, sport-integrated trunk loading
-- **Free weight training** at **moderate to high loads** (>80% 1 RM for strength-focused phases)
-- **Heavy resistance strength training (neuromuscular activation + hypertrophy)**
-- **Sport-specific resistance training** — dominant modality; biomechanically congruent with competitive demands
-
-**Dose-response evidence (Lesinski et al. 2016):** Optimal parameters for muscular strength development in youth and young adult athletes include:
-
-- Training period: >23 weeks
-- Volume: 5 sets per exercise
-- Intensity: 80–89% of 1 RM
-- Repetitions: 6–8 per set
-- Rest: 3–4 min between sets
-
-These parameters represent the upper boundary of the LTAD progression and should only be applied when a solid technical and neuromuscular foundation has been established across the preceding stages.
-
-### One-Minute-Paper Topics
-<Note>
-  A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
-</Note>
-- A 14-year-old athlete has a Tanner stage III classification. Name the corresponding LTAD stage and list three appropriate RT methods.
-- Why are depth jumps from low drop heights recommended for adolescents but not for younger children? What changes in the tissue during mid-PHV that makes this appropriate?
-- Why is eccentric resistance training specifically introduced during adolescence, and which tissue is it intended to protect?
-- A female soccer player is at the Learning to Train stage. Outline a 4-week introductory RT program consistent with the Granacher et al. (2016) model, including training type, frequency, volume, and technique considerations.
-
-### Key References
-- Arampatzis A, Bohm S, Mersmann F. *Muscle–tendon unit training control in youth athletes.* Leistungssport 48 (5), 2018. (citation to be completed)
-- Balyi I, Way R, Higgs C. *Long-Term Athlete Development.* Human Kinetics, Champaign (IL), 2013.
-- Faigenbaum AD, Lloyd RS, MacDonald J, Myer GD. *Citius, Altius, Fortius: beneficial effects of resistance training for young athletes: narrative review.* Br J Sports Med 50 (1), 2016: 3–7.
-- Gogtay N, Giedd JN, Lusk L, et al. *Dynamic mapping of human cortical development during childhood through early adulthood.* Proc Natl Acad Sci USA 101, 2004: 8174–8179.
-- Granacher U, Lesinski M, Büsch D, Muehlbauer T, Prieske O, Puta C, Gollhofer A, Behm DG. *Effects of resistance training in youth athletes on muscular fitness and athletic performance: a conceptual model for long-term athlete development.* Front Physiol 7, 2016: 164.
-- Hammami R, Granacher U, Makhlouf I, Behm DG, Chaouachi A. *Sequencing effects of balance and plyometric training on physical performance in youth soccer athletes.* J Strength Cond Res 30 (12), 2016: 3278–3289.
-- Kraemer WJ, Fleck SJ. *Strength Training for Young Athletes*, 2nd edn. Human Kinetics, Champaign (IL), 2005.
-- Lesinski M, Prieske O, Granacher U. *Effects and dose-response relationships of resistance training on physical performance in youth athletes: a systematic review and meta-analysis.* Br J Sports Med 50, 2016: 781–795.
-- Mersmann F, Bohm S, Arampatzis A. *Imbalances in the development of muscle and tendon as risk factor for tendinopathies in youth athletes.* Front Physiol 8, 2017.
-- Sander A, Keiner M, Wirth K, Schmidtbleicher D. *Influence of a 2-year strength training programme on power performance in elite youth soccer players.* Eur J Sport Sci 13 (5), 2013: 445–451.
-- Zinke F, Prieske O, Gäbler M, Granacher U. *Krafttraining im Nachwuchsleistungssport.* Leistungssport 48 (5), 2018: 10–13.
+Exercise itself is a **zeitgeber** for peripheral clocks, particularly the skeletal-muscle clock [4]. Mistimed exercise — for example late, high-intensity sessions in evening chronotypes — can desynchronise peripheral oscillators from the central SCN, with measurable effects on glucose tolerance, recovery and sleep onset latency [3, 4].
 
 ---
 
-## 3 The Evidence — Effect Sizes by Training Type
+## 3 Sleep Loss Impairs Glucose Tolerance and Mitochondrial Function
 
-<Note>
-**Learning objectives:**
-- The effect sizes for strength, power and athletic performance by RT modality
-- Why free weights dominate strength gains and complex training dominates power and performance
-- Age and sex effects, and the under-representation of female and child athletes
-</Note>
+### The Saner et al. (2021) Experiment
 
-The following section synthesises findings from Lesinski et al. (2016), a systematic review and meta-analysis of 43 studies on RT effects in youth athletes aged 6–18 years, as summarised and contextualised in Granacher et al. (2016).
+Saner and colleagues [3] tested the metabolic and molecular consequences of acute sleep restriction and asked whether exercise could mitigate them. The design centred on three nights of partial sleep restriction (4 h time in bed) in healthy adults and a crossover comparison with normal-sleep and sleep-restricted-plus-HIIE conditions.
 
-### 3.1 Muscular Strength
+Key outcomes attributable to sleep restriction alone:
 
-Effect sizes (ES) from 16 studies, using Rhea's (2004) scale for trained individuals (trivial &lt;0.35; small 0.35–0.79; moderate 0.80–1.50; large ≥1.50):
+* **Reduced glucose tolerance.** Plasma glucose excursions during OGTT increased significantly after sleep restriction.
+* **Impaired mitochondrial respiration.** Permeabilised skeletal muscle fibres from sleep-restricted participants showed reduced ADP-stimulated respiration and lower coupling efficiency.
+* **Reduced sarcoplasmic protein synthesis.** Stable-isotope tracer methods documented a fall in muscle protein synthesis rates.
+* **Disrupted diurnal gene expression rhythms.** Core clock and metabolic transcripts lost amplitude.
 
-<Table>
-
-| Training Type | ES (Muscular Strength) | Magnitude |
-|---|---|---|
-| **Free weight training** | 2.97 | Large |
-| Machine + free weight combined | 1.16 | Moderate–Large |
-| Functional training | 0.62 | Small |
-| Plyometric training | 0.39 | Small |
-| Machine-based training | 0.36 | Small |
-| **Overall RT** | **1.09** | **Moderate** |
-
-<Fragment slot="caption">
-Effect sizes for muscular strength by resistance-training type in youth athletes (Lesinski et al. 2016).
-</Fragment>
-</Table>
-
-The superiority of free weights is attributed to the greater muscular stabilisation of trunk and limb joints required for multi-planar movement with more degrees of freedom (Behm et al. 2008).
-
-### 3.2 Muscular Power
-
-Effect sizes (ES) from 33 studies:
-
-<Table>
-
-| Training Type | ES (Muscular Power) | Magnitude |
-|---|---|---|
-| **Complex training** (RT + plyometrics) | 1.66 | Large |
-| Machine-based training | 1.45 | Moderate–Large |
-| Free weight training | 0.90 | Moderate |
-| Plyometric training | 0.81 | Moderate |
-| Machine + free weight combined | 0.77 | Small–Moderate |
-| Functional training | 0.39 | Small |
-| **Overall RT** | **0.80** | **Moderate** |
-
-<Fragment slot="caption">
-Effect sizes for muscular power by resistance-training type in youth athletes (Lesinski et al. 2016).
-</Fragment>
-</Table>
-
-**Complex training** — combining heavy resistance exercises with biomechanically similar plyometric movements in the same session (post-activation potentiation principle) — produces the largest power gains. This is consistent with the velocity-specificity principle: both the force and velocity components of the power equation must be trained simultaneously for maximal adaptation.
-
-### 3.3 Athletic Performance
-
-Effect sizes (ES) from 20 studies:
-
-<Table>
-
-| Training Type | ES (Athletic Performance) | Magnitude |
-|---|---|---|
-| **Complex training** | 1.85 | Large |
-| Functional training | 0.79 | Small–Moderate |
-| Plyometric training | 0.74 | Small–Moderate |
-| Machine-based training | 0.30 | Trivial–Small |
-| **Overall RT** | **0.75** | **Small–Moderate** |
-
-<Fragment slot="caption">
-Effect sizes for athletic performance by resistance-training type in youth athletes (Lesinski et al. 2016).
-</Fragment>
-</Table>
-
-Athletic performance shows smaller overall effects than muscular strength or power, reflecting the additional complexity of translating physical fitness gains to sport-specific outcomes.
-
-### 3.4 Age- and Sex-Specific Effects
-
-**Age effects:**
-
-<Table>
-
-| Outcome | Children | Adolescents |
-|---|---|---|
-| Muscular Strength | ES = 1.35 (large) | ES = 0.91 (moderate) |
-| Muscular Power | ES = 0.78 (moderate) | ES = 0.85 (moderate) |
-| Athletic Performance | ES = 0.50 (small) | ES = 1.03 (moderate) |
-
-<Fragment slot="caption">
-Age-specific effect sizes of resistance training in children versus adolescents (Lesinski et al. 2016).
-</Fragment>
-</Table>
-
-Children show larger **relative strength gains** than adolescents, likely due to greater neural plasticity and larger relative percentage improvements. Adolescents show larger gains in **athletic performance**, attributable to greater muscle mass, more differentiated fiber-type composition (type II fibers increase with maturation), and a larger training state transition from early to more structured conditioning.
-
-**Sex effects (where data available):**
-
-<Table>
-
-| Outcome | Boys | Girls |
-|---|---|---|
-| Muscular Power | ES = 0.85 | ES = 0.61 |
-| Athletic Performance | ES = 0.72 | ES = 1.81 |
-
-<Fragment slot="caption">
-Sex-specific effect sizes of resistance training in boys versus girls, where data were available (Lesinski et al. 2016).
-</Fragment>
-</Table>
-
-The larger athletic performance effect in girls may reflect greater relative adaptive reserves in response to neural stimuli, particularly in populations where baseline RT exposure has historically been lower. **Both female youth athletes and child athletes remain significantly under-represented in the literature** — a key research gap identified by Granacher et al. (2016).
-
-### One-Minute-Paper Topics
-<Note>
-  A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
-</Note>
-- Using effect sizes from Lesinski et al. (2016): which RT modality produces the largest gains in muscular strength, and what physiological mechanism explains this superiority?
-- Why do child athletes show larger *relative* strength gains than adolescents following RT, despite having lower absolute force production?
-- Define "complex training." Why does it produce the largest effect sizes for muscular power and athletic performance?
-- Athletic performance shows smaller overall effects than strength or power. Explain why, and state which modality is the exception.
-- Granacher et al. (2016) identify the under-representation of female and child athletes as a key research gap. What study design would you propose to address it?
-
-### Key References
-- Behm DG, Faigenbaum AD, Falk B, Klentrou P. *Canadian Society for Exercise Physiology position paper: resistance training in children and adolescents.* Appl Physiol Nutr Metab 33 (3), 2008: 547–561.
-- Granacher U, Lesinski M, Büsch D, Muehlbauer T, Prieske O, Puta C, Gollhofer A, Behm DG. *Effects of resistance training in youth athletes on muscular fitness and athletic performance: a conceptual model for long-term athlete development.* Front Physiol 7, 2016: 164.
-- Lesinski M, Prieske O, Granacher U. *Effects and dose-response relationships of resistance training on physical performance in youth athletes: a systematic review and meta-analysis.* Br J Sports Med 50, 2016: 781–795.
-- Rhea MR. *Determining the magnitude of treatment effects in strength training research through the use of the effect size.* J Strength Cond Res 18 (4), 2004: 918–920.
+These findings provide a mechanistic explanation for the epidemiological signal that habitual short sleep predicts type 2 diabetes and cardiometabolic disease independent of body mass index [3].
 
 ---
 
-## 4 Practice, Risks and Immunology
+## 4 HIIE as a Counter-Strategy to Sleep Loss
 
-<Note>
-**Learning objectives:**
-- Balance training as the foundation, and the evidence-based sequencing and concurrent-training rules
-- The muscle–tendon unit and strain-based individualised diagnostics
-- The risk cascade of early specialisation, and the exercise-induced immunological stress response
-</Note>
+### The HIIE Protocol (Saner et al.)
 
-### 4.1 Balance Training as a Foundational Element
+Within the same Saner et al. study, a **high-intensity interval exercise (HIIE)** protocol was applied during the sleep-restriction arm to test whether exercise could rescue the metabolic and mitochondrial deficits [3]:
 
-Balance training deserves special emphasis across **all stages of LTAD** for three mechanistic reasons:
-
-1. **Balance capabilities are immature and not fully developed in children** (Payne and Isaacs 2008; Behm et al. 2008). Unstable environments reduce force output compared to stable conditions — making inadequate balance a limiter of strength and power expression.
-
-2. **Balance training improves subsequent strength and power training outcomes.** A meta-analysis (Behm and Colado 2012) showed that balance training alone increases performance by more than 30% on average. A 5-week balance training intervention improved jump height; correlations of 0.65 between static balance performance and maximal skating speed were reported in youth under-17 ice hockey players (Behm et al. 2005).
-
-3. **Balance training reduces injury risk.** It is an essential injury-prevention component, particularly for lower extremity injuries during rapid growth phases.
-
-> **Practical recommendation:** Incorporate balance training *prior to and concurrent with* all phases of RT. At the early and late childhood stages, it is the primary RT preparatory method.
-
-### 4.2 Sequencing: Balance, Plyometric, and Strength Training
-
-**At the mesocycle level (block periodisation):**
-Balance training should precede plyometric/reactive strength training in a sequential mesocycle arrangement. Hammami et al. (2016) demonstrated that balance → plyometrics sequencing produces significantly larger gains in reactive strength index, leg stiffness, triple hop, and Y-Balance tests than the reversed order in pubertal male soccer players.
-
-**Within the training session:**
-The sequencing of balance and plyometric exercises within a single session does not significantly affect outcomes (Chaouachi et al. 2017). Both alternating (balance–plyometric–balance) and block (30 min balance + 30 min plyometrics) arrangements yielded comparable improvements.
-
-**Strength and sport-specific sequencing:**
-When combining RT with sport-specific practice within a single training day, **RT should precede sport-specific practice** (Fernandez-Fernandez et al. 2018; Ramirez-Campillo et al. 2018). This applies particularly to reactive strength (plyometric) training before technical or tactical sport sessions.
-
-### 4.3 Concurrent Training — Strength and Endurance
-
-Many sports (soccer, tennis, rowing, kayaking) demand both high muscular strength and aerobic endurance, necessitating concurrent training — the combination of strength and endurance stimuli within a microcycle or training day.
-
-**Key evidence (Gäbler et al. 2018 meta-analysis):**
-
-- Concurrent training **surpasses isolated endurance training** for improving sport-specific endurance performance in youth athletes
-- Concurrent training **surpasses isolated strength training** for muscular power development
-- Both modalities produce **positive cross-effects**: strength training enhances aerobic endurance capacity, and endurance training supports muscular power development in youth athletes
-
-**Practical recommendation:** Both strength and endurance stimuli should be included within a microcycle. The order within a training day (when both occur in a single session) follows the priority of the primary training goal for that day.
-
-### 4.4 Muscle–Tendon Unit: Individualised Training Control
-
-Effective RT in youth athletes requires attention not only to the muscle but to the **muscle–tendon unit** as a functional whole (Arampatzis et al. 2018).
-
-**The core problem:** During growth and RT, muscles may adapt faster than tendons. Increased muscle force applied to a relatively non-stiffened tendon increases peak tendon strain during maximal contractions. Above ~9% maximum strain, degenerative processes become likely; below ~4.5%, adaptation stimulus is insufficient.
-
-**Optimal tendon adaptation protocol (from the KINGS consortium):**
-
-- High-intensity isometric contractions: ~85–90% of maximum voluntary contraction
-- Contraction duration: ~3 seconds
-- Volume: 5 sets × 4 repetitions, 3–4 sessions/week
-
-**Individual monitoring principle:** Two athletes performing the same external load (e.g., 100 kg back squat) experience *identical mechanical load* but potentially very different *tendon strain* depending on their individual tendon stiffness. This necessitates individualised diagnostics — ideally ultrasound-based measurement of tendon deformation during standardised contractions — to identify dysfunctions and optimise training stimulus for each athlete.
-
-**Practical categories:**
-
-- Maximum tendon strain >9% → reduce loading, prioritise tendon stiffness training
-- Maximum tendon strain &lt;4.5% → increase muscular loading to restore balance
-
-### 4.5 Risks of Early Specialisation
-
-Despite the benefits of well-structured RT across LTAD, a growing body of evidence documents significant risks associated with **early sport specialisation and premature competitive emphasis** in youth athletes (Oliver 2018).
-
-Early specialisation — committing to a single sport before the age of 12 — is associated with the following interconnected risk cascade:
-
-```
-Early Specialisation
-       |
-       ↓
-Limited movement competency (reduced FMS breadth)
-       |
-       ↓
-Higher injury rates ←————— Excessive and rapidly progressing loads
-       |
-       ↓
-Overtraining / non-functional overreaching
-       |
-       ↓
-Burnout ———————→ Drop-out from sport
-```
-
-**Injury data (British professional soccer academies):** A tripling of injury rates over a study period has been documented, with competition injuries also reflecting non-functional overreaching in training (cited in Oliver 2018).
-
-**Monitoring as risk mitigation:** To individualise training and reduce injury and illness risk, **growth rates and training loads should be monitored concurrently**. Screening for strength and movement deficits that increase sport-specific injury risk is recommended. Athletic training components should be systematically included in youth training sessions.
-
-**Fundamental principle across the LTAD pyramid:**
-> Athletes, coaches, teachers, and sports administrators should ensure that young athletes enjoy sport and develop effective health behaviours, wellbeing, and sport-life balance — not only athletic performance metrics. (Armstrong 2018)
-
-### 4.6 Exercise-Induced Immunological Stress Response in Youth Athletes
-
-RT and intensive athletic training are not immunologically neutral. The acute exercise-induced immune response reflects the relationship between training load and recovery capacity — a relationship that, if mismanaged, can impair both performance and health in youth athletes (Puta and Gabriel 2018; Steidten et al. 2018).
-
-#### 4.6.1 The Acute Exercise-Induced Immunological Stress Response
-
-Intensive physical loading produces a characteristic immunological signature:
-
-- **Lymphocyte response:** Acute exercise mobilises lymphocytes (specific acquired immune response) into the bloodstream, followed by redistribution to peripheral tissues (surveillance function) during the recovery phase.
-- **Granulocyte response:** Particularly after strenuous sessions, granulocytes (unspecific innate immune response) continue to increase post-exercise.
-
-**The Acute Recovery and Stress Scale (AEB — Akutmaß für Erholung und Beanspruchung):**
-A validated subjective measure combining recovery and stress dimensions that correlates with objective immunological parameters. The load and recovery dimensions of the AEB are associated with the percentage proportions of:
-
-- **Lymphocytes** (specific acquired immunity)
-- **Granulocytes** (non-specific innate immunity)
-
-in the white blood cell differential count. This makes the AEB a practical monitoring tool for tracking exercise-induced immunological stress and recovery in youth athletes without requiring repeated blood sampling.
-
-#### 4.6.2 Practical Measures to Reduce Immunological Stress
-
-Emerging evidence from the KINGS consortium supports the following interventions (Puta and Gabriel 2018):
+* **3-minute warm-up** at 60 W.
+* **10 × 60-second intervals** on a cycle ergometer at **90 % of each participant's Ẇpeak**.
+* **75-second active recovery** at 60 W between intervals.
+* Mean power per interval: **318 ± 53 W**; mean heart rate across the protocol: **156 ± 13 bpm**.
 
 <Table>
 
-| Intervention | Recommendation | Mechanism |
-|---|---|---|
-| **Carbohydrates** | Peri-exercise intake | Reduces cortisol-mediated immune suppression |
-| **Omega-3 fatty acids** | Regular supplementation | Anti-inflammatory modulation of immune response |
-| **Zinc** | 8–11 mg/day | Supports immune cell function and reduces exercise-induced stress markers |
-| **Sleep** | 7–9 hours/night | Primary recovery driver; inadequate sleep amplifies immunological stress |
+| Phase | Duration | Intensity |
+| --- | --- | --- |
+| Warm-up | 3 min | 60 W |
+| Interval | 60 s | 90 % Ẇpeak |
+| Active recovery | 75 s | 60 W |
+| Repeats | 10 | — |
 
 <Fragment slot="caption">
-Evidence-based interventions to reduce the exercise-induced immunological stress response in youth athletes (Puta and Gabriel 2018).
+HIIE counter-strategy to sleep loss (adapted from [3]).
 </Fragment>
 </Table>
 
-**Connection to the broader LTAD framework:** The immunological dimension of RT in youth athletics is not merely a health concern — it is a **performance and development constraint**. Youth athletes who consistently train under immunological stress accumulate recovery deficits that directly impair neuromuscular adaptation and increase injury susceptibility. Monitoring AEB alongside training load represents a practical, non-invasive approach to maintaining the balance between training stimulus and recovery capacity.
+### Outcomes
 
-### 4.7 Conclusion
+Compared with sleep restriction alone, the addition of HIIE [3]:
 
-The conceptual model introduced by Granacher et al. (2016) — with co-authorship by Christian Puta — and updated through the YPD framework of Lloyd and Oliver (2012) and Lloyd (2018) provides a comprehensive, evidence-based framework for implementing RT across all stages of long-term athlete development. Several core principles emerge:
+* **Partially restored glucose tolerance** during OGTT.
+* **Mitigated the fall in mitochondrial respiratory function** in permeabilised muscle fibres.
+* **Preserved sarcoplasmic protein synthesis** rates.
+* **Restored amplitude of select diurnal rhythms** in skeletal muscle transcription.
 
-1. **Biological age, not chronological age**, is the primary organising principle. PHV provides the key reference point; Tanner staging supports individual assessment.
+The implication is mechanistically important: a relatively short bout of vigorous exercise can act as a **metabolic and circadian rescue stimulus** under conditions of acute sleep debt — though it does not replace sleep itself.
 
-2. **All components of fitness are trainable at all maturational stages**, with appropriate emphasis and method selection. The YPD model refutes the myth of single "windows of opportunity."
+**Practical insight.** HIIE is not a substitute for sleep but a *mitigation* strategy. The clinical principle is sequential: first protect sleep, then deploy exercise to defend against the consequences of unavoidable sleep loss (shift work, competition travel, perinatal periods, clinical care contexts).
 
-3. **Balance training is foundational** across all LTAD stages — it is a prerequisite for safe and effective RT and a primary injury-prevention strategy.
+---
 
-4. **RT type and intensity progress systematically** from coordination and technique-focused in early childhood to complex, heavy, and sport-specific in adulthood. Free weights and complex training consistently produce the largest effects on muscular strength and power, respectively.
+## 5 Translational Implications for the Athletic and Clinical Population
 
-5. **The muscle–tendon unit must be monitored individually.** Muscle and tendon adapt at different rates; dysfunctions — detectable through strain-based diagnostics — require individualised training adjustments.
+### For Athletes
 
-6. **Early specialisation carries significant risks** — injury, overtraining, burnout, and dropout — that systematically undermine the very goals of LTAD.
+* **Monitor and protect sleep** the way one monitors training load — weekly sleep duration, sleep efficiency, chronotype-aligned timing.
+* **Schedule the highest-intensity sessions** in the late afternoon for typical chronotypes, when muscle temperature, neuromuscular drive and power output are highest.
+* **In acute sleep debt** (e.g. travel, competition stress), deploy short HIIE blocks rather than additional long aerobic volume.
 
-7. **Immunological stress monitoring** (AEB, differential blood count) is a practical, non-invasive addition to training load management in youth athletes.
+### For Clinical Populations
 
-The central challenge for sport science and practice is not whether to implement RT in youth athletes, but *how* to do so optimally — with the right modalities, loads, sequencing, and monitoring at each developmental stage.
+* **In prediabetes and type 2 diabetes** (see Lectures 4 and 7), short sleep duration is an independent risk factor. Sleep optimisation is part of the lifestyle prescription.
+* **In infection-associated chronic illness** (Long COVID, ME/CFS), HIIE-style protocols are contraindicated. Pacing and sleep stabilisation take precedence over conditioning gains.
+* **In MAFLD and IBD** (Lectures 9–11), the inflammatory and metabolic costs of sleep loss aggravate disease activity. Sleep hygiene belongs in the standard counselling block.
 
-### One-Minute-Paper Topics
-<Note>
-  A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
-</Note>
-- Why is balance training recommended at *every* stage of LTAD? Provide a physiological rationale.
-- Describe the evidence-based mesocycle sequencing for balance and plyometric training (cite the relevant study and the key outcome variable that differentiated the sequences).
-- What is concurrent training? Summarise two key findings from Gäbler et al. (2018) regarding its effects in youth athletes.
-- Explain the concept of muscle–tendon dysfunctions: what happens when muscle strength increases faster than tendon stiffness adapts, and what are the consequences for injury risk?
-- List three documented risks of early sport specialisation and explain the mechanistic pathway from early specialisation to drop-out.
-- Define the Acute Recovery and Stress Scale (AEB) and explain how it correlates with objective immunological parameters.
-- List four evidence-based interventions for reducing the exercise-induced immunological stress response in youth athletes, and provide the mechanism for at least two.
+### Open Questions
 
-### Key References
-- Arampatzis A, Bohm S, Mersmann F. *Muscle–tendon unit training control in youth athletes.* Leistungssport 48 (5), 2018. (citation to be completed)
-- Armstrong N. *Contribution on youth athlete wellbeing.* Leistungssport 48 (5), 2018. (citation to be completed)
-- Behm DG, Colado JC. *The effectiveness of resistance training using unstable surfaces and devices for rehabilitation.* Int J Sports Phys Ther 7 (2), 2012: 226–241.
-- Behm DG, Faigenbaum AD, Falk B, Klentrou P. *Canadian Society for Exercise Physiology position paper: resistance training in children and adolescents.* Appl Physiol Nutr Metab 33 (3), 2008: 547–561.
-- Behm DG, Wahl MJ, Button DC, Power KE, Anderson KG. *Relationship between hockey skating speed and selected performance measures.* J Strength Cond Res 19 (2), 2005: 326–331.
-- Chaouachi M, Granacher U, Makhlouf I, Hammami R, Behm DG, Chaouachi A. *Within session sequence of balance and plyometric exercises does not affect training adaptations with youth soccer athletes.* J Sports Sci Med 16 (1), 2017: 125–136.
-- Fernandez-Fernandez J, Granacher U, Sanz D, et al. *Sequencing effects of neuromuscular training on physical fitness in youth elite tennis players.* J Strength Cond Res 32 (3), 2018: 849–856.
-- Gäbler M, Prieske O, Hortobagyi T, Granacher U. *The effects of concurrent strength and endurance training on physical fitness and athletic performance in youth: a systematic review and meta-analysis.* Front Physiol 9, 2018: 1057.
-- Granacher U, Lesinski M, Büsch D, Muehlbauer T, Prieske O, Puta C, Gollhofer A, Behm DG. *Effects of resistance training in youth athletes on muscular fitness and athletic performance: a conceptual model for long-term athlete development.* Front Physiol 7, 2016: 164.
-- Hammami R, Granacher U, Makhlouf I, Behm DG, Chaouachi A. *Sequencing effects of balance and plyometric training on physical performance in youth soccer athletes.* J Strength Cond Res 30 (12), 2016: 3278–3289.
-- Lloyd RS, Oliver JL. *The Youth Physical Development model: a new approach to long-term athletic development.* Strength Cond J 34, 2012: 61–72.
-- Lloyd RS. *Das Motorische Entwicklungsmodell nach Lloyd: Ein Update.* Leistungssport 48 (5), 2018: 8–9.
-- Oliver J. *Risikoreduktion für maximale Erfolge.* Leistungssport 48 (5), 2018: 6–7.
-- Payne VG, Isaacs LD. *Human Motor Development: A Lifespan Approach.* McGraw-Hill, 2008.
-- Puta C, Gabriel HHW. *Leistung in Gesundheit — Risiken und Ressourcen.* Leistungssport 48 (5), 2018: 25–26.
-- Ramirez-Campillo R, Alvarez C, Gentil P, et al. *Sequencing effects of plyometric training applied before or after regular soccer training on measures of physical fitness in young players.* J Strength Cond Res, 2018 (Epub ahead of print).
-- Steidten T, Puta C, Gabriel B, May R, Kellmann M, Granacher U, Gabriel HHW. *Belastungsinduzierte immunologische Stressreaktion: How much is too much?* Leistungssport 48 (5), 2018: 22–24.
+The Saner et al. work tested short-term restriction. Long-term, recurrent partial sleep restriction — the everyday pattern of working adults — has been less rigorously mapped. The combined effects of chronic short sleep, low-grade inflammation and inactivity define the "metabolic background" against which the rest of this lecture series operates.
 
 ---
 
 ## References
 
-- Arampatzis A, Bohm S, Mersmann F. *Muscle–tendon unit training control in youth athletes.* Leistungssport 48 (5), 2018. (citation to be completed)
-- Armstrong N, Barker AR. *Endurance training and elite young athletes.* Med Sport Sci 56, 2011: 59–83.
-- Armstrong N. *Contribution on youth athlete wellbeing.* Leistungssport 48 (5), 2018. (citation to be completed)
-- Balyi I, Way R, Higgs C. *Long-Term Athlete Development.* Human Kinetics, Champaign (IL), 2013.
-- Behm DG, Colado JC. *The effectiveness of resistance training using unstable surfaces and devices for rehabilitation.* Int J Sports Phys Ther 7 (2), 2012: 226–241.
-- Behm DG, Faigenbaum AD, Falk B, Klentrou P. *Canadian Society for Exercise Physiology position paper: resistance training in children and adolescents.* Appl Physiol Nutr Metab 33 (3), 2008: 547–561.
-- Behm DG, Wahl MJ, Button DC, Power KE, Anderson KG. *Relationship between hockey skating speed and selected performance measures.* J Strength Cond Res 19 (2), 2005: 326–331.
-- Behm DG, Young JD, Whitten JHD, et al. *Effectiveness of traditional strength vs. power training on muscle strength, power and speed with youth: a systematic review and meta-analysis.* Front Physiol 8, 2017: 423.
-- Behringer M, vom Heede A, Matthews M, Mester J. *Effects of strength training on motor performance skills in children and adolescents: a meta-analysis.* Pediatr Exerc Sci 23, 2011: 186–206.
-- Behringer M, vom Heede A, Yue Z, Mester J. *Effects of resistance training in children and adolescents: a meta-analysis.* Pediatrics 126, 2010: e1199–e1210.
-- Büsch D, Prieske O, Kriemler S, Puta C, Gabriel H, Granacher U. *Krafttraining im Kindes- und Jugendalter: Bedeutung, Wirkung und Handlungsempfehlungen.* Swiss Sports Exerc Med 65 (3), 2017: 34–42.
-- Chaouachi M, Granacher U, Makhlouf I, Hammami R, Behm DG, Chaouachi A. *Within session sequence of balance and plyometric exercises does not affect training adaptations with youth soccer athletes.* J Sports Sci Med 16 (1), 2017: 125–136.
-- Cohen DD, et al. *Secular changes in muscular fitness of English children*, 2011. (citation to be completed)
-- Faigenbaum AD, Lloyd RS, MacDonald J, Myer GD. *Citius, Altius, Fortius: beneficial effects of resistance training for young athletes: narrative review.* Br J Sports Med 50 (1), 2016: 3–7.
-- Fernandez-Fernandez J, Granacher U, Sanz D, et al. *Sequencing effects of neuromuscular training on physical fitness in youth elite tennis players.* J Strength Cond Res 32 (3), 2018: 849–856.
-- Gäbler M, Prieske O, Hortobagyi T, Granacher U. *The effects of concurrent strength and endurance training on physical fitness and athletic performance in youth: a systematic review and meta-analysis.* Front Physiol 9, 2018: 1057.
-- German Federal Statistical Office (Statistisches Bundesamt). *Population data for Germany*, 2015. (citation to be completed)
-- Gogtay N, Giedd JN, Lusk L, et al. *Dynamic mapping of human cortical development during childhood through early adulthood.* Proc Natl Acad Sci USA 101, 2004: 8174–8179.
-- Granacher U, Lesinski M, Büsch D, Muehlbauer T, Prieske O, Puta C, Gollhofer A, Behm DG. *Effects of resistance training in youth athletes on muscular fitness and athletic performance: a conceptual model for long-term athlete development.* Front Physiol 7, 2016: 164.
-- Hammami R, Granacher U, Makhlouf I, Behm DG, Chaouachi A. *Sequencing effects of balance and plyometric training on physical performance in youth soccer athletes.* J Strength Cond Res 30 (12), 2016: 3278–3289.
-- Kraemer WJ, Fleck SJ. *Strength Training for Young Athletes*, 2nd edn. Human Kinetics, Champaign (IL), 2005.
-- Lesinski M, Prieske O, Granacher U. *Effects and dose-response relationships of resistance training on physical performance in youth athletes: a systematic review and meta-analysis.* Br J Sports Med 50, 2016: 781–795.
-- Lloyd RS, Oliver JL. *The Youth Physical Development model: a new approach to long-term athletic development.* Strength Cond J 34, 2012: 61–72.
-- Lloyd RS. *Das Motorische Entwicklungsmodell nach Lloyd: Ein Update.* Leistungssport 48 (5), 2018: 8–9.
-- Mersmann F, Bohm S, Arampatzis A. *Imbalances in the development of muscle and tendon as risk factor for tendinopathies in youth athletes.* Front Physiol 8, 2017.
-- Moran J, Sandercock G, Rumpf MC, Parry DA. *Variation in responses to sprint training in male youth athletes: a meta-analysis.* Int J Sports Med 38 (1), 2016: 1–11.
-- Oliver J. *Risikoreduktion für maximale Erfolge.* Leistungssport 48 (5), 2018: 6–7.
-- Payne VG, Isaacs LD. *Human Motor Development: A Lifespan Approach.* McGraw-Hill, 2008.
-- Puta C, Gabriel HHW. *Leistung in Gesundheit — Risiken und Ressourcen.* Leistungssport 48 (5), 2018: 25–26.
-- Ramirez-Campillo R, Alvarez C, Gentil P, et al. *Sequencing effects of plyometric training applied before or after regular soccer training on measures of physical fitness in young players.* J Strength Cond Res, 2018 (Epub ahead of print).
-- Rhea MR. *Determining the magnitude of treatment effects in strength training research through the use of the effect size.* J Strength Cond Res 18 (4), 2004: 918–920.
-- Runhaar J, Collard DCM, Singh AS, Kemper HCG, van Mechelen W, Chinapaw MJM. *Motor fitness in Dutch youth: differences over a 26-year period (1980–2006).* J Sci Med Sport 13 (3), 2010: 323–328.
-- Rumpf MC, Cronin JB, Pinder SD, Oliver J, Hughes M. *Effect of different training methods on running sprint times in male youth.* Pediatr Exerc Sci 24, 2012: 170–186.
-- Sander A, Keiner M, Wirth K, Schmidtbleicher D. *Influence of a 2-year strength training programme on power performance in elite youth soccer players.* Eur J Sport Sci 13 (5), 2013: 445–451.
-- Smith JJ, Eather N, Morgan PJ, et al. *The health benefits of muscular fitness for children and adolescents: a systematic review and meta-analysis.* Sports Med 44, 2014: 1209–1223.
-- Steidten T, Puta C, Gabriel B, May R, Kellmann M, Granacher U, Gabriel HHW. *Belastungsinduzierte immunologische Stressreaktion: How much is too much?* Leistungssport 48 (5), 2018: 22–24.
-- Tomkinson GR, Léger LA, Olds TS, Cazorla G. *Secular trends in the performance of children and adolescents (1980–2000): an analysis of 55 studies of the 20m shuttle run test with 1.1 million children.* Sports Med 33 (4), 2003: 285–300.
-- Zinke F, Prieske O, Gäbler M, Granacher U. *Krafttraining im Nachwuchsleistungssport.* Leistungssport 48 (5), 2018: 10–13.
+* [1] Watson AM. Sleep and athletic performance. *Current Sports Medicine Reports.* 2017;16(6):413–418. doi:10.1249/JSR.0000000000000418.
+* [2] Mah CD, Mah KE, Kezirian EJ, Dement WC. The effects of sleep extension on the athletic performance of collegiate basketball players. *Sleep.* 2011;34(7):943–950. doi:10.5665/SLEEP.1132.
+* [3] Saner NJ, Lee MJ, Kuang J, Pitchford NW, Roach GD, Garnham A, Genders AJ, Stokes T, Schroder EA, Huo Z, Esser KA, Phillips SM, Bishop DJ, Bartlett JD. Exercise mitigates sleep-loss-induced changes in glucose tolerance, mitochondrial function, sarcoplasmic protein synthesis, and diurnal rhythms. *Molecular Metabolism.* 2021;43:101110. doi:10.1016/j.molmet.2020.101110. PMID: 33137489.
+* [4] Gabriel BM, Zierath JR. Circadian rhythms and exercise — re-setting the clock in metabolic disease. *Nature Reviews Endocrinology.* 2019;15(4):197–206. doi:10.1038/s41574-018-0150-x.
+* [5] Walker MP. *Why We Sleep: Unlocking the Power of Sleep and Dreams.* Scribner; 2017.
+* [6] Reutrakul S, Van Cauter E. Sleep influences on obesity, insulin resistance, and risk of type 2 diabetes. *Metabolism.* 2018;84:56–66. doi:10.1016/j.metabol.2018.02.010.
+
+---
+
+## One-Minute-Paper Topics
+
+<Note>
+  A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
+</Note>
+
+1. Why is sleep framed as a *performance reserve* rather than as passive recovery? Give two performance- or health-relevant outcomes that quantitatively track sleep duration.
+2. Name the central pacemaker of the mammalian circadian system, the chromophore responsible for entrainment, and one peripheral oscillator relevant to exercise metabolism.
+3. Reproduce three rows from Table 1 (diurnal patterns) and explain how each pattern would inform timing of a high-intensity training session.
+4. What is a *zeitgeber*? Name three zeitgebers and explain how exercise functions as one.
+5. Sketch the Saner et al. study design: how many nights of sleep restriction, what was the sleep dose, and what were the comparator conditions?
+6. List the four primary deficits Saner et al. documented after acute sleep restriction. Which of them is most directly relevant to glycaemic control?
+7. Describe the HIIE protocol (warm-up, interval count, interval duration, intensity, recovery duration, recovery intensity) from memory.
+8. Mean power per HIIE interval was 318 ± 53 W and mean HR was 156 ± 13 bpm. What does the standard deviation tell you about between-participant heterogeneity?
+9. Which mitochondrial readout did Saner et al. report? Distinguish between coupling efficiency and ADP-stimulated respiration.
+10. Sarcoplasmic protein synthesis fell with sleep loss but was preserved by HIIE. What does this imply about the role of acute exercise in protein turnover under metabolic stress?
+11. The lecture frames HIIE as a *mitigation* strategy, not a *substitute* for sleep. Why does this distinction matter clinically and ethically?
+12. Habitual short sleep predicts type 2 diabetes independent of BMI. Which of the Saner et al. findings provides a mechanistic candidate for this association?
+13. Explain why late-evening high-intensity training in evening chronotypes may desynchronise peripheral clocks from the SCN.
+14. In a patient with Long COVID who reports unrefreshing sleep and exertion intolerance, would you recommend the Saner et al. HIIE protocol? Justify in two sentences.
+15. Distinguish between *sleep duration*, *sleep efficiency* and *sleep architecture*. Which of these is most strongly influenced by an evening HIIE session?
+16. What is the morning cortisol awakening response (CAR), and how does chronic sleep restriction alter it?
+17. Describe one randomised trial design that would test whether scheduled HIIE during shift-work weeks reduces incident prediabetes.
+18. The diurnal pattern of insulin sensitivity favours morning carbohydrate intake. Re-design the meal–exercise schedule of a type-2-diabetes patient in line with this principle.
+19. Define *chronotype* in one sentence. How would you operationalise chronotype assessment in a routine sports-medicine consultation?
+20. For an elite ski athlete travelling across six time zones for competition, propose a sleep- and exercise-prescription package for the first 72 hours after arrival.

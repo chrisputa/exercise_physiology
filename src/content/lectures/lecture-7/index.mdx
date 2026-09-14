@@ -1,545 +1,412 @@
 ---
-title: Basics of Biochemistry Principles of Exercise
-description: Introduces the three energy systems (ATP-PCr, glycolytic, oxidative) by time-course, ATP rate and capacity, and the concept of metabolic thresholds.
-  Treats glucose biochemistry after Lehninger — the four fates of glucose and three fates of pyruvate, glycolysis regulation, the Pasteur and Warburg effects, GLUT4 and type 1 diabetes, fermentation and the Cori cycle, gluconeogenesis, and the pentose phosphate pathway.
-  Covers substrate utilisation across exercise intensities and its hormonal control by catecholamines, insulin/glucagon and cortisol/growth hormone.
-  Develops the lactate paradigm shift — production and clearance, MCT transport and the lactate shuttle, GPR81 signalling, histone lactylation, and the lactate threshold.
-  Closes with fibre-type biochemistry, endurance vs resistance adaptations (AMPK, mTOR, PGC-1α), ROS and hormesis, recovery metabolism (EPOC, glycogen resynthesis, muscle protein synthesis), and exercise as medicine.
-examRelevant: false
+title: Exercise Snacks
+description: Presents the concept and clinical evidence base for Exercise Snacks — isolated, brief, intense bouts repeated through the day — across four domains, namely glycaemic control, muscular adaptation, cardiovascular mortality (VILPA) and immune regulation.
+  Develops the underlying physiological mechanisms — the AMPK-convergent GLUT4 and LPL axes, the three phases of muscular adaptation, the Fick-equation framework for aerobic gains, and the three immunological axes converging on NF-κB suppression.
+  Translates the evidence into prescription, with intensity anchors (%HRmax, RPE CR10), an example one-day protocol, and the safety limits that apply in cardiac rehabilitation and post-exertional malaise.
+examRelevant: true
 draft: false
 ---
 
 import Figure from '../../../components/Figure.astro';
 import Table from '../../../components/Table.astro';
-import fig1 from '../../../assets/biochemistry_01_energy_systems.png';
-import fig1Dark from '../../../assets/biochemistry_01_energy_systems_dark.png';
-import fig2 from '../../../assets/Cellular_Respiration_bw.png';
-import fig2Dark from '../../../assets/generated/Cellular_Respiration_bw_dark.png';
-import fig3 from '../../../assets/biochemistry_02_atp_yield.png';
-import fig3Dark from '../../../assets/biochemistry_02_atp_yield_dark.png';
-import fig4 from '../../../assets/biochemistry_03_fat_cho_crossover.png';
-import fig4Dark from '../../../assets/biochemistry_03_fat_cho_crossover_dark.png';
+import fig1 from '../../../assets/L06_Fig01_ExerciseSnacks_bw_1.png';
+import fig1Dark from '../../../assets/generated/L06_Fig01_ExerciseSnacks_bw_1_dark.png';
+import fig2 from '../../../assets/L06_Fig02_ExerciseSnack_bw.png';
+import fig2Dark from '../../../assets/generated/L06_Fig02_ExerciseSnack_bw_dark.png';
+import fig3 from '../../../assets/L06_Fig03_energy_metabolism_bw.png';
+import fig3Dark from '../../../assets/generated/L06_Fig03_energy_metabolism_bw_dark.png';
+import fig4 from '../../../assets/L06_Fig04_chart2_muscle_signaling_bw.png';
+import fig4Dark from '../../../assets/generated/L06_Fig04_chart2_muscle_signaling_bw_dark.png';
+import fig5 from '../../../assets/L06_Fig05_chart3_aerobic_capacity_bw.png';
+import fig5Dark from '../../../assets/generated/L06_Fig05_chart3_aerobic_capacity_bw_dark.png';
+import fig6 from '../../../assets/L06_Fig06_chart4_immune_signaling_bw.png';
+import fig6Dark from '../../../assets/generated/L06_Fig06_chart4_immune_signaling_bw_dark.png';
+import fig7 from '../../../assets/snacks_01_mortality_reduction.png';
+import fig7Dark from '../../../assets/snacks_01_mortality_reduction_dark.png';
+import fig8 from '../../../assets/snacks_02_postprandial_glucose.png';
+import fig8Dark from '../../../assets/snacks_02_postprandial_glucose_dark.png';
+import fig9 from '../../../assets/snacks_03_adaptation_timeline.png';
+import fig9Dark from '../../../assets/snacks_03_adaptation_timeline_dark.png';
 import { Note } from '../../../components/MarginNote/index.js';
 
 
+**From:** Puta C, Reuken P, Katzer K, Gabriel M, Dudziak D, Stallmach A. *Exercise Snacks.* Friedrich-Schiller-University Jena / University Hospital Jena, 2025.
+
+---
+
 ## Table of Contents
 
-1. [Energy Systems and ATP Production](#1-energy-systems-and-atp-production)
-2. [Glucose Biochemistry](#2-glucose-biochemistry)
-3. [Substrate Utilization and Hormonal Control](#3-substrate-utilization-and-hormonal-control)
-4. [Lactate Metabolism and the Lactate Threshold](#4-lactate-metabolism-and-the-lactate-threshold)
-5. [Fibers, Adaptations, Recovery and Clinical Applications](#5-fibers-adaptations-recovery-and-clinical-applications)
+1. [Exercise Snacks — Concept and Clinical Evidence](#1-exercise-snacks--concept-and-clinical-evidence)
+2. [Physiological Mechanisms of Short Training Bouts](#2-physiological-mechanisms-of-short-training-bouts)
+3. [Prescription and Clinical Translation](#3-prescription-and-clinical-translation)
 
 ---
 
-[**Lecture - Slidedeck**](slides/)
-
----
-
-## 1 Energy Systems and ATP Production
+## 1 Exercise Snacks — Concept and Clinical Evidence
 
 <Note>
 **Learning objectives:**
-- The three energy systems (ATP-PCr, glycolytic, oxidative) by time-course, ATP rate and capacity
-- Why effort duration selects the dominant pathway, and how aerobic and anaerobic ATP yield from glucose differ
-- The concept of first and second metabolic thresholds
+- Definition and typical format of Exercise Snacks (≤1 min bouts, ≥64 % V̇O₂peak / ≥77 % HRmax, several times per day)
+- The four evidence domains: glycaemic control, muscular adaptation, cardiovascular mortality (VILPA), immune function
+- Insulin-independent GLUT4 translocation and muscle-derived IL-6 as the two mechanistic anchors
 </Note>
 
-### 1.1 Introduction to Exercise Biochemistry
+### 1.1 The Clinical Case
 
-Exercise biochemistry examines the molecular and metabolic changes that occur during physical activity. Understanding these principles is essential for optimising athletic performance, designing effective training programmes, and comprehending how exercise promotes health and prevents disease (Brooks et al. 2005).
+Imagine the following situation. A 53-year-old patient with arterial hypertension and a prediabetic metabolic state (HbA1c 6.4 % / 47 mmol/mol) at a BMI of 31.4 kg/m² (105 kg at 183 cm), waist circumference ~100 cm (notable visceral fat), engages in only light daily activity (~2000–4000 steps/day) and works as a deputy branch manager in banking. You discuss the importance of physical activity for his prediabetes and hypertension and recommend "Exercise Snacks" as a starting point. He replies: "No, I don't have time for that — I have so much to do professionally." Your answer: start with **Exercise Snacks**. He asks: "What is that? I've never heard of it."
 
-At the cellular level, exercise initiates a cascade of biochemical events involving energy metabolism, substrate utilisation, hormone regulation, and adaptive signalling pathways. These processes are highly coordinated and depend on exercise intensity, duration, and the individual's training status (Hawley et al. 2014).
+**Aim.** To present the significance of small exercise bouts — "Exercise Snacks" — in an evidence-based manner. The cardiorespiratory, cardiometabolic and immunological adaptations they produce should motivate integrating brief, repeated strenuous exertions into everyday life (Shen 2022; Francois et al. 2014; Wang et al. 2024). Implementing Exercise Snacks could be a *key strategy for starting or resuming* physical activity (Shen 2022).
 
-### 1.2 The ATP-PCr System (Phosphagen System)
+### 1.2 Definition and Characterisation
 
-The most immediate energy source for muscle contraction is adenosine triphosphate (ATP). However, intramuscular ATP stores are limited and can sustain maximal exercise for only 2–3 seconds. The phosphocreatine (PCr) system provides rapid ATP regeneration through the creatine kinase reaction (Greenhaff 2001):
+There is a clear need for practical activity recommendations that simultaneously improve cardiorespiratory fitness and reduce the effects of inactivity on cardiometabolic health. **"Exercise Snacks" are defined as isolated, brief, intense exertions that can be performed multiple times per day** (Islam et al. 2022), particularly effective around mealtimes to maximise metabolic effects (Chen et al. 2025).
 
-> **PCr + ADP + H⁺ → ATP + Creatine**
+**Typical format.** One of the first protocols comprised an 11-minute bout (6 × 1-minute snacks with 1-minute recovery) plus a 5-minute warm-up and 3-minute cool-down, performed three times per day before meals (Francois et al. 2014). Exercise Snacks involve brief phases (≤1 min) at high intensity (≥64 % V̇O₂peak, ≥77 % of maximal heart rate) (Chen et al. 2025); later studies extended the concept to short (&lt;10-minute) phases across the morning and afternoon (Shen 2022; Francois et al. 2014; Wang et al. 2024; Stamatakis et al. 2022).
 
-This system is crucial for high-intensity, short-duration activities (5–10 seconds) such as sprinting, jumping, or powerlifting. Complete PCr restoration requires 3–5 minutes of rest (Harris et al. 1976).
+**Simple execution.** Stair climbing, short sprints, intensive uphill walking intervals, or body-weight exercises (e.g. 1 minute of sit-to-stand) (Shen 2022).
 
-### 1.3 Glycolytic System (Anaerobic Glycolysis)
+### 1.3 Exercise Snacks and Energy Metabolism
 
-When exercise extends beyond 10 seconds, the glycolytic system becomes the predominant ATP source. This pathway breaks down glucose or glycogen without requiring oxygen, producing pyruvate and lactate as end products (Robergs et al. 2004). Key features:
-
-- Net ATP yield: 2–3 ATP per glucose molecule (depending on glucose source)
-- Peak power output: 30–90 seconds
-- Produces hydrogen ions (H⁺) that contribute to metabolic acidosis
-- Critical for activities like the 400 m sprint, 100 m swim, or resistance training
-
-### 1.4 Oxidative System (Aerobic Metabolism)
-
-The oxidative system provides sustainable ATP production through complete oxidation of carbohydrates and fats in the mitochondria, via three main processes: pyruvate oxidation, the citric acid cycle (Krebs cycle), and the electron transport chain (Holloszy & Coyle 1984).
-
-ATP yields from complete oxidation are substantially higher than anaerobic pathways: approximately 32–36 ATP per glucose molecule and over 100 ATP per palmitate (16-carbon fatty acid). This efficiency makes the oxidative system ideal for prolonged exercise lasting more than 2–3 minutes (Berg et al. 2002).
-
-### 1.5 Comparison of Energy Systems
-
-<Figure src={fig1} srcDark={fig1Dark} alt="ATP resynthesis rate of the three energy systems against effort duration">
-The three energy systems compared by the two properties that matter in practice: how fast they resynthesise ATP, and how long they can keep it up. ATP–PCr delivers the highest rate but is spent within 5–10 s, glycolysis peaks over 30–90 s, and oxidative phosphorylation sustains a moderate rate for effectively unlimited duration. Note the logarithmic time axis.
+<Figure src={fig1} srcDark={fig1Dark} alt="Evidence-based effects of Exercise Snacks">
+Summary of evidence-based effects on energy metabolism, muscular adaptations, aerobic capacity and immunological signalling pathways of Exercise Snacks (created in BioRender; Puta C, 2025).
 </Figure>
 
-<Figure src={fig2} srcDark={fig2Dark} alt="Cellular respiration">
-After uptake into the cell, glucose is phosphorylated and passes through glycolysis down to pyruvate. Under anaerobic conditions, pyruvate is converted to lactate to regenerate the NAD⁺ required for glycolysis, and lactate is typically released by the cells (2 mol ATP per mol glucose). Under aerobic conditions, pyruvate enters the mitochondria and is converted to acetyl-CoA by oxidative decarboxylation, feeding the citrate cycle; it is broken down to CO₂ and the reduction equivalents NADH/H⁺ and FADH₂, whose oxygen-dependent reoxidation yields water and is coupled to ATP synthesis from ADP and Pᵢ, giving ≈ 30 mol ATP per mol glucose.
+Brief, frequent, intensive exertions around mealtimes reproducibly improve postprandial glycaemia and insulin sensitivity. A crossover study reported a one-day and 24-hour reduction of mean blood glucose (~0.7 mmol/L over 24 h) and a ~1.4 mmol/L reduction of the 3-hour postprandial glucose after breakfast versus continuous training in insulin-resistant adults (Carter & Solomon 2020). Meta-analyses show strong effects on maximal oxygen uptake (increase) and total and LDL cholesterol (decrease) (Chen et al. 2025; Wan et al. 2025); protocols that reduce adipocyte size and improve glycaemic control produce greater reductions of basal inflammatory markers (Metsios & Kitas 2018; Costa Pereira et al. 2024). The insulin-sensitivity benefit of multiple short daily snacks can be lost with brief cessation, indicating that chronic adaptations require continuous stimulation (Costa Pereira et al. 2024).
+
+<Figure src={fig8} srcDark={fig8Dark} alt="Postprandial blood glucose with and without pre-meal exercise snacks">
+**Left**: blood glucose after a meal preceded by six one-minute exercise snacks versus a no-exercise control; the shaded area is the difference in glycaemic excursion. **Right**: the two summary effects — a ~1.4 mmol·L⁻¹ lower 3-hour postprandial peak after breakfast and a ~0.7 mmol·L⁻¹ lower 24-hour mean glucose, in insulin-resistant adults (Carter & Solomon 2020).
 </Figure>
 
-### 1.6 Common Metabolic Thresholds
+**The metabolic basis** is that these brief, predominantly anaerobic-lactacid exertions move glucose into muscle *insulin-independently*. During exertion, GLUT4 is translocated from intracellular vesicles to the plasma membrane by muscle contraction — insulin-independently — so both insulin and physical activity raise cell-surface GLUT4 (Lawrence 1926; Roy & Marette 1996; Flores-Opazo et al. 2020). Acute exertion can raise cell-surface GLUT4 by ~50 % immediately after training (Schnurr et al. 2015).
 
-**Metabolic threshold:** an exercise intensity that results in an apparent change in metabolism (usually reflected by changes in oxygen uptake, carbon dioxide production, ventilation, or metabolites in muscle and blood). The first detectable change is often termed the first metabolic threshold, the second detectable change the second metabolic threshold (Bishop et al. 2025).
+**Practical insight.** Brief, intensive Exercise Snacks before or shortly after meals are an evidence-based, time-efficient strategy for reducing postprandial glycaemia and improving insulin-related parameters in prediabetes and risk patients (Carter & Solomon 2020; Chen et al. 2025; Wan et al. 2025; Bellini et al. 2024) — directly addressing our patient's prediabetic risk profile. For weight reduction, the concept is expanded to 3×/week of 4 × 4 min at 85–95 % HRmax / 3 min at 60–70 % HRmax (30–40 min total), with an expected additive ~3 % reduction of visceral and liver fat.
+
+### 1.4 Exercise Snacks and Muscular Adaptations
+
+Four weeks of daily 5 × 1 min (morning) and 5 × 1 min (evening) with 1-minute pauses (sit-to-stand, seated knee extension, walking-on-the-spot vs standing TV watching) produced a 31 % improvement in the 1-minute sit-to-stand test, a 6 % increase in maximal leg strength, and a 2 % increase in thigh muscle cross-sectional area (Perkin et al. 2019). Despite their brevity, Exercise Snacks of large muscle groups activate classical intracellular signalling (AMPK) and transcriptional regulators (PGC-1α) involved in oxidative muscle remodelling (Babir et al. 2025).
+
+**Practical insight.** Simple large-muscle-group exercises counteract age- or disease-related muscle wasting (sarcopenia). Preserved muscle mass matters for immuno-metabolic effects (prediabetes, metabolic syndrome). Our patient gains strength and shifts toward fat-free mass; muscular effects (more strength) are usually noticeable sooner than the longer-term effects of weight reduction.
+
+### 1.5 Exercise Snacks and Cardiovascular Disease (VILPA)
+
+Exercise Snacks align with the revised WHO guidelines on physical activity and sedentary behaviour (Bull et al. 2020), which removed the previous requirement that activity occur in bouts of ≥10 minutes. The underlying evidence refers to **vigorous intermittent lifestyle physical activity (VILPA)**. In a UK Biobank sample of 25,241 non-athletes (mean age 61.8 y; 14,178 women / 11,063 men) (Stamatakis et al. 2022):
+
+- compared with no VILPA, **3 × 1–2 min VILPA per day** was associated with a **38–40 %** reduction in all-cause and cancer mortality risk and a **48–49 %** reduction in cardiovascular mortality risk;
+- a single daily duration of **4.4 min/day** was associated with a **26–30 %** reduction in all-cause and cancer mortality risk and a **32–34 %** reduction in cardiovascular mortality risk (Stamatakis et al. 2022).
+
+<Figure src={fig7} srcDark={fig7Dark} alt="Mortality risk reduction with VILPA by dose pattern and outcome">
+Reduction in mortality risk associated with vigorous intermittent lifestyle physical activity, by outcome. Three separate bouts of 1–2 min per day are associated with larger reductions than a single daily bout of 4.4 min, and the effect is largest for cardiovascular mortality. UK Biobank, n = 25,241 non-exercisers, mean age 61.8 y (Stamatakis et al. 2022).
+</Figure>
+
+These effects reflect, among other things, increased capillary density and mitochondrial content, enhancing skeletal-muscle gas exchange and oxygen uptake. **Our patient thus benefits from daily 3 × 1–2-minute strenuous Exercise Snacks — even as a non-athlete — with a marked reduction in cardiovascular and cancer risk.**
+
+### 1.6 Effects on Immune Function and Inflammatory Markers
+
+One of the most important medical discoveries of the past two decades is that the immune system and inflammation are involved not just in selected diseases but in a multitude of health problems determining morbidity and mortality (Slavich 2015; Netea et al. 2017). More than 50 % of all deaths are attributable to inflammation-related diseases — ischaemic heart disease, stroke, cancer, type 2 diabetes, chronic kidney disease, NAFLD, and autoimmune and neurodegenerative diseases (GBD 2017 Causes of Death Collaborators 2018).
+
+#### 1.6.1 Fundamentals: Physical Activity and the Immune System
+
+**Cell mobilisation during exertion.** Acute exertions (brief interval-like, anaerobic-lactacid, or ≥~20 min continuous at the individual anaerobic threshold) transiently increase blood immune cells, driven by (i) release of adrenaline, noradrenaline and cortisol, (ii) increased vascular/tissue shear forces, and (iii) rising blood pressure — depending on intensity, type and duration.
+
+**Immune surveillance after exertion.** Some mobilised lymphocytes migrate from blood into tissues (lung, bone marrow, GI tract) for surveillance; other cells (e.g. neutrophils) keep rising in blood after strenuous exertion.
+
+**Myokines.** Muscle contraction releases anti-inflammatory messengers (myokines/exerkines) that act locally (reducing skeletal-muscle insulin resistance), stimulate whole-body fat burning, and exert anti-inflammatory effects.
+
+**Regular activity and immune competence.** Regular activity reduces the risk of chronic low-grade-inflammation diseases (T2DM, cardiovascular disease) via enhanced immunological tissue surveillance, altered immune-cell function, and stimulation of anti-inflammatory signalling.
+
+#### 1.6.2 Exercise Snacks: Pro- and Anti-inflammatory Effects
+
+The effects are context-dependent: brief intensive exertions produce transient IL-6 increases; with repeated snacks, longer-term reductions of IL-6 and CRP are seen, while TNF-α effects are inconsistent (Francois et al. 2014). Exercise Snacks induce acute modulation of immune signals, gene expression and microbiome-mediated pathways, and can alter immunometabolic status (Soltani et al. 2020; Sohail et al. 2019; Radom-Aizik et al. 2014; Haunhorst et al. 2022; Ringleb et al. 2024).
+
+**Acute exertion-induced effects.** Exertion-induced IL-6 (a myokine) acts as a metabolic signal promoting hepatic glucose production and lipolysis and — instead of driving NF-κB/TNF inflammation — promotes anti-inflammatory mediators (IL-10, soluble TNF receptors, IL-1ra) (Metsios & Kitas 2018), lasting up to ~6 hours post-exertion (Kliszczewicz et al. 2019; Radom-Aizik et al. 2014; Metsios & Kitas 2018).
+
+**Longer-term changes.** Programmes with Exercise Snacks can lower resting IL-6 and CRP in overweight/obese youth and adults; combined training with calorie restriction lowers CRP and can positively influence IL-6 and TNF-α in non-sedentary adults (Khalafi et al. 2024; Guo et al. 2024; Liu et al. 2021).
+
+**Bottom line for our patient.** Muscle-expressed IL-6 differs from IL-6 in non-exertion inflammation: it stimulates hepatic glucose production and lipolysis and induces anti-inflammatory signalling, achieving an overall reduction of the systemic inflammatory state.
+
+<Figure src={fig2} srcDark={fig2Dark} alt="Exercise Snack protocols and anti-inflammatory efficacy">
+Exercise Snack protocols and anti-inflammatory efficacy (data: literature analysis). HIIT: high-intensity interval training.
+</Figure>
 
 ### One-Minute-Paper Topics
 <Note>
   A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
 </Note>
-- Compare the phosphagen, glycolytic, and oxidative ATP systems by time course and yield.
-- Why does the phosphagen system dominate in efforts shorter than ~10 seconds?
-- Outline glycolysis in three steps and identify its net ATP yield.
-- Why is the aerobic ATP yield from glucose roughly 15× the anaerobic yield, and what limits the anaerobic route?
-- Define the first and second metabolic threshold and name one measurable variable that reveals each.
+- Define "Exercise Snack" in one sentence, including duration and frequency.
+- What is the rationale for distributing short bouts of activity throughout the day rather than consolidating them?
+- Why is insulin-independent glucose uptake clinically relevant for people with insulin resistance?
+- Name two muscular adaptations that can be elicited by repeated short, intense bouts.
+- Summarise the VILPA evidence: 3 × 1–2 min bouts/day were associated with what mortality reduction?
+- Why might VILPA be especially valuable for non-exercisers?
+- Explain why muscle-derived IL-6 acts anti-inflammatorily while IL-6 in chronic disease does not.
 
 ### Key References
-- Berg JM, Tymoczko JL, Stryer L. *Biochemistry*, 5th edn. W.H. Freeman and Company, 2002.
-- Bishop DJ, Beck B, Biddle SJH, et al. *Physical activity and exercise intensity terminology.* J Sci Med Sport 28, 2025: 980–991.
-- Brooks GA, Fahey TD, Baldwin KM. *Exercise Physiology: Human Bioenergetics and Its Applications*, 4th edn. McGraw-Hill, 2005.
-- Greenhaff PL. *The creatine-phosphocreatine system: there's more than one song in its repertoire.* J Physiol 537 (3), 2001: 657.
-- Harris RC, Edwards RH, Hultman E, et al. *The time course of phosphorylcreatine resynthesis during recovery of the quadriceps muscle in man.* Pflügers Arch 367 (2), 1976: 137–142.
-- Hawley JA, Hargreaves M, Joyner MJ, Zierath JR. *Integrative biology of exercise.* Cell 159 (4), 2014: 738–749.
-- Holloszy JO, Coyle EF. *Adaptations of skeletal muscle to endurance exercise and their metabolic consequences.* J Appl Physiol 56 (4), 1984: 831–838.
-- Robergs RA, Ghiasvand F, Parker D. *Biochemistry of exercise-induced metabolic acidosis.* Am J Physiol Regul Integr Comp Physiol 287 (3), 2004: R502–R516.
+- Babir FJ, Smith L, Patel R, et al. *Technology-enabled exercise 'snacks' are feasible to perform in a real-world setting: a randomized controlled trial.* Scand J Med Sci Sports, 2025. doi:10.1111/sms.70117.
+- Bellini A, Rossi F, Bianchi M, et al. *Exercise prescription for postprandial glycemic management.* Nutrients, 2024. doi:10.3390/nu16081170.
+- Bull FC, Al-Ansari SS, Biddle S, et al. *World Health Organization 2020 guidelines on physical activity and sedentary behaviour.* Br J Sports Med 54 (24), 2020: 1451–1462. doi:10.1136/bjsports-2020-102955.
+- Carter S, Solomon TPJ. *Exercise-induced improvements in postprandial glucose response are blunted by pre-exercise hyperglycemia: a randomized crossover trial in healthy individuals.* Front Endocrinol (Lausanne), 2020. doi:10.3389/fendo.2020.566548.
+- Chen J, Zhang Y, Li X, et al. *The effectiveness of exercise snacks as a time-efficient treatment for improving cardiometabolic health in adults: a systematic review and meta-analysis.* Front Cardiovasc Med, 2025. doi:10.3389/fcvm.2025.1643153.
+- Costa Pereira LV, Silva J, Oliveira M, et al. *Cardiometabolic and cellular adaptations to multiple vs single daily HIIT sessions in Wistar rats: impact of short-term detraining.* Metabolites, 2024. doi:10.3390/metabo14080447.
+- Flores-Opazo M, McGee SL, Hargreaves M. *Exercise and GLUT4.* Exerc Sport Sci Rev 48 (3), 2020: 110–118. doi:10.1249/JES.0000000000000224.
+- Francois ME, Little JP, Bookman E, et al. *'Exercise snacks' before meals: a novel strategy to improve glycaemic control in individuals with insulin resistance.* Diabetologia 57, 2014: 1437–1445. doi:10.1007/s00125-014-3244-6.
+- GBD 2017 Causes of Death Collaborators. *Global, regional, and national age-sex-specific mortality for 282 causes of death in 195 countries and territories, 1980–2017: a systematic analysis for the Global Burden of Disease Study 2017.* Lancet 392 (10159), 2018: 1736–1788. doi:10.1016/S0140-6736(18)32203-7.
+- Guo Y, Qian HZ, Xu X, Liu Q. *Effects of different exercise modalities on inflammatory markers in the obese and overweight populations: unraveling the mystery of exercise and inflammation.* Front Physiol, 2024. doi:10.3389/fphys.2024.1405094.
+- Haunhorst S, Bloch W, Ringleb M, et al. *Acute effects of heavy resistance exercise on biomarkers of neuroendocrine-immune regulation in healthy adults: a systematic review.* Exerc Immunol Rev 28, 2022: 36–52.
+- Islam H, Gibala MJ, Little JP. *Exercise snacks: a novel strategy to improve cardiometabolic health.* Exerc Sport Sci Rev 50 (1), 2022: 31–37. doi:10.1249/JES.0000000000000275.
+- Khalafi M, Mohebbi H, Symonds ME, et al. *The effects of exercise training on inflammatory markers in children and adolescents: a systematic review and meta-analysis.* Physiol Behav, 2024. doi:10.1016/j.physbeh.2024.114524.
+- Kliszczewicz B, Snarr RL, Esco MR, et al. *Acute inflammatory responses to high-intensity functional training programming: an observational study.* J Hum Sport Exerc, 2019. doi:10.14198/jhse.2019.144.18.
+- Lawrence RD. *The effect of exercise on insulin action in diabetes.* Br Med J 1 (3406), 1926: 648–650. doi:10.1136/bmj.1.3406.648.
+- Liu Y, Wang Y, Chen X, et al. *Calorie restriction with exercise intervention improves inflammatory response in overweight and obese adults: a systematic review and meta-analysis.* Front Physiol, 2021. doi:10.3389/fphys.2021.754731.
+- Metsios GS, Kitas GD. *Physical activity, exercise and rheumatoid arthritis: effectiveness, mechanisms and implementation.* Best Pract Res Clin Rheumatol, 2018. doi:10.1016/j.berh.2019.03.013.
+- Netea MG, Balkwill F, Chonchol M, et al. *A guiding map for inflammation.* Nat Immunol 18 (8), 2017: 826–831. doi:10.1038/ni.3790.
+- Perkin OJ, McGuigan PM, Stokes KA. *Exercise snacking to improve muscle function in healthy older adults: a pilot study.* J Aging Res 2019, 2019: 7516939. doi:10.1155/2019/7516939.
+- Radom-Aizik S, Zaldivar F, Haddad F, Cooper DM. *Impact of brief exercise on circulating monocyte gene and microRNA expression: implications for atherosclerotic vascular disease.* Brain Behav Immun, 2014. doi:10.1016/j.bbi.2014.01.003.
+- Ringleb M, Javelle F, Haunhorst S, et al. *Beyond muscles: investigating immunoregulatory myokines in acute resistance exercise — a systematic review and meta-analysis.* FASEB J 38 (7), 2024: e23596. doi:10.1096/fj.202301619R.
+- Roy D, Marette A. *Exercise induces the translocation of GLUT4 to transverse tubules from an intracellular pool in rat skeletal muscle.* Biochem Biophys Res Commun 223 (1), 1996: 147–152. doi:10.1006/bbrc.1996.0860.
+- Schnurr TM, Reynolds AJ, Komac AM, et al. *The effect of acute exercise on GLUT4 levels in peripheral blood mononuclear cells of sled dogs.* Biochem Biophys Rep 2, 2015: 45–49. doi:10.1016/j.bbrep.2015.05.002.
+- Shen MM. *Exercise snacks: a novel strategy to improve cardiometabolic health.* Exerc Sport Sci Rev, 2022. doi:10.1249/jes.0000000000000275.
+- Slavich GM. *Understanding inflammation, its regulation, and relevance for health: a top scientific and public priority.* Brain Behav Immun 45, 2015: 13–14. doi:10.1016/j.bbi.2014.10.012.
+- Sohail MU, Yassine HM, Sohail A, et al. *Impact of physical exercise on gut microbiome, inflammation, and the pathobiology of metabolic disorders.* Rev Diabet Stud, 2019. doi:10.1900/RDS.2019.15.35.
+- Soltani N, Ghasemi A, Asadi M, et al. *The exercise training modulatory effects on the obesity-induced immunometabolic dysfunctions.* Diabetes Metab Syndr Obes, 2020. doi:10.2147/DMSO.S234992.
+- Stamatakis E, Ahmadi MN, Gill JMR, et al. *Association of wearable device-measured vigorous intermittent lifestyle physical activity with mortality.* Nat Med 28 (12), 2022: 2521–2529. doi:10.1038/s41591-022-02100-x.
+- Wan K, Lee S, Chen J, et al. *Effects of exercise snacks on cardiometabolic health and body composition in adults: a systematic review and meta-analysis.* Scand J Med Sci Sports, 2025. doi:10.1111/sms.70114.
+- Wang T, Laher I, Li S. *Exercise snacks and physical fitness in sedentary populations.* Sports Med Health Sci, 2024. doi:10.1016/j.smhs.2024.02.006.
 
 ---
 
-## 2 Glucose Biochemistry
+## 2 Physiological Mechanisms of Short Training Bouts
 
 <Note>
 **Learning objectives:**
-- The four major fates of glucose and the three catabolic fates of pyruvate
-- Glycolysis regulation, the Pasteur and Warburg effects, and GLUT4-dependent uptake in type 1 diabetes
-- Fermentation and the Cori cycle, gluconeogenesis as a bypass pathway, and the pentose phosphate pathway
+- The two insulin-independent, AMPK-convergent energy-metabolism axes (GLUT4, LPL)
+- The three temporally staggered phases of muscular adaptation (AMPK/PGC-1α → mTORC1 → satellite cells)
+- The Fick-equation framework (central vs peripheral) and the three immunological axes converging on NF-κB suppression
 </Note>
 
-### 2.1 Major Pathways of Glucose Utilization
+### 2.1 Energy Metabolism
 
-Glucose is relatively rich in potential energy; its complete oxidation to CO₂ and water proceeds with a standard free-energy change of −2,840 kJ/mol. In animals and vascular plants, glucose has four major fates (Nelson & Cox 2013):
+**Key outcomes:** ↓ Blood glucose · ↓ Triglycerides
 
-- **Storage** as glycogen (animals), starch (plants), or sucrose.
-- **Structural polymers** — synthesis of complex polysaccharides destined for the extracellular space.
-- **Glycolysis → pyruvate** — oxidation to the three-carbon pyruvate to provide ATP and metabolic intermediates.
-- **Pentose phosphate pathway** — oxidation to ribose 5-phosphate (nucleic-acid synthesis) and NADPH (reductive biosynthesis).
+Short bouts activate two parallel, insulin-independent metabolic axes that lower plasma glucose and triglycerides within minutes.
 
-### 2.2 Three Possible Catabolic Fates of Pyruvate
+**GLUT4 translocation.** Muscle contractions raise the AMP/ATP ratio and activate Ca²⁺/calmodulin-dependent kinases, both triggering AMPK. Activated AMPK drives GLUT4 vesicles from intracellular depots to the plasma membrane — without insulin — giving rapid glucose uptake and a fall in blood glucose. The effect sets in within minutes and persists 1–4 hours post-exercise, valuable for postprandial glycaemic control in T2DM and insulin resistance (Lawrence 1926; Roy & Marette 1996; Flores-Opazo et al. 2020).
 
-The pyruvate formed by glycolysis is further metabolised via one of three catabolic routes (Nelson & Cox 2013):
+**LPL activity.** Lipoprotein lipase on the muscle capillary endothelium cleaves triglycerides from VLDL and chylomicrons into free fatty acids. Contractions increase LPL activity via AMPK and enhance capillary perfusion, so plasma triglycerides and VLDL fall and muscle fatty-acid oxidation rises.
 
-1. **Aerobic oxidation (complete oxidation to CO₂):** under aerobic conditions, pyruvate is oxidised with loss of its carboxyl group as CO₂ to yield the acetyl group of acetyl-CoA, which is fully oxidised to CO₂ by the citric acid cycle. Electrons pass to O₂ through the mitochondrial carrier chain, forming H₂O and driving ATP synthesis (≈ 30–32 ATP per glucose).
-2. **Lactic acid fermentation:** when vigorously contracting muscle works under hypoxia, NADH cannot be reoxidised to NAD⁺; pyruvate is reduced to lactate, accepting electrons from NADH and regenerating the NAD⁺ needed for glycolysis to continue. Some tissues (retina, erythrocytes) form lactate even under aerobic conditions.
-3. **Ethanol (alcohol) fermentation:** in yeast and some plant/invertebrate tissues, pyruvate is converted under hypoxia to ethanol and CO₂:
+**Convergence.** Both axes share **AMPK** as the central sensor and converge on reduced insulin resistance and lower cardiovascular risk — the core metabolic protective effect.
 
-> Glucose + 2ADP + 2Pᵢ → 2 ethanol + 2CO₂ + 2ATP + 2H₂O
-
-**Exercise relevance.** During high-intensity exercise, when O₂ delivery cannot meet demand, the lactic-acid route predominates; lactate travels to the liver and is converted back to glucose via gluconeogenesis (the Cori cycle). The best-conditioned athletes can sprint at top speed for no more than ~1 minute (Nelson & Cox 2013).
-
-### 2.3 Glycolysis Regulation and the Warburg Effect
-
-Pasteur observed that glucose consumption is many times greater anaerobically than aerobically — the **Pasteur effect**. Its basis is now clear: the anaerobic ATP yield (2 per glucose) is far below the aerobic yield (30–32 per glucose), so ~15× as much glucose must be consumed anaerobically for the same ATP (Nelson & Cox 2013).
-
-<Figure src={fig3} srcDark={fig3Dark} alt="ATP yield per mole of substrate and the resulting Pasteur effect">
-**Left**: ATP yield per mole of substrate on a logarithmic scale — 2 for anaerobic glycolysis, ~31 for the complete aerobic oxidation of glucose, and 106 for palmitate. **Right**: the direct consequence, the Pasteur effect. Because the anaerobic yield is roughly 15-fold lower, about 15× as much glucose must be consumed anaerobically to liberate the same amount of ATP (Nelson & Cox 2013).
+<Figure src={fig3} srcDark={fig3Dark} alt="Energy metabolism signalling">
+Exercise Snacks — energy-metabolism signalling. Both the GLUT4 and LPL axes operate insulin-independently via AMPK, converging on reduced insulin resistance and lower cardiovascular risk.
 </Figure>
 
-Glycolytic flux is regulated to keep ATP nearly constant, via allosteric control of hexokinase, PFK-1 and pyruvate kinase, and second-to-second metabolite fluctuations; on a slower scale by glucagon, epinephrine and insulin, and by enzyme gene expression.
+### 2.2 Muscle Structure and Function
 
-**The Warburg effect.** Warburg observed (1928) that tumours of nearly all types carry out glycolysis at a much higher rate than normal tissue, *even when oxygen is available* (Nelson & Cox 2013):
+**Key outcomes:** ↑ Maximal leg strength · ↑ Muscle cross-sectional area
 
-- Tumour cells rely on glycolysis for much ATP; the low yield (2 vs ~30 ATP/glucose) forces high glucose uptake.
-- The **hypoxia-inducible factor HIF-1** stimulates ≥8 glycolytic enzymes and the transporters GLUT1/GLUT3 when O₂ is limited.
-- Three hexokinase inhibitors show chemotherapeutic promise: 2-deoxyglucose, lonidamine, 3-bromopyruvate.
-- PET with ¹⁸F-labelled 2-fluoro-2-deoxyglucose (FdG) detects tumours by their high glucose uptake.
+Muscular adaptations unfold across three temporally staggered phases.
 
-### 2.4 Glucose Uptake, GLUT4 and Type 1 Diabetes
+**Acute (minutes–hours): AMPK/PGC-1α axis.** Contractions activate AMPK, which phosphorylates PGC-1α and drives its nuclear translocation; PGC-1α co-activates PPARγ and initiates transcription of mitochondrial and myofibrillar genes, while neuromuscular recruitment improves fibre conduction velocity.
 
-Glucose uptake is mediated by the GLUT family. Hepatocyte (GLUT1/2) and neuronal (GLUT3) transporters are constitutively present; the main transporter of skeletal muscle, cardiac muscle and adipose tissue (**GLUT4**) is sequestered in intracellular vesicles and moves to the membrane only in response to an **insulin signal** (Nelson & Cox 2013).
+**Subacute (hours–days): myofibrillar protein synthesis.** mTORC1 is activated via mechanical stress and IGF-1, increasing translation of myosin-heavy-chain and actin mRNAs; the PPARγ/PGC-1α complex amplifies this via higher mitochondrial ATP. Even short bouts open the anabolic window provided mechanical tension is adequate.
 
-In **type 1 diabetes**, too few β cells means insufficient insulin to trigger GLUT4-mediated uptake. Glucose accumulates (hyperglycaemia); muscle and fat instead burn fatty acids, and hepatic acetyl-CoA is converted to ketone bodies (acetoacetate, β-hydroxybutyrate). Overproduction lowers blood pH — **ketoacidosis**, a life-threatening condition (Nelson & Cox 2013).
+**Chronic (weeks–months): satellite-cell activation and hypertrophy.** Mechanical stress activates satellite cells via Hepatocyte Growth Factor (HGF) and Mechano Growth Factor (MGF); they proliferate, differentiate and fuse with existing fibres, raising myonuclei number and cross-sectional area — the slowest but most durable adaptation.
 
-**Exercise relevance.** Exercise stimulates GLUT4 translocation via AMPK and calcium signalling, *independent of insulin* (Richter & Hargreaves 2013) — of particular clinical importance in diabetes. The Lehninger Fig. 14-10 cascade (insulin defect → blocked PI-3K/PKB → no GLUT4 insertion → blocked glycolysis and PPP → impaired TCA/ETC → triacylglycerol mobilisation → ketoacidosis) makes each step of this failure explicit (Nelson & Cox 2013).
+> **Clinical note (ME/CFS / Post-COVID):** mTORC1 activation through exercise may trigger post-exertional malaise rather than hypertrophy in populations with mitochondrial dysfunction — highlighting the need for wearable-based PEM monitoring as a safeguard.
 
-### 2.5 Fermentation and the Cori Cycle
-
-**Fermentation** is the anaerobic degradation of glucose (or other nutrients) to obtain ATP; it neither consumes O₂ nor changes net NAD⁺/NADH. In **lactic-acid fermentation**, NADH from glycolysis is reoxidised to NAD⁺ by reducing pyruvate to lactate (lactate dehydrogenase):
-
-> Pyruvate + NADH + H⁺ → L-Lactate + NAD⁺  (ΔG′° = −25.1 kJ/mol)
-
-In **ethanol fermentation**, pyruvate is decarboxylated to acetaldehyde (pyruvate decarboxylase; TPP, Mg²⁺) then reduced to ethanol by alcohol dehydrogenase using NADH (Nelson & Cox 2013).
-
-**In exercise**, during a sprint the blood cannot deliver O₂ fast enough; muscle ferments stored glycogen to lactate. Lactate is later reconverted to glucose by hepatic gluconeogenesis during recovery, when the excess O₂ consumed repays the **oxygen debt**. The muscle-lactate → liver-glucose loop is the **Cori cycle** (Carl and Gerty Cori). A trained athlete recovers from a 100 m sprint in ≤30 min; an alligator may need many hours (Nelson & Cox 2013).
-
-### 2.6 Gluconeogenesis
-
-Some tissues depend almost entirely on glucose — the brain alone needs ~120 g/day. Between meals, during fasting, or after vigorous exercise, glycogen is depleted, and glucose must be made from non-carbohydrate precursors by **gluconeogenesis** (Nelson & Cox 2013):
-
-- Occurs in all animals, plants, fungi and microorganisms; mainly in the **liver** (also renal cortex, small-intestinal epithelium).
-- Important precursors are three-carbon compounds — **lactate, pyruvate, glycerol** — and glucogenic amino acids.
-- After exercise, muscle lactate returns to the liver, is converted to glucose, and returns to muscle as glycogen (Cori cycle).
-
-**Not simply reverse glycolysis.** Seven of ten reactions reverse glycolysis, but three irreversible glycolytic steps are bypassed (Nelson & Cox 2013):
-
-1. **Pyruvate → PEP** — pyruvate carboxylase (mitochondrial; biotin, ATP → oxaloacetate) then PEP carboxykinase (GTP).
-2. **Fructose 1,6-bisphosphate → fructose 6-phosphate** — fructose 1,6-bisphosphatase (Mg²⁺; ΔG′° = −16.3 kJ/mol).
-3. **Glucose 6-phosphate → glucose** — glucose 6-phosphatase (ER lumen of hepatocytes, renal and intestinal cells; ΔG′° = −13.8 kJ/mol).
-
-Gluconeogenesis is energetically expensive:
-
-> 2 Pyruvate + 4ATP + 2GTP + 2NADH + 2H⁺ + 4H₂O → Glucose + 4ADP + 2GDP + 6Pᵢ + 2NAD⁺
-
-Six high-energy phosphates per glucose (vs 2 ATP for glycolysis). Glycolysis and gluconeogenesis are **reciprocally regulated** to prevent futile cycling (Nelson & Cox 2013).
-
-### 2.7 Pentose Phosphate Pathway
-
-The **pentose phosphate pathway** (phosphogluconate / hexose monophosphate pathway) is an alternative catabolic fate of glucose 6-phosphate with two major functions (Nelson & Cox 2013):
-
-- **NADPH production** — for fatty-acid, cholesterol and steroid synthesis (liver, adipose, adrenal, gonad) and for maintaining reduced glutathione against oxidative damage (erythrocytes, lens, cornea).
-- **Ribose 5-phosphate production** — for RNA, DNA and coenzyme synthesis in rapidly dividing cells (marrow, skin, intestinal mucosa, tumours).
-
-**Oxidative phase:** glucose 6-phosphate dehydrogenase (G6PD) reduces NADP⁺ to NADPH; after lactonase and 6-phosphogluconate dehydrogenase, a second NADPH forms and ribulose 5-phosphate is produced, isomerised to ribose 5-phosphate.
-
-> Glucose 6-phosphate + 2NADP⁺ + H₂O → ribose 5-phosphate + CO₂ + 2NADPH + 2H⁺
-
-**Non-oxidative phase:** transketolase (TPP cofactor) and transaldolase interconvert three-, four-, five-, six- and seven-carbon sugars, reversibly converting six pentose phosphates to five hexose phosphates. Whether glucose 6-phosphate enters glycolysis or the PPP depends on the cytosolic NADP⁺/NADPH ratio: rising NADP⁺ allosterically stimulates G6PD and diverts flux to the PPP (Nelson & Cox 2013).
-
-### One-Minute-Paper Topics
-<Note>
-  A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
-</Note>
-- Describe the four major fates of glucose and the three catabolic fates of pyruvate, and the conditions that favour each.
-- Explain the Warburg effect in one sentence and name one context in which high aerobic glycolysis also occurs in healthy tissue.
-- Why is GLUT4 special among glucose transporters, and how does exercise recruit it independently of insulin?
-- What is gluconeogenesis, why is it *not* simply reverse glycolysis, and why does it matter during prolonged exercise?
-- Briefly explain the two functions of the pentose phosphate pathway and when a cell diverts glucose 6-phosphate into it.
-
-### Key References
-- Nelson DL, Cox MM. *Lehninger Principles of Biochemistry*, 6th edn. W.H. Freeman and Company, 2013.
-- Richter EA, Hargreaves M. *Exercise, GLUT4, and skeletal muscle glucose uptake.* Physiol Rev 93 (3), 2013: 993–1017.
-
----
-
-## 3 Substrate Utilization and Hormonal Control
-
-<Note>
-**Learning objectives:**
-- Carbohydrate, fat and protein as exercise substrates, and their relative contributions
-- FATmax and the carbohydrate-to-fat crossover as intensity rises
-- Hormonal control of metabolism: catecholamines, insulin/glucagon, cortisol/growth hormone
-</Note>
-
-### 3.1 Carbohydrate Metabolism
-
-Carbohydrates are the primary fuel during moderate-to-high-intensity exercise; muscle glycogen and blood glucose are the main substrates (Coggan & Coyle 1991). Glycogen depletion rate rises with intensity — above ~70 % V̇O₂max, glycogen use increases exponentially, and depletion produces the fatigue known as "hitting the wall" in endurance events (Bergström et al. 1967). Glucose uptake is enhanced during exercise through both insulin-dependent and insulin-independent mechanisms, the latter via AMPK- and calcium-driven GLUT4 translocation (Richter & Hargreaves 2013).
-
-### 3.2 Fat Metabolism
-
-Fat oxidation supplies energy during low-to-moderate intensity exercise and grows in importance as duration extends. Fatty acids enter mitochondria via the carnitine shuttle before beta-oxidation (Jeukendrup 2002). The maximal rate of fat oxidation (**FATmax**) typically occurs at ~45–65 % V̇O₂max and shifts with training status; endurance training raises fat-oxidation capacity by increasing mitochondrial density, oxidative enzyme activity and capillary density (Achten et al. 2002).
-
-### 3.3 Protein Metabolism
-
-Proteins contribute minimally to most exercise (typically 5–15 % of total energy) but become more significant during prolonged exercise when glycogen is depleted. Amino acids, particularly branched-chain amino acids (BCAAs), can be oxidised for energy or used for gluconeogenesis (Wagenmakers 1998).
-
-### 3.4 Substrate Utilization at Different Exercise Intensities
-
-<Figure src={fig4} srcDark={fig4Dark} alt="Relative contribution of fat and carbohydrate to energy supply across exercise intensity">
-The crossover from fat to carbohydrate as exercise intensity rises. At low intensity the CHO:fat ratio is about 30:70, near 50:50 at moderate intensity, and 85:15 at high intensity. FAT_max — the intensity at which absolute fat oxidation peaks — lies at roughly 45–65 % V̇O₂max, well below the intensity at which carbohydrate begins to dominate the mixture.
+<Figure src={fig4} srcDark={fig4Dark} alt="Muscle structure and function signalling">
+Exercise Snacks — muscle signalling: three staggered phases from acute AMPK/PGC-1α through mTORC1-driven protein synthesis to satellite-cell hypertrophy.
 </Figure>
 
-Exercise triggers profound hormonal responses that coordinate these metabolic adjustments to meet energy demands and maintain homeostasis (Galbo 1983).
+### 2.3 Aerobic Capacity
 
-### 3.5 Catecholamines (Epinephrine and Norepinephrine)
+**Key outcomes:** ↑ Oxygen uptake · ↑ Performance
 
-Catecholamine secretion increases proportionally with exercise intensity. These hormones promote glycogenolysis and lipolysis through β-adrenergic receptor stimulation, increasing both glucose and free-fatty-acid availability, and they enhance cardiac output and redirect blood flow to working muscles (Kjaer 1989).
+Aerobic gains operate through two coupled systems framed by the **Fick equation**:
 
-### 3.6 Insulin and Glucagon
+$$\dot{V}O_2 = \text{CO} \times (C_aO_2 - C_{\bar{v}}O_2)$$
 
-During exercise, insulin falls while glucagon rises, promoting hepatic glucose production to maintain blood-glucose homeostasis. This reciprocal regulation ensures adequate glucose delivery to working muscle and the central nervous system (Wasserman 2009).
+Exercise Snacks act on **both sides** — centrally (cardiac output, CO) and peripherally (arteriovenous oxygen difference, a-vO₂ diff).
 
-### 3.7 Cortisol and Growth Hormone
+**Central adaptations.** Repeated bouts acutely raise heart rate and stroke volume; over time, baroreceptor training improves autonomic cardiac regulation (HRV) and cardiac remodelling raises resting stroke volume.
 
-Both increase during prolonged exercise. Cortisol stimulates gluconeogenesis and protein catabolism; growth hormone promotes lipolysis and exerts anabolic effects during recovery. Their elevation becomes particularly significant during exercise exceeding 60 minutes (Viru & Viru 2004).
+**Peripheral adaptations** — the dominant pathway for Exercise Snacks:
 
-### One-Minute-Paper Topics
-<Note>
-  A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
-</Note>
-- How does substrate utilisation shift from rest to high-intensity exercise, and what is FATmax?
-- Describe one action of catecholamines on exercise metabolism.
-- Contrast the metabolic effects of insulin and glucagon during and after exercise.
-- How do cortisol and growth hormone contribute to substrate mobilisation during prolonged exercise?
+- **Mitochondrial biogenesis** (via PGC-1α): higher oxidative capacity per fibre
+- **Capillary angiogenesis** (via VEGF): shorter O₂ diffusion distance
+- **Myoglobin concentration** ↑: intracellular O₂ buffering
 
-### Key References
-- Achten J, Gleeson M, Jeukendrup AE. *Determination of the exercise intensity that elicits maximal fat oxidation.* Med Sci Sports Exerc 34 (1), 2002: 92–97.
-- Bergström J, Hermansen L, Hultman E, Saltin B. *Diet, muscle glycogen and physical performance.* Acta Physiol Scand 71 (2), 1967: 140–150.
-- Coggan AR, Coyle EF. *Carbohydrate ingestion during prolonged exercise: effects on metabolism and performance.* Exerc Sport Sci Rev 19, 1991: 1–40.
-- Galbo H. *Hormonal and Metabolic Adaptation to Exercise*. Thieme Medical Publishers, 1983.
-- Jeukendrup AE. *Regulation of fat metabolism in skeletal muscle.* Ann N Y Acad Sci 967, 2002: 217–235.
-- Kjaer M. *Epinephrine and some other hormonal responses to exercise in man.* Int J Sports Med 10 (1), 1989: 2–15.
-- Richter EA, Hargreaves M. *Exercise, GLUT4, and skeletal muscle glucose uptake.* Physiol Rev 93 (3), 2013: 993–1017.
-- Viru A, Viru M. *Cortisol — essential adaptation hormone in exercise.* Int J Sports Med 25 (6), 2004: 461–464.
-- Wagenmakers AJ. *Protein and amino acid metabolism in human muscle.* Adv Exp Med Biol 441, 1998: 307–319.
-- Wasserman DH. *Four grams of glucose.* Am J Physiol Endocrinol Metab 296 (1), 2009: E11–E21.
+Together these widen the a-vO₂ diff — the muscle extracts more O₂ per unit blood flow.
 
----
+> **Contrast with continuous training**, which primarily raises CO. Exercise Snacks disproportionately target the peripheral side — relevant where cardiac adaptation is limited (deconditioning, autonomic dysfunction in Long COVID).
 
-## 4 Lactate Metabolism and the Lactate Threshold
+<Figure src={fig5} srcDark={fig5Dark} alt="Aerobic capacity signalling">
+Exercise Snacks — aerobic-capacity signalling: central (CO) and peripheral (a-vO₂ diff) adaptations framed by the Fick equation, with snacks disproportionately targeting the peripheral side.
+</Figure>
 
-<Note>
-**Learning objectives:**
-- Why lactate is now viewed as a fuel and signalling molecule rather than a waste product
-- Production (glycolysis, NAD⁺ regeneration, glutamine) and clearance (PDH, gluconeogenesis/Cori)
-- MCT transport and the lactate shuttle, GPR81 signalling and histone lactylation, and the lactate threshold
-</Note>
+### 2.4 Immunological Signalling Pathways
 
-### 4.1 The Lactate Paradigm Shift
+**Key outcomes:** ↑ Myokine release · ↑ Transcriptional reprogramming of immune cells
 
-Since its discovery in 1780, lactate was wrongly characterised as a harmful by-product produced only under hypoxia. Research over recent decades has revolutionised this view: lactate is a signalling molecule, an energy substrate, and a key metabolic regulator, produced and used even under fully aerobic conditions (Li et al. 2022). Understanding **lactate homeostasis** — production, clearance and regulation — is central to exercise physiology, cancer metabolism and inflammation.
+The immunological effect is the most complex domain, connecting muscle, immune system and gut across three parallel axes — all converging on **NF-κB suppression**.
 
-### 4.2 Lactate Production Pathways
+**Axis 1 — muscle as endocrine organ (myokines).** Contracting muscle secretes cytokines (myokines). IL-6 is the most prominent: released transiently, it acts anti-inflammatorily (distinct from chronically elevated IL-6 in obesity), stimulates IL-10, and suppresses TNF-α. IL-15 promotes NK-cell proliferation; irisin influences T-cell differentiation. **Kinetics are decisive** — brief transient peaks are immunoprotective, chronic elevation is pro-inflammatory (Haunhorst et al. 2022; Ringleb et al. 2024).
 
-Lactate production rises when demand for O₂ and ATP exceeds supply — strenuous exercise, infection/inflammation, hypoxia, cancer.
+**Axis 2 — transcriptional reprogramming of immune cells.** Mechanical loading and myokines drive: NF-κB suppression via IL-10 (↓ TNF-α, IL-1β); Nrf2 induction (antioxidant enzymes, HO-1, competing with NF-κB for co-activators); M1 → M2 macrophage polarisation, i.e. a shift from a pro-inflammatory to a reparative phenotype; and Treg expansion via IL-10 and TGF-β, producing immune tolerance (Radom-Aizik et al. 2014).
 
-**Primary pathway — glycolysis.** Glucose is broken to two pyruvate. Under aerobic conditions pyruvate enters mitochondria → acetyl-CoA → TCA; under high demand or hypoxia the TCA cycle is insufficient and pyruvate is reduced directly to lactate by **lactate dehydrogenase (LDH)** (Nelson & Cox 2013).
+**Axis 3 — microbiome-mediated metabolites.** Regular short bouts increase gut-microbiome diversity and short-chain fatty acids (SCFAs: butyrate, propionate). SCFAs bind GPR41/GPR43 on immune cells, inhibit HDAC, and epigenetically modulate cytokine production; butyrate directly suppresses NF-κB in colonocytes and macrophages.
 
-**The critical role of NAD⁺ regeneration.** Lactate production is not just about making a metabolite — it regenerates **NAD⁺**. Glycolysis requires NAD⁺; converting pyruvate to lactate reoxidises NADH to NAD⁺, letting glycolysis continue producing ATP when mitochondria cannot keep up. Without it, glycolysis would halt from NAD⁺ depletion.
+> **Research connection (ME/CFS / Long COVID):** dysbiosis with reduced SCFA producers (*Faecalibacterium prausnitzii*, *Roseburia*) is consistently reported; Exercise Snacks may rehabilitate this axis. The SCFA–NF-κB–EV-miRNA triangle is a direct entry point for EV-associated miRNA biomarker studies — snacks could shift EV cargo toward anti-inflammatory miRNA profiles.
 
-**Secondary pathway — glutamine catabolism** (important in cancer): glutamine → glutamate (glutaminase, often upregulated by c-Myc) → α-ketoglutarate → TCA; glutamine-derived carbon becomes oxaloacetate → malate, which exits the mitochondria and is converted by malic enzyme (ME1) to NADPH and pyruvate — a secondary lactate source. This serves dual purposes: **NADPH production** and **lactate production** (Li et al. 2022).
+<Figure src={fig6} srcDark={fig6Dark} alt="Immunological signalling pathways">
+Exercise Snacks — immunological signalling: three parallel axes (myokines, transcriptional reprogramming, microbiome metabolites) converging on NF-κB suppression.
+</Figure>
 
-### 4.3 Lactate Clearance Mechanisms
+### 2.5 Interactive Dashboard and Summary
 
-Accumulating lactate can cause **lactic acidosis**, so it must be rapidly metabolised.
+An interactive HTML dashboard visualises all four physiological domains (energy metabolism, muscle signalling, aerobic capacity, immunological pathways) with animated pathway diagrams, tabbed panels and integrated references.
 
-**Irreversible — the PDH pathway.** Lactate is oxidised back to pyruvate; **pyruvate dehydrogenase (PDH)** converts pyruvate to acetyl-CoA, which enters the TCA cycle for complete oxidation. This is a one-way street: acetyl-CoA cannot revert to a three-carbon unit. PDH is regulated by E1α phosphorylation (phosphorylated = inactive) and NADH (high NADH inhibits). When mitochondrial respiration is impaired, PDH activity falls and circulating lactate rises — why lactate is a valuable clinical marker (Li et al. 2022).
+[→ Interactive Dashboard — Physiological Mechanisms](/dashboards/exercise-snacks)
 
-**Reversible — gluconeogenesis and the Cori cycle.** In liver (and muscle), lactate → pyruvate → glucose, which is released to blood — maintaining glucose during fasting or prolonged exercise and recycling lactate. Muscle lactate → hepatic glucose → back to muscle is the **Cori cycle** (Brooks 2009).
-
-### 4.4 Lactate Transport and Regulation
-
-**Monocarboxylate transporters (MCTs).** Lactate crosses membranes via MCTs (SLC16 family; 14 identified, MCT1–4 most important). They catalyse **proton-coupled, bidirectional** transport (lactate:H⁺ 1:1 symport).
-
-- **MCT1 (homeostatic):** widely distributed, high affinity, basal lactate maintenance along the gradient.
-- **MCT4 (high-capacity):** low affinity, high capacity, expressed in highly glycolytic tissue, tumour cells and white (Type II) fibres. High MCT1/2/4 expression is associated with cancer progression.
-
-**The lactate shuttle.** Synergistic MCT1–4 activity shuttles lactate from glycolytic producers to oxidative consumers: in muscle, Type II → Type I fibres; in tumours, hypoxic → normoxic cells; in brain, astrocytes → neurons.
-
-**GPR81 — the lactate receptor.** Lactate signals through **G protein-coupled receptor 81 (GPR81)** (highest in adipose; also kidney, muscle, CNS, heart), mediating energy metabolism, lipolysis regulation, neuronal protection and inflammatory regulation — making lactate a true signalling molecule (Li et al. 2022).
-
-### 4.5 Cellular Lactate Metabolism and Lactylation
-
-Intracellular lactate arises from glycolysis (LDH) and the glutamine/ME1 route; within mitochondria it can be reconverted to pyruvate (PDH → acetyl-CoA → TCA), connecting to cholesterol and lipid synthesis, or cleared reversibly via gluconeogenesis (lactate → pyruvate → glucose, mainly in liver).
-
-**Protein lactylation.** One of the most revolutionary recent discoveries: lactate is a substrate for **protein lactylation**, a post-translational modification with epigenetic consequences (Li et al. 2022):
-
-1. **Lactyl-CoA** forms from lactate, serving as the modification substrate.
-2. **Histone lactylation (Kla)** modifies lysine residues; **p300** is the "writer", **HDACs** the "erasers".
-3. **Non-histone** proteins can also be lactylated, altering their function.
-4. Lactylated histones control genes of inflammation, tumour development, immune responses and metabolism (e.g. *Arg1*, *YTHDF2*).
-
-Lactate is therefore an **epigenetic regulator**, not merely a metabolite.
-
-### 4.6 Lactate Homeostasis and the Lactate Threshold
-
-Lactate homeostasis is a balance:
-
-> [Lactate]_steady-state = Production − Clearance
-
-where Production = glycolysis + glutamine metabolism + MCT import, and Clearance = PDH oxidation + gluconeogenesis + MCT export + lactylation. Key determinants: glycolytic flux, PDH activity, MCT expression, O₂ availability, and metabolic demand.
-
-**The lactate threshold** is the exercise intensity at which blood lactate begins to accumulate exponentially — typically 50–60 % V̇O₂max in untrained individuals and 70–80 % V̇O₂max in endurance athletes. It is a strong, highly trainable predictor of endurance performance (Faude et al. 2009). Rather than accumulating passively, lactate is continuously produced and cleared even at rest, and during exercise is oxidised in the same fibre, shuttled to oxidative fibres, or converted to glucose in the liver (Brooks 2009).
-
-**Summary — the paradigm shift.** Old view (pre-1980s): a waste product of anaerobic metabolism causing fatigue. Current view: an essential metabolite and signalling molecule, produced both aerobically and anaerobically, functioning as (1) an energy substrate (often preferred over glucose), (2) a redox buffer (NAD⁺/NADH), (3) a signalling molecule (GPR81), and (4) an epigenetic regulator (lactylation) (Li et al. 2022; Brooks 2018).
-
-### One-Minute-Paper Topics
-<Note>
-  A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
-</Note>
-- Why is lactate now considered a fuel and signalling molecule rather than a waste product?
-- Explain, in one sentence each, the role of NAD⁺ regeneration in lactate production and the lactate-shuttle concept.
-- Contrast irreversible (PDH) and reversible (gluconeogenesis/Cori) lactate clearance.
-- What is the role of MCT transporters in lactate exchange between tissues, and how do MCT1 and MCT4 differ?
-- Define protein lactylation and explain its potential epigenetic relevance; how does GPR81 signalling extend lactate's role?
-
-### Key References
-- Brooks GA. *Cell-cell and intracellular lactate shuttles.* J Physiol 587 (23), 2009: 5591–5600.
-- Brooks GA. *The science and translation of lactate shuttle theory.* Cell Metab 27 (4), 2018: 757–785.
-- Faude O, Kindermann W, Meyer T. *Lactate threshold concepts: how valid are they?* Sports Med 39 (6), 2009: 469–490.
-- Li X, Yang Y, Zhang B, et al. *Lactate metabolism in human health and disease.* Signal Transduct Target Ther 7 (1), 2022: 305.
-- Nelson DL, Cox MM. *Lehninger Principles of Biochemistry*, 6th edn. W.H. Freeman and Company, 2013.
-
----
-
-## 5 Fibers, Adaptations, Recovery and Clinical Applications
-
-<Note>
-**Learning objectives:**
-- Contractile and metabolic properties of Type I, IIa and IIx fibres
-- Endurance vs resistance adaptations, the opposing AMPK and mTOR pathways, and ROS as adaptive signals (hormesis)
-- Recovery metabolism (EPOC, glycogen resynthesis, MPS) and exercise as medicine
-</Note>
-
-### 5.1 Muscle Fiber Types and Metabolic Characteristics
-
-Skeletal muscle contains heterogeneous fibre types with distinct metabolic and contractile properties (Schiaffino & Reggiani 2011).
-
-**Type I (slow-twitch, oxidative):** high mitochondrial density and oxidative enzyme content, rich capillary supply and myoglobin (red), high fatigue resistance, lower force and contraction speed, primary reliance on fat oxidation.
-
-**Type II (fast-twitch):** subdivided into **Type IIa** (fast oxidative-glycolytic, intermediate properties) and **Type IIx** (fast glycolytic — highest glycolytic and force capacity, lowest oxidative capacity, fatigues rapidly) (Bottinelli & Reggiani 2000).
+<Figure src={fig9} srcDark={fig9Dark} alt="Timescales of the four adaptation domains after a short exercise bout">
+The four domains on a shared logarithmic time axis, from the stimulus to the adaptation. Energy metabolism responds within minutes to hours, immune signalling over hours to weeks, muscle structure over hours to months, and aerobic capacity only after weeks — which is why a single snack is measurable in glucose but not in V̇O₂max. Central mediators are named below each bar.
+</Figure>
 
 <Table>
 
-| Characteristic | Type I | Type IIa | Type IIx |
+| Domain | Primary Outcomes | Central Mediators | Timeframe |
 |---|---|---|---|
-| Contraction Speed | Slow | Fast | Very Fast |
-| Force Production | Low | High | Very High |
-| Mitochondrial Density | High | Moderate | Low |
-| Fatigue Resistance | High | Moderate | Low |
-| Primary Metabolism | Oxidative | Oxid-Glycolytic | Glycolytic |
+| Energy Metabolism | ↓ Blood glucose, ↓ Triglycerides | AMPK, GLUT4, LPL | Minutes–hours |
+| Muscle Structure | ↑ Strength, ↑ CSA | AMPK, mTORC1, PGC-1α, satellite cells | Hours–months |
+| Aerobic Capacity | ↑ V̇O₂max, ↑ Performance | PGC-1α, VEGF, Fick CO × a-vO₂ | Weeks–months |
+| Immune Signalling | ↓ Inflammation, ↑ Tolerance | IL-6/IL-10, Nrf2, NF-κB, SCFAs | Hours–weeks |
 
 <Fragment slot="caption">
-Contractile and metabolic characteristics of the three skeletal-muscle fiber types.
+Summary of the four physiological domains affected by Exercise Snacks, with primary outcomes, central mediators and timeframe.
 </Fragment>
 </Table>
-
-### 5.2 Biochemical Adaptations to Training
-
-**Endurance training** enhances oxidative capacity and substrate utilisation (Holloszy 2008): mitochondrial biogenesis via PGC-1α; greater oxidative enzyme activity; increased capillary density; greater myoglobin; glycogen sparing at submaximal intensities; improved lactate clearance.
-
-**Resistance training** stimulates muscle protein synthesis and neural adaptation (Phillips 2014): increased MPS via mTOR; enhanced PCr stores and creatine kinase activity; greater glycolytic enzyme content; Type II hypertrophy; satellite-cell activation.
-
-**Molecular signalling.** **AMPK** is activated by cellular energy stress and drives glucose uptake, fat oxidation and mitochondrial biogenesis (Hardie 2011). **mTOR** integrates nutrients, growth factors and mechanical tension to regulate protein synthesis — activated by resistance loading, and transiently suppressed by acute endurance exercise (Bodine et al. 2001). **PGC-1α** is the master regulator of mitochondrial biogenesis, upregulated by endurance exercise via AMPK, calcium signalling and p38 MAPK (Puigserver et al. 1998). AMPK and mTOR thus represent broadly opposing adaptive axes for endurance vs resistance training.
-
-### 5.3 Reactive Oxygen Species and Oxidative Stress
-
-Exercise increases muscle O₂ consumption up to 100-fold, raising reactive oxygen species (ROS) production. While excessive ROS damages cellular components, moderate ROS serve as **secondary messengers** in exercise-induced adaptations — mitochondrial biogenesis, antioxidant enzyme expression and glucose uptake (Powers & Jackson 2008). The concept of **hormesis** holds that low-to-moderate oxidative stress stimulates adaptive responses that strengthen cellular defences (Ristow et al. 2009). Chronic training enhances endogenous antioxidant systems (SOD, catalase, glutathione peroxidase), improving the capacity to manage oxidative stress in subsequent bouts (Ji 2008).
-
-### 5.4 Recovery Metabolism and Nutritional Biochemistry
-
-**EPOC.** After exercise, O₂ consumption stays elevated to restore homeostasis — PCr resynthesis, lactate clearance, restoration of O₂ stores, elevated temperature, increased cardiac/respiratory work, catecholamine effects (Borsheim & Bahr 2003). Magnitude and duration scale with intensity and duration; high-intensity interval training produces greater EPOC than steady-state work of similar total work (LaForgia et al. 2006).
-
-**Glycogen resynthesis** occurs in two phases: a rapid, insulin-independent phase (first 30–60 min, driven by exercise-induced GLUT4 translocation and glycogen synthase activity), then a slower insulin-dependent phase (Jentjens & Jeukendrup 2003). Maximal rates occur with ~1.0–1.2 g/kg/h carbohydrate; co-ingesting protein (0.2–0.4 g/kg) helps when carbohydrate is suboptimal (van Loon et al. 2000).
-
-**Muscle protein synthesis** is stimulated for 24–48 h after (especially resistance) exercise (Burd et al. 2011). Post-exercise protein enhances MPS and reduces breakdown; **leucine** activates mTOR; optimal doses are ~20–40 g depending on body size and stimulus (Moore et al. 2009).
-
-### 5.5 Clinical Applications and Exercise as Medicine
-
-Exercise biochemistry underpins disease prevention and management (Pedersen & Saltin 2015).
-
-**Metabolic disease.** Exercise improves insulin sensitivity via increased GLUT4 expression, better mitochondrial function and reduced intramuscular lipid — beneficial for preventing/managing type 2 diabetes (Hawley & Lessard 2008). It favourably modifies lipids (↑ HDL, ↓ triglycerides, improved LDL particle size) through enhanced lipoprotein lipase activity and altered hepatic lipid metabolism (Durstine et al. 2001).
-
-**Cardiovascular health.** Training improves endothelial function, arterial compliance and cardiac efficiency; enhanced nitric-oxide bioavailability improves vasodilation and lowers vascular oxidative stress (Green et al. 2004). Cardiac adaptations (↑ stroke volume, improved diastolic filling, enhanced contractility) reduce cardiac workload at a given absolute load (Blomqvist & Saltin 1983).
-
-**Ageing and sarcopenia.** Resistance training counteracts age-related muscle loss by stimulating MPS and satellite-cell activation; with adequate protein it maintains muscle mass and function in older adults (Fiatarone et al. 1994). Exercise also preserves mitochondrial function with age, reducing damaged-mitochondria accumulation and frailty (Short et al. 2005).
-
-### 5.6 Key Terms Related to Physical Activity and Exercise Prescription
-
-**Physical activity:** any bodily movement produced by skeletal-muscle contraction that increases energy expenditure above basal level — incidental (activities of daily living) and intentional (e.g. non-structured activity such as walking the dog).
-
-**Exercise:** planned, structured physical activity performed with the explicit intent of improving or maintaining components of physical fitness (aerobic capacity, strength, power, endurance, body composition, balance, coordination, flexibility) and/or a specific health benefit.
-
-**Sport:** rule-governed, structured, competitive physical activity involving gross motor movement.
-
-**Cardiorespiratory fitness:** the integrated ability of the circulatory and respiratory systems to supply O₂ to skeletal-muscle mitochondria; often expressed as V̇O₂max or estimated from work rate or non-exercise algorithms. **Cardiorespiratory exercise** requires both systems to support sustained metabolism (preferred over "aerobic" or "endurance" exercise).
-
-**Metabolic threshold:** an intensity producing an apparent change in metabolism (first and second metabolic thresholds).
-
-**Body composition:** relative proportions of fat mass and fat-free mass. **Muscle strength** (force in a task), **muscle power** (force × velocity, or rate of work), **muscle endurance** (sustained force), **muscle fitness** (the global term).
-
-**Resistance exercise:** exercise requiring muscles to exert force against resistance (body weight, bands, free weights, machines) until repetitions/duration are limited by neuromuscular fatigue.
-
-**Flexibility:** the ability to move a joint through its maximal unrestricted range of motion without pain. **Perception of effort:** the cognitive feeling of effort integrating signals from peripheral muscles/joints, the cardiopulmonary system and the CNS.
-
-### 5.7 Conclusion
-
-Exercise biochemistry reveals the molecular and metabolic adaptations enabling human performance and health — from immediate energy provision (ATP-PCr) to long-term adaptations in mitochondrial density and protein synthesis. Understanding these principles supports evidence-based training, nutrition and therapeutic intervention, and reinforces exercise as a powerful stimulus for positive adaptation and a cornerstone of preventive medicine.
 
 ### One-Minute-Paper Topics
 <Note>
   A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
 </Note>
-- Compare Type I and Type II muscle fibres in terms of biochemical and metabolic properties.
-- Describe how AMPK and mTOR signalling represent opposing adaptive pathways to endurance vs resistance training.
-- Why would suppressing exercise-induced ROS entirely be expected to blunt training adaptations?
-- What is EPOC, and which biochemical processes drive it after high-intensity exercise?
-- Give one clinical application of exercise biochemistry relevant to post-infection recovery.
+- Explain how muscle contraction triggers insulin-independent GLUT4 translocation, and name the central sensor shared with the LPL axis.
+- Describe the three temporally staggered phases of muscular adaptation and their principal mediators.
+- Explain the Fick equation in one sentence and identify which term Exercise Snacks affect most.
+- How can brief intense bouts improve aerobic capacity despite their short duration?
+- Name one myokine released during contraction and one of its immune effects, and explain how NF-κB suppression produces anti-inflammatory effects.
 
 ### Key References
-- Blomqvist CG, Saltin B. *Cardiovascular adaptations to physical training.* Annu Rev Physiol 45, 1983: 169–189.
-- Bodine SC, Stitt TN, Gonzalez M, et al. *Akt/mTOR pathway is a crucial regulator of skeletal muscle hypertrophy.* Nat Cell Biol 3 (11), 2001: 1014–1019.
-- Borsheim E, Bahr R. *Effect of exercise intensity, duration and mode on post-exercise oxygen consumption.* Sports Med 33 (14), 2003: 1037–1060.
-- Bottinelli R, Reggiani C. *Human skeletal muscle fibres: molecular and functional diversity.* Prog Biophys Mol Biol 73 (2-4), 2000: 195–262.
-- Burd NA, West DW, Moore DR, et al. *Enhanced amino acid sensitivity of myofibrillar protein synthesis persists for up to 24 h after resistance exercise in young men.* J Nutr 141 (4), 2011: 568–573.
-- Durstine JL, Grandjean PW, Davis PG, et al. *Blood lipid and lipoprotein adaptations to exercise.* Sports Med 31 (15), 2001: 1033–1062.
-- Fiatarone MA, O'Neill EF, Ryan ND, et al. *Exercise training and nutritional supplementation for physical frailty in very elderly people.* N Engl J Med 330 (25), 1994: 1769–1775.
-- Green DJ, Maiorana A, O'Driscoll G, Taylor R. *Effect of exercise training on endothelium-derived nitric oxide function in humans.* J Physiol 561 (1), 2004: 1–25.
-- Hardie DG. *AMP-activated protein kinase: an energy sensor that regulates all aspects of cell function.* Genes Dev 25 (18), 2011: 1895–1908.
-- Hawley JA, Lessard SJ. *Exercise training-induced improvements in insulin action.* Acta Physiol 192 (1), 2008: 127–135.
-- Holloszy JO. *Regulation by exercise of skeletal muscle content of mitochondria and GLUT4.* J Physiol Pharmacol 59 (Suppl 7), 2008: 5–18.
-- Jentjens R, Jeukendrup AE. *Determinants of post-exercise glycogen synthesis during short-term recovery.* Sports Med 33 (2), 2003: 117–144.
-- Ji LL. *Modulation of skeletal muscle antioxidant defense by exercise: role of redox signaling.* Free Radic Biol Med 44 (2), 2008: 142–152.
-- LaForgia J, Withers RT, Gore CJ. *Effects of exercise intensity and duration on the excess post-exercise oxygen consumption.* J Sports Sci 24 (12), 2006: 1247–1264.
-- Moore DR, Robinson MJ, Fry JL, et al. *Ingested protein dose response of muscle and albumin protein synthesis after resistance exercise in young men.* Am J Clin Nutr 89 (1), 2009: 161–168.
-- Pedersen BK, Saltin B. *Exercise as medicine — evidence for prescribing exercise as therapy in 26 different chronic diseases.* Scand J Med Sci Sports 25 (Suppl 3), 2015: 1–72.
-- Phillips SM. *A brief review of critical processes in exercise-induced muscular hypertrophy.* Sports Med 44 (Suppl 1), 2014: 71–77.
-- Powers SK, Jackson MJ. *Exercise-induced oxidative stress: cellular mechanisms and impact on muscle force production.* Physiol Rev 88 (4), 2008: 1243–1276.
-- Puigserver P, Wu Z, Park CW, et al. *A cold-inducible coactivator of nuclear receptors linked to adaptive thermogenesis.* Cell 92 (6), 1998: 829–839.
-- Ristow M, Zarse K, Oberbach A, et al. *Antioxidants prevent health-promoting effects of physical exercise in humans.* Proc Natl Acad Sci USA 106 (21), 2009: 8665–8670.
-- Schiaffino S, Reggiani C. *Fiber types in mammalian skeletal muscles.* Physiol Rev 91 (4), 2011: 1447–1531.
-- Short KR, Bigelow ML, Kahl J, et al. *Decline in skeletal muscle mitochondrial function with aging in humans.* Proc Natl Acad Sci USA 102 (15), 2005: 5618–5623.
-- van Loon LJ, Saris WH, Kruijshoop M, Wagenmakers AJ. *Maximizing postexercise muscle glycogen synthesis.* Am J Clin Nutr 72 (1), 2000: 106–111.
+- Flores-Opazo M, McGee SL, Hargreaves M. *Exercise and GLUT4.* Exerc Sport Sci Rev 48 (3), 2020: 110–118. doi:10.1249/JES.0000000000000224.
+- Haunhorst S, Bloch W, Ringleb M, et al. *Acute effects of heavy resistance exercise on biomarkers of neuroendocrine-immune regulation in healthy adults: a systematic review.* Exerc Immunol Rev 28, 2022: 36–52.
+- Lawrence RD. *The effect of exercise on insulin action in diabetes.* Br Med J 1 (3406), 1926: 648–650. doi:10.1136/bmj.1.3406.648.
+- Radom-Aizik S, Zaldivar F, Haddad F, Cooper DM. *Impact of brief exercise on circulating monocyte gene and microRNA expression: implications for atherosclerotic vascular disease.* Brain Behav Immun, 2014. doi:10.1016/j.bbi.2014.01.003.
+- Ringleb M, Javelle F, Haunhorst S, et al. *Beyond muscles: investigating immunoregulatory myokines in acute resistance exercise — a systematic review and meta-analysis.* FASEB J 38 (7), 2024: e23596. doi:10.1096/fj.202301619R.
+- Roy D, Marette A. *Exercise induces the translocation of GLUT4 to transverse tubules from an intracellular pool in rat skeletal muscle.* Biochem Biophys Res Commun 223 (1), 1996: 147–152. doi:10.1006/bbrc.1996.0860.
+
+---
+
+## 3 Prescription and Clinical Translation
+
+<Note>
+**Learning objectives:**
+- When Exercise Snacks complement rather than replace medication and dietary intervention
+- Constructing a prescription with intensity anchors (%HRmax, RPE CR10)
+- Safety and monitoring considerations, including the PEM caveat
+</Note>
+
+### 3.1 When Snacks Help and When They Do Not
+
+Exercise Snacks are a highly promising, time-efficient strategy for improving cardiometabolic health, particularly in inactive individuals. They have local and systemic effects on energy metabolism, musculature, cardiovascular and cardiometabolic function, and immunological (dys)regulation, and provide a low-threshold entry into physical activity through brief strenuous exertions integrable into everyday life.
+
+Two caveats matter for prescription. In pre-existing conditions (e.g. type 2 diabetes), Exercise Snacks may act **additively to medication** (e.g. insulin). And movement snacks alone, without dietary intervention, often do **not** produce significant weight loss. For sustainable weight reduction, combine movement (including Exercise Snacks), controlled nutrition, and — where applicable — behavioural and environmental interventions.
+
+### 3.2 Example Exercise Snack Protocol
+
+**Example protocol for the patient from §1.1.** Designed to maximise health benefit time-efficiently.
+
+- Each one-minute snack is performed at high to very high intensity: target ≥75–85 % of maximal heart rate (HRmax = 211 − 0.65 × age; see also [ntnu.edu/cerg/hrmax](https://www.ntnu.edu/cerg/hrmax)) or RPE 7–10 on the Borg CR10 scale (7–10 = "very hard" to "maximal"; you should feel you are working hard and be unable to speak in full sentences).
+- Rest phases serve recovery and should be low-intensity or passive.
+
+<Table>
+
+| Step/Exercise | Duration | Exercise Example | Intensity Recommendation |
+|---|---|---|---|
+| Exercise 1 | 1 min | Stair climbing | Strong–very strong: ≥75–85 % HRmax, ≥85 % V̇O₂max, RPE 7–10 (CR10), "as intense as possible" |
+| Pause | 45 min | Passive recovery | Low (active or passive recovery) |
+| Exercise 2 | 1 min | Squats | Strong–very strong: ≥75–85 % HRmax, ≥85 % V̇O₂max, RPE 7–10 (CR10) |
+| Pause | 45 min | Passive recovery | Low (active or passive recovery) |
+| Exercise 3 | 1 min | Brisk walking (uphill) | Strong: ≥75 % HRmax, RPE 7–8 (CR10), "as fast as possible" |
+| Pause | 45 min | Passive recovery | Low (active or passive recovery) |
+| Exercise 4 | 1 min | Step-ups | Strong–very strong: ≥75–85 % HRmax, RPE 7–10 (CR10) |
+| Pause | 45 min | Passive recovery | Low (active or passive recovery) |
+| Exercise 5 | 1 min | Jumping jacks | Strong–very strong: ≥75–85 % HRmax, RPE 7–10 (CR10) |
+| Pause | 45 min | Passive recovery | Low (active or passive recovery) |
+| Exercise 6 | 1 min | Lunges | Strong–very strong: ≥75–85 % HRmax, RPE 7–10 (CR10) |
+
+<Fragment slot="caption">
+Example Exercise Snack protocol for the patient presented in §1.1, with exercise, duration and intensity recommendation.
+</Fragment>
+</Table>
+
+**RPE (Borg CR10 scale)** — category rating 0–10: 0 = no exertion, 2 = light, 5 = heavy, 7 = very heavy, 10 = extremely strenuous / nearly maximal (Hareendran et al. 2012).
+
+### 3.3 Interactive Dashboard — Blood and Serum Parameters
+
+An interactive HTML dashboard outlining metabolic, inflammatory and trace-element responses.
+
+[→ Interactive Dashboard — Exercise Effects on Blood & Serum Parameters](/dashboards/exercise-effects)
+
+### One-Minute-Paper Topics
+<Note>
+  A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
+</Note>
+- Compare Exercise Snacks with traditional moderate-to-vigorous physical activity guidelines in terms of feasibility.
+- Sketch a sample one-day Exercise Snack protocol for a sedentary office worker.
+- What safety considerations apply when prescribing Exercise Snacks to a cardiac-rehabilitation patient?
+- Could Exercise Snacks be appropriate for patients with post-exertional malaise (PEM)? Justify your answer.
+- What measurement strategy could capture the cumulative effect of Exercise Snacks across a day?
+- Identify one limitation of the current Exercise Snack evidence base.
+- How would you design a randomised trial to test Exercise Snacks vs. one continuous session of equal total duration?
+- What was the most surprising mechanistic insight from this lecture, and why?
+- Which open question about Exercise Snacks would you most like to investigate yourself?
+
+### Key References
+- Bull FC, Al-Ansari SS, Biddle S, et al. *World Health Organization 2020 guidelines on physical activity and sedentary behaviour.* Br J Sports Med 54 (24), 2020: 1451–1462. doi:10.1136/bjsports-2020-102955.
+- Hareendran A, Leidy NK, Monz BU, et al. *Proposing a standardized method for evaluating patient report of the intensity of dyspnea during exercise testing in COPD.* Int J Chron Obstruct Pulmon Dis 7, 2012: 345–355. doi:10.2147/COPD.S29571.
+- Stamatakis E, Ahmadi MN, Gill JMR, et al. *Association of wearable device-measured vigorous intermittent lifestyle physical activity with mortality.* Nat Med 28 (12), 2022: 2521–2529. doi:10.1038/s41591-022-02100-x.
 
 ---
 
 ## References
 
-- Achten J, Gleeson M, Jeukendrup AE. *Determination of the exercise intensity that elicits maximal fat oxidation.* Med Sci Sports Exerc 34 (1), 2002: 92–97.
-- Berg JM, Tymoczko JL, Stryer L. *Biochemistry*, 5th edn. W.H. Freeman and Company, 2002.
-- Bergström J, Hermansen L, Hultman E, Saltin B. *Diet, muscle glycogen and physical performance.* Acta Physiol Scand 71 (2), 1967: 140–150.
-- Bishop DJ, Beck B, Biddle SJH, et al. *Physical activity and exercise intensity terminology.* J Sci Med Sport 28, 2025: 980–991.
-- Blomqvist CG, Saltin B. *Cardiovascular adaptations to physical training.* Annu Rev Physiol 45, 1983: 169–189.
-- Bodine SC, Stitt TN, Gonzalez M, et al. *Akt/mTOR pathway is a crucial regulator of skeletal muscle hypertrophy.* Nat Cell Biol 3 (11), 2001: 1014–1019.
-- Borsheim E, Bahr R. *Effect of exercise intensity, duration and mode on post-exercise oxygen consumption.* Sports Med 33 (14), 2003: 1037–1060.
-- Bottinelli R, Reggiani C. *Human skeletal muscle fibres: molecular and functional diversity.* Prog Biophys Mol Biol 73 (2-4), 2000: 195–262.
-- Brooks GA. *Cell-cell and intracellular lactate shuttles.* J Physiol 587 (23), 2009: 5591–5600.
-- Brooks GA. *The science and translation of lactate shuttle theory.* Cell Metab 27 (4), 2018: 757–785.
-- Brooks GA, Fahey TD, Baldwin KM. *Exercise Physiology: Human Bioenergetics and Its Applications*, 4th edn. McGraw-Hill, 2005.
-- Burd NA, West DW, Moore DR, et al. *Enhanced amino acid sensitivity of myofibrillar protein synthesis persists for up to 24 h after resistance exercise in young men.* J Nutr 141 (4), 2011: 568–573.
-- Coggan AR, Coyle EF. *Carbohydrate ingestion during prolonged exercise: effects on metabolism and performance.* Exerc Sport Sci Rev 19, 1991: 1–40.
-- Durstine JL, Grandjean PW, Davis PG, et al. *Blood lipid and lipoprotein adaptations to exercise.* Sports Med 31 (15), 2001: 1033–1062.
-- Faude O, Kindermann W, Meyer T. *Lactate threshold concepts: how valid are they?* Sports Med 39 (6), 2009: 469–490.
-- Fiatarone MA, O'Neill EF, Ryan ND, et al. *Exercise training and nutritional supplementation for physical frailty in very elderly people.* N Engl J Med 330 (25), 1994: 1769–1775.
-- Galbo H. *Hormonal and Metabolic Adaptation to Exercise*. Thieme Medical Publishers, 1983.
-- Green DJ, Maiorana A, O'Driscoll G, Taylor R. *Effect of exercise training on endothelium-derived nitric oxide function in humans.* J Physiol 561 (1), 2004: 1–25.
-- Greenhaff PL. *The creatine-phosphocreatine system: there's more than one song in its repertoire.* J Physiol 537 (3), 2001: 657.
-- Hardie DG. *AMP-activated protein kinase: an energy sensor that regulates all aspects of cell function.* Genes Dev 25 (18), 2011: 1895–1908.
-- Harris RC, Edwards RH, Hultman E, et al. *The time course of phosphorylcreatine resynthesis during recovery of the quadriceps muscle in man.* Pflügers Arch 367 (2), 1976: 137–142.
-- Hawley JA, Hargreaves M, Joyner MJ, Zierath JR. *Integrative biology of exercise.* Cell 159 (4), 2014: 738–749.
-- Hawley JA, Lessard SJ. *Exercise training-induced improvements in insulin action.* Acta Physiol 192 (1), 2008: 127–135.
-- Holloszy JO. *Regulation by exercise of skeletal muscle content of mitochondria and GLUT4.* J Physiol Pharmacol 59 (Suppl 7), 2008: 5–18.
-- Holloszy JO, Coyle EF. *Adaptations of skeletal muscle to endurance exercise and their metabolic consequences.* J Appl Physiol 56 (4), 1984: 831–838.
-- Jentjens R, Jeukendrup AE. *Determinants of post-exercise glycogen synthesis during short-term recovery.* Sports Med 33 (2), 2003: 117–144.
-- Jeukendrup AE. *Regulation of fat metabolism in skeletal muscle.* Ann N Y Acad Sci 967, 2002: 217–235.
-- Ji LL. *Modulation of skeletal muscle antioxidant defense by exercise: role of redox signaling.* Free Radic Biol Med 44 (2), 2008: 142–152.
-- Kjaer M. *Epinephrine and some other hormonal responses to exercise in man.* Int J Sports Med 10 (1), 1989: 2–15.
-- LaForgia J, Withers RT, Gore CJ. *Effects of exercise intensity and duration on the excess post-exercise oxygen consumption.* J Sports Sci 24 (12), 2006: 1247–1264.
-- Li X, Yang Y, Zhang B, et al. *Lactate metabolism in human health and disease.* Signal Transduct Target Ther 7 (1), 2022: 305.
-- Moore DR, Robinson MJ, Fry JL, et al. *Ingested protein dose response of muscle and albumin protein synthesis after resistance exercise in young men.* Am J Clin Nutr 89 (1), 2009: 161–168.
-- Nelson DL, Cox MM. *Lehninger Principles of Biochemistry*, 6th edn. W.H. Freeman and Company, 2013.
-- Pedersen BK, Saltin B. *Exercise as medicine — evidence for prescribing exercise as therapy in 26 different chronic diseases.* Scand J Med Sci Sports 25 (Suppl 3), 2015: 1–72.
-- Phillips SM. *A brief review of critical processes in exercise-induced muscular hypertrophy.* Sports Med 44 (Suppl 1), 2014: 71–77.
-- Powers SK, Jackson MJ. *Exercise-induced oxidative stress: cellular mechanisms and impact on muscle force production.* Physiol Rev 88 (4), 2008: 1243–1276.
-- Puigserver P, Wu Z, Park CW, et al. *A cold-inducible coactivator of nuclear receptors linked to adaptive thermogenesis.* Cell 92 (6), 1998: 829–839.
-- Richter EA, Hargreaves M. *Exercise, GLUT4, and skeletal muscle glucose uptake.* Physiol Rev 93 (3), 2013: 993–1017.
-- Ristow M, Zarse K, Oberbach A, et al. *Antioxidants prevent health-promoting effects of physical exercise in humans.* Proc Natl Acad Sci USA 106 (21), 2009: 8665–8670.
-- Robergs RA, Ghiasvand F, Parker D. *Biochemistry of exercise-induced metabolic acidosis.* Am J Physiol Regul Integr Comp Physiol 287 (3), 2004: R502–R516.
-- Schiaffino S, Reggiani C. *Fiber types in mammalian skeletal muscles.* Physiol Rev 91 (4), 2011: 1447–1531.
-- Short KR, Bigelow ML, Kahl J, et al. *Decline in skeletal muscle mitochondrial function with aging in humans.* Proc Natl Acad Sci USA 102 (15), 2005: 5618–5623.
-- van Loon LJ, Saris WH, Kruijshoop M, Wagenmakers AJ. *Maximizing postexercise muscle glycogen synthesis.* Am J Clin Nutr 72 (1), 2000: 106–111.
-- Viru A, Viru M. *Cortisol — essential adaptation hormone in exercise.* Int J Sports Med 25 (6), 2004: 461–464.
-- Wagenmakers AJ. *Protein and amino acid metabolism in human muscle.* Adv Exp Med Biol 441, 1998: 307–319.
-- Wasserman DH. *Four grams of glucose.* Am J Physiol Endocrinol Metab 296 (1), 2009: E11–E21.
+- Babir FJ, Smith L, Patel R, et al. *Technology-enabled exercise 'snacks' are feasible to perform in a real-world setting: a randomized controlled trial.* Scand J Med Sci Sports, 2025. doi:10.1111/sms.70117.
+- Bellini A, Rossi F, Bianchi M, et al. *Exercise prescription for postprandial glycemic management.* Nutrients, 2024. doi:10.3390/nu16081170.
+- Bull FC, Al-Ansari SS, Biddle S, et al. *World Health Organization 2020 guidelines on physical activity and sedentary behaviour.* Br J Sports Med 54 (24), 2020: 1451–1462. doi:10.1136/bjsports-2020-102955.
+- Carter S, Solomon TPJ. *Exercise-induced improvements in postprandial glucose response are blunted by pre-exercise hyperglycemia: a randomized crossover trial in healthy individuals.* Front Endocrinol (Lausanne), 2020. doi:10.3389/fendo.2020.566548.
+- Chen J, Zhang Y, Li X, et al. *The effectiveness of exercise snacks as a time-efficient treatment for improving cardiometabolic health in adults: a systematic review and meta-analysis.* Front Cardiovasc Med, 2025. doi:10.3389/fcvm.2025.1643153.
+- Costa Pereira LV, Silva J, Oliveira M, et al. *Cardiometabolic and cellular adaptations to multiple vs single daily HIIT sessions in Wistar rats: impact of short-term detraining.* Metabolites, 2024. doi:10.3390/metabo14080447.
+- Flores-Opazo M, McGee SL, Hargreaves M. *Exercise and GLUT4.* Exerc Sport Sci Rev 48 (3), 2020: 110–118. doi:10.1249/JES.0000000000000224.
+- Francois ME, Little JP, Bookman E, et al. *'Exercise snacks' before meals: a novel strategy to improve glycaemic control in individuals with insulin resistance.* Diabetologia 57, 2014: 1437–1445. doi:10.1007/s00125-014-3244-6.
+- GBD 2017 Causes of Death Collaborators. *Global, regional, and national age-sex-specific mortality for 282 causes of death in 195 countries and territories, 1980–2017: a systematic analysis for the Global Burden of Disease Study 2017.* Lancet 392 (10159), 2018: 1736–1788. doi:10.1016/S0140-6736(18)32203-7.
+- Guo Y, Qian HZ, Xu X, Liu Q. *Effects of different exercise modalities on inflammatory markers in the obese and overweight populations: unraveling the mystery of exercise and inflammation.* Front Physiol, 2024. doi:10.3389/fphys.2024.1405094.
+- Hareendran A, Leidy NK, Monz BU, et al. *Proposing a standardized method for evaluating patient report of the intensity of dyspnea during exercise testing in COPD.* Int J Chron Obstruct Pulmon Dis 7, 2012: 345–355. doi:10.2147/COPD.S29571.
+- Haunhorst S, Bloch W, Ringleb M, et al. *Acute effects of heavy resistance exercise on biomarkers of neuroendocrine-immune regulation in healthy adults: a systematic review.* Exerc Immunol Rev 28, 2022: 36–52.
+- Islam H, Gibala MJ, Little JP. *Exercise snacks: a novel strategy to improve cardiometabolic health.* Exerc Sport Sci Rev 50 (1), 2022: 31–37. doi:10.1249/JES.0000000000000275.
+- Khalafi M, Mohebbi H, Symonds ME, et al. *The effects of exercise training on inflammatory markers in children and adolescents: a systematic review and meta-analysis.* Physiol Behav, 2024. doi:10.1016/j.physbeh.2024.114524.
+- Kliszczewicz B, Snarr RL, Esco MR, et al. *Acute inflammatory responses to high-intensity functional training programming: an observational study.* J Hum Sport Exerc, 2019. doi:10.14198/jhse.2019.144.18.
+- Lawrence RD. *The effect of exercise on insulin action in diabetes.* Br Med J 1 (3406), 1926: 648–650. doi:10.1136/bmj.1.3406.648.
+- Liu Y, Wang Y, Chen X, et al. *Calorie restriction with exercise intervention improves inflammatory response in overweight and obese adults: a systematic review and meta-analysis.* Front Physiol, 2021. doi:10.3389/fphys.2021.754731.
+- Metsios GS, Kitas GD. *Physical activity, exercise and rheumatoid arthritis: effectiveness, mechanisms and implementation.* Best Pract Res Clin Rheumatol, 2018. doi:10.1016/j.berh.2019.03.013.
+- Netea MG, Balkwill F, Chonchol M, et al. *A guiding map for inflammation.* Nat Immunol 18 (8), 2017: 826–831. doi:10.1038/ni.3790.
+- Perkin OJ, McGuigan PM, Stokes KA. *Exercise snacking to improve muscle function in healthy older adults: a pilot study.* J Aging Res 2019, 2019: 7516939. doi:10.1155/2019/7516939.
+- Radom-Aizik S, Zaldivar F, Haddad F, Cooper DM. *Impact of brief exercise on circulating monocyte gene and microRNA expression: implications for atherosclerotic vascular disease.* Brain Behav Immun, 2014. doi:10.1016/j.bbi.2014.01.003.
+- Ringleb M, Javelle F, Haunhorst S, et al. *Beyond muscles: investigating immunoregulatory myokines in acute resistance exercise — a systematic review and meta-analysis.* FASEB J 38 (7), 2024: e23596. doi:10.1096/fj.202301619R.
+- Roy D, Marette A. *Exercise induces the translocation of GLUT4 to transverse tubules from an intracellular pool in rat skeletal muscle.* Biochem Biophys Res Commun 223 (1), 1996: 147–152. doi:10.1006/bbrc.1996.0860.
+- Schnurr TM, Reynolds AJ, Komac AM, et al. *The effect of acute exercise on GLUT4 levels in peripheral blood mononuclear cells of sled dogs.* Biochem Biophys Rep 2, 2015: 45–49. doi:10.1016/j.bbrep.2015.05.002.
+- Shen MM. *Exercise snacks: a novel strategy to improve cardiometabolic health.* Exerc Sport Sci Rev, 2022. doi:10.1249/jes.0000000000000275.
+- Slavich GM. *Understanding inflammation, its regulation, and relevance for health: a top scientific and public priority.* Brain Behav Immun 45, 2015: 13–14. doi:10.1016/j.bbi.2014.10.012.
+- Sohail MU, Yassine HM, Sohail A, et al. *Impact of physical exercise on gut microbiome, inflammation, and the pathobiology of metabolic disorders.* Rev Diabet Stud, 2019. doi:10.1900/RDS.2019.15.35.
+- Soltani N, Ghasemi A, Asadi M, et al. *The exercise training modulatory effects on the obesity-induced immunometabolic dysfunctions.* Diabetes Metab Syndr Obes, 2020. doi:10.2147/DMSO.S234992.
+- Stamatakis E, Ahmadi MN, Gill JMR, et al. *Association of wearable device-measured vigorous intermittent lifestyle physical activity with mortality.* Nat Med 28 (12), 2022: 2521–2529. doi:10.1038/s41591-022-02100-x.
+- Wan K, Lee S, Chen J, et al. *Effects of exercise snacks on cardiometabolic health and body composition in adults: a systematic review and meta-analysis.* Scand J Med Sci Sports, 2025. doi:10.1111/sms.70114.
+- Wang T, Laher I, Li S. *Exercise snacks and physical fitness in sedentary populations.* Sports Med Health Sci, 2024. doi:10.1016/j.smhs.2024.02.006.

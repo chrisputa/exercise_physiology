@@ -1,510 +1,228 @@
 ---
-title: Lactate – From Metabolic Waste Product to Central Metabolite
-description: Traces the evolution of lactate from a metabolic byproduct to a central regulator of human physiology, highlighting its continuous aerobic production, role as a primary fuel source, and function as a signaling molecule across cellular and systemic levels. It also introduces lactate-based performance diagnostics, emphasizing individualized thresholds and curve analysis to assess training adaptation, endurance capacity, and metabolic dysfunction in conditions such as Long COVID and ME/CFS.
+title: Cardiorespiratory Fitness measured in metabolic equivalent task
+description: Evidence-based comparison of cardiorespiratory fitness (CRF) measured in METs versus VO₂ max, based on Eric Topol's *Ground Truths* analysis and reconstructed figures from major cohort studies.
+  Demonstrates that CRF/METs underpins >99% of the outcome literature linking fitness to all-cause and cardiovascular mortality, drawing on the JAMA 2009 meta-analysis (n=102,980), the Cleveland Clinic cohort (n=122,007), and the Veterans Affairs cohort (n=750,302).
+  Critically evaluates consumer wearable VO₂ max estimates (7–16% MAPE) and the data imbalance between METs-based and direct VO₂ max evidence, concluding that METs are clinically superior for most healthy adults.
 examRelevant: false
 draft: false
 ---
 
-import Quote from '../../../components/Quote.astro';
-import { Note } from '../../../components/MarginNote/index.js';
-import Table from '../../../components/Table.astro';
 import Figure from '../../../components/Figure.astro';
-import fig1 from '../../../assets/lactate_01_lactate_turnover_flux.png';
-import fig1Dark from '../../../assets/lactate_01_lactate_turnover_flux_dark.png';
-import fig2 from '../../../assets/lactate_02_postprandial_lactate_shuttle.png';
-import fig2Dark from '../../../assets/lactate_02_postprandial_lactate_shuttle_dark.png';
+import Table from '../../../components/Table.astro';
+import fig1 from '../../../assets/fitness_01_met_mortality.png';
+import fig1Dark from '../../../assets/fitness_01_met_mortality_dark.png';
+import fig2 from '../../../assets/fitness_02_mortality_cohorts.png';
+import fig2Dark from '../../../assets/fitness_02_mortality_cohorts_dark.png';
+import fig3 from '../../../assets/fitness_03_met_vs_vo2max.png';
+import fig3Dark from '../../../assets/fitness_03_met_vs_vo2max_dark.png';
+import { Note } from '../../../components/MarginNote/index.js';
 
 
 ## Table of Contents
 
-1. [The Paradigm Shift and the Shuttle Architecture](#1-the-paradigm-shift-and-the-shuttle-architecture)
-2. [Lactate as Fuel and as Metabolic Switch](#2-lactate-as-fuel-and-as-metabolic-switch)
-3. [Lactate as Dietary Carbon — and the Nutrition Payoff](#3-lactate-as-dietary-carbon--and-the-nutrition-payoff)
-4. [The Lactate Curve in Practice — Threshold, Zones and the Clinical Shift](#4-the-lactate-curve-in-practice--threshold-zones-and-the-clinical-shift)
+1. [How Fitness Is Measured — and the Conflation Problem](#1-how-fitness-is-measured--and-the-conflation-problem)
+2. [The Evidence — Cardiorespiratory Fitness and Mortality](#2-the-evidence--cardiorespiratory-fitness-and-mortality)
+3. [The VO₂ Max Verdict and Practical Recommendations](#3-the-vo-max-verdict-and-practical-recommendations)
 
 ---
 
-## 1 The Paradigm Shift and the Shuttle Architecture
+## 1 How Fitness Is Measured — and the Conflation Problem
 
 <Note>
 **Learning objectives:**
-- The paradigm shift and lactate's three roles: fuel, gluconeogenic precursor, signalling molecule
-- The three nested shuttles (cell–cell, intracellular, organ–organ) and their MCT machinery
-- Isotope-tracer evidence, and lactataemia as a load rather than a pathology marker
+- The conflation of VO₂ max with cardiorespiratory fitness (CRF), and why it matters clinically
+- CRF: definition, graded-exercise/MET measurement, and its status as a clinical vital sign
+- Direct laboratory VO₂ max versus wearable estimation, and the accuracy gap between them
 </Note>
 
-### 1.1 Historical Context and Paradigm Shift
+### 1.1 Introduction and Clinical Context
 
-For decades, lactate was regarded as a toxic end-product of anaerobic glycolysis — the cause of muscle fatigue and performance decline. This view is now obsolete. Building on the **Lactate Shuttle Theory**, first proposed by Brooks in 1985 and consolidated in his 2018 review (Brooks 2018), a fundamental paradigm shift has occurred: lactate is not the problem, but part of the solution.
+**Clinical takeaway.** Cardiorespiratory fitness (CRF), measured in metabolic equivalents of task (METs) on a treadmill or bicycle ergometer, is the evidence-based metric underpinning more than 99 % of the outcome literature linking physical fitness to all-cause and cardiovascular mortality. VO₂ max — especially as estimated by consumer wearables — is poorly validated, frequently inaccurate, and conflated with CRF in popular health narratives. METs are free, universally accessible, and clinically superior for most healthy adults.
 
-<Quote 
-  author="Brooks"
-  cite="2018, Cell Metabolism"
-  quote="Once thought to be a waste product of anaerobic metabolism, lactate is now known to form continuously under aerobic conditions." 
-/>
+Wearable fitness devices increasingly report VO₂ max values to consumers, prompting anxiety and clinical inquiries when those values decline. Topol (2026) describes two recent patients who contacted him concerned about a falling VO₂ max displayed by their smartwatches — a scenario that illustrates a far broader problem: the widespread conflation of **VO₂ max** (maximal oxygen uptake) with **cardiorespiratory fitness (CRF)**, two related but methodologically and evidentially distinct constructs.
 
-Three core functions are now well established:
+This lecture distils that critical analysis into an evidence-based framework covering: (1) how each metric is defined and measured; (2) the strength and size of the supporting outcome datasets; (3) the origin and consequences of conflation in popular media; and (4) practical recommendations grounded in peer-reviewed evidence. The figures throughout are reconstructed from published data; they are not reproductions of the original article graphics.
 
-1. **Energy substrate** – preferred oxidative fuel in the heart, brain, liver, and red skeletal muscle
-2. **Gluconeogenic precursor** – primary source for hepatic glucose synthesis (Cori cycle and beyond)
-3. **Signaling molecule** – autocrine, paracrine, and endocrine functions (myokine/exerkine)
+### 1.2 Cardiorespiratory Fitness (CRF)
 
-### 1.2 Brooks (2018) — *The Science and Translation of Lactate Shuttle Theory*
+CRF reflects the integrated capacity of the cardiovascular, pulmonary, and musculoskeletal systems to sustain aerobic exercise (Ross et al. 2016). It is assessed via graded exercise testing and expressed as metabolic equivalents of task (METs), where 1 MET equals the resting metabolic rate. CRF can be assessed on any treadmill or ergometer without a specialist, whereas VO₂ max requires a calibrated metabolic cart, an exhaled-gas mask, and trained staff. The MET intensity bands and the heart-rate estimate MET ≈ 0.05 × HR_bpm + 2 are treated in [Lecture 3](/lectures/lecture-3), §2.8.
 
-**Cell Metabolism, 27, 757–785**
+The American Heart Association classifies CRF as a **clinical vital sign** (Ross et al. 2016).
 
-This comprehensive review synthesizes four decades of research from the Brooks Lab (UC Berkeley) and describes three nested shuttle systems:
+### 1.3 VO₂ Max — Direct Laboratory Measurement
 
-<Table>
+Maximal oxygen uptake (VO₂ max) is the ceiling of aerobic power, determined via *direct gas exchange* during a ramp-protocol exercise test to volitional exhaustion (Topol 2026). Requirements: calibrated metabolic cart, tight mask, and trained exercise physiologist. Cost: ~$150 per test. Result expressed in mL O₂ · kg⁻¹ · min⁻¹. These requirements make routine clinical screening impractical.
 
-| Shuttle Level | Description |
-|---|---|
-| **Cell-Cell Lactate Shuttle (CCLS)** | Lactate transfer between producing cells (e.g., glycolytic muscle fibers) and consuming cells (heart, brain, liver) along concentration gradients |
-| **Intracellular Lactate Shuttle (ILS)** | Intracellular transfer of cytosolically produced lactate to the mitochondrial matrix for oxidative metabolism within the same cell |
-| **Organ-Organ Lactate Shuttle** | Systemic redistribution between organs (muscle → liver, muscle → brain) via the bloodstream |
+### 1.4 VO₂ Max — Wearable Estimation
 
-<Fragment slot="caption">
-The three lactate shuttle systems.
-</Fragment>
-</Table>
+Consumer smartwatches impute VO₂ max from population-based algorithms (heart rate + GPS/accelerometry), not gas exchange (Tedesco et al. 2025). Accuracy is poor: mean absolute percentage error (MAPE) is typically 7–16 %.
 
-**Key Findings:**
-- Lactate is produced **continuously under fully aerobic conditions** — not only during oxygen deficiency
-- At rest, approximately 50% of produced lactate is **oxidatively utilized**
-- During intense exercise, this fraction increases to approximately **75–80%**
-- Monocarboxylate transporters (MCT1, MCT4) and the co-factor **CD147** mediate transcellular lactate transport
-- A mitochondrial **lactate oxidation complex** (LDH + MCT1 + CD147) enables direct intracellular oxidation
-
-**Clinical Translation:**
-- Lactatemia as a **"strain" biomarker** (load response), not a pathological stress marker
-- Therapeutic lactate infusions in traumatic brain injury, heart failure, and systemic inflammation
-- Endurance training increases MCT expression and thereby lactate clearance capacity
-
-### 1.3 Brooks et al. (2022) — *Tracing the Lactate Shuttle to the Mitochondrial Reticulum*
-
-**Experimental & Molecular Medicine, 54, 1332–1347**
-
-This review deepens the mechanistic understanding of the **intracellular lactate shuttle** and describes the role of the mitochondrial reticulum:
-
-- Isotope tracer studies (¹³C-lactate infusions) provide unambiguous documentation of **continuous organ-organ, cell-cell, and intracellular shuttling**
-- Lactate is considered the **preferred substrate over glucose** in heart and brain
-- The mitochondrial reticulum (an interconnected mitochondrial network) generates the concentration and redox gradients that drive intracellular lactate flux
-- **Histone lactylation** and CREB-dependent signaling pathways have been identified as novel epigenetic signaling routes
-- Introduction of the **Postprandial Lactate Shuttle (PLS)** as a new category: dietary carbohydrates pass through a lactate intermediate before storage or oxidation
-
-**Methodological note:** Isotope tracer infusions combined with arterial-venous difference measurements across muscle, heart, and brain yield quantitative flux rates at rest and during exercise, before and after endurance training, at sea level and altitude.
+Because wearables estimate rather than measure VO₂ max, their values carry directional biases and extrinsic confounders that make them unreliable for clinical or lifestyle decisions.
 
 ### One-Minute-Paper Topics
 <Note>
   A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
 </Note>
-- In one sentence, why is the idea that "lactate is a waste product" considered outdated?
-- Explain the concept of continuous aerobic lactate production at rest.
-- Describe the lactate shuttle hypothesis in your own words.
-- Which tissues are major lactate consumers, and which are major producers?
-- How does the monocarboxylate transporter (MCT) family enable lactate exchange between cells?
+- The lecture's core argument is that METs-based CRF — not VO₂max — is the evidence-based metric for linking fitness to mortality outcomes. Summarise this argument in three sentences suitable for a patient consultation.
+- Define CRF in terms of the integrated capacity it reflects. How is it measured clinically, how is it expressed, and why does the American Heart Association classify it as a "clinical vital sign"?
+- What equipment, personnel, and procedural conditions are needed for a valid direct VO₂max measurement? Why do these requirements make routine clinical screening impractical?
+- Consumer smartwatches estimate VO₂max from HR and GPS/accelerometry rather than direct gas exchange. What is MAPE (mean absolute percentage error), and what is the typical MAPE range for wearable VO₂max estimates (7–16%)? What are the clinical consequences of this inaccuracy?
+- Using the formula MET ≈ 0.05 × HR_bpm + 2, estimate the MET value for a heart rate of 120 bpm and 160 bpm. To which intensity categories (light, moderate, vigorous) do these values correspond?
+- Outline three specific reasons why consumer-wearable VO₂max estimates should not be used for clinical or lifestyle decision-making. Relate your answer to both technical and epistemological limitations.
+- The American Heart Association proposed CRF as a clinical vital sign. What are the implications for routine care? Should every GP appointment include a fitness assessment, and how could this be implemented practically?
 
 ### Key References
-- Brooks GA (2018). The Science and Translation of Lactate Shuttle Theory. *Cell Metabolism*, 27, 757–785. [10.1016/j.cmet.2018.03.008](https://doi.org/10.1016/j.cmet.2018.03.008)
-- Brooks GA et al. (2022). Tracing the lactate shuttle to the mitochondrial reticulum. *Experimental & Molecular Medicine*, 54, 1332–1347. [10.1038/s12276-022-00802-3](https://doi.org/10.1038/s12276-022-00802-3)
+- Ross R, Blair SN, Arena R, et al. *Importance of assessing cardiorespiratory fitness in clinical practice: a case for fitness as a clinical vital sign — a scientific statement from the American Heart Association.* Circulation 134 (24), 2016: e653–e699.
+- Tedesco S, Sica M, Ancillao A, et al. *Accuracy of consumer-grade wearables for VO₂ max estimation: a systematic review.* Electronics 14 (15), 2025: 3081.
+- Topol E. *The flawed VO₂ max craze: conflation with cardiorespiratory fitness.* Ground Truths (Substack), 23 February 2026.
 
 ---
 
-## 2 Lactate as Fuel and as Metabolic Switch
+## 2 The Evidence — Cardiorespiratory Fitness and Mortality
 
 <Note>
 **Learning objectives:**
-- Glucose feeding the TCA cycle indirectly via circulating lactate (Hui et al. 2017)
-- The decoupling of glycolysis and the TCA cycle at the level of lactate
-- Lactate as a direct ETC activator, and what this means for trained athletes
+- The Kodama (2009) meta-analysis: each 1-MET increment and mortality risk
+- The Cleveland Clinic cohort: the 1.41 hazard ratio, the >5-fold gradient, and the sex difference
+- The Veterans Affairs cohort and the graded, no-ceiling dose–response between fitness and survival
 </Note>
 
-### 2.1 Hui et al. (2017) — *Glucose Feeds the TCA Cycle via Circulating Lactate*
+### 2.1 Meta-Analysis: 33 Studies, 102,980 Participants (JAMA 2009)
 
-**Nature, 551, 115–118**
-
-This landmark study using systemic ¹³C isotope tracing in mice delivers a fundamental reinterpretation of aerobic metabolism:
-
-**Background:** Under aerobic conditions, glucose was assumed to be the primary input to the TCA cycle. This assumption has been refuted.
-
-**Method:** Intravenous infusions of [U-¹³C]glucose, [U-¹³C]lactate, and [U-¹³C]glutamine in fed and fasted mice; measurement of isotope labeling fractions in TCA intermediates across multiple tissues.
-
-**Main Findings:**
-
-<Table>
-
-| Parameter | Result |
-|---|---|
-| Molar turnover flux of lactate vs. glucose (fed) | Lactate exceeds glucose by a **factor of 1.1** |
-| Molar turnover flux of lactate vs. glucose (fasted) | Lactate exceeds glucose by a **factor of 2.5** |
-| TCA labeling by ¹³C-lactate | Extensive in **all tissues** (fed and fasted) |
-| Glucose contribution to TCA cycle (fasted) | Primarily **indirect** — via circulating lactate — in all tissues except the brain |
-| Situation in tumors (lung, pancreas) | Lactate exceeds glucose as TCA substrate; in pancreatic tumors, glutamine contributes even more |
-
-<Fragment slot="caption">
-Lactate turnover flux relative to glucose (tracer study).
-</Fragment>
-</Table>
-
-<Figure src={fig1} srcDark={fig1Dark} alt="Lactate turnover flux relative to glucose, fed versus fasted">
-Both bars sit above the line at which the two fluxes would be equal — lactate, not glucose, is the primary circulating carbohydrate fuel. Feeding brings the two close together; fasting pulls them apart, and lactate then turns over two and a half times as fast as glucose. After Hui et al., Nature 551: 115–118 (2017).
+<Figure src={fig1} srcDark={fig1Dark} alt="CRF and Mortality Risk — JAMA 2009">
+Cardiorespiratory fitness and mortality risk. Each 1-MET increment in exercise capacity is associated with a **14–15 % reduction in all-cause mortality**, plotted here relative to the 7.9-MET reference. Shaded band = 95 % CI. Meta-analysis of 33 studies (n = 102,980; Kodama et al. 2009).
 </Figure>
 
-**Conclusion:** Glycolysis and the TCA cycle are **decoupled at the level of lactate**. Glucose can make its TCA contribution predominantly via the detour of circulating lactate, without entering the mitochondria directly as pyruvate. This enables independent regulation of ATP production and glucose catabolism.
+The landmark meta-analysis by Kodama et al. (2009) established METs as a potent and graded prognostic variable for all-cause and cardiovascular mortality.
 
-<Quote 
-  author="Hui et al."
-  cite="2017, Nature"
-  quote="Glycolysis and the TCA cycle are uncoupled at the level of lactate, which is a primary circulating TCA substrate in most tissues and tumours." 
-/>
+### 2.2 Cleveland Clinic Cohort: 122,007 Patients (JAMA Network Open 2018)
 
-### 2.2 Cai et al. (2023) — *Lactate Activates the Mitochondrial Electron Transport Chain Independently of Its Metabolism*
+> **Cleveland Clinic Key Results**
+>
+> - Five MET strata: Low, Below-Average, Above-Average, High, Elite.
+> - HR (above-average vs. below-average): **1.41** — equivalent to **smoking or diabetes**.
+> - HR (Low vs. Elite): **>5-fold**.
+> - Protective effect **more pronounced in women** at every stratum.
+> - **No ceiling mortality risk** even at elite fitness.
 
-**Molecular Cell, 83, 3904–3920**
+### 2.3 Veterans Affairs Cohort: 750,000+ Veterans (Kokkinos et al. 2022)
 
-This work from the Thompson Lab at Memorial Sloan Kettering Cancer Center (New York) represents a conceptual breakthrough: lactate acts not only as a fuel, but as a **direct activator of the mitochondrial electron transport chain (ETC)** — independently of its own metabolism.
-
-**Core Findings:**
-
-1. **Lactate enters the mitochondrial matrix** and directly stimulates ETC activity.
-
-2. **The ability to enhance OXPHOS does not depend on lactate metabolism:**
-   - Both **L-lactate** (the biologically active stereoisomer) and **D-lactate** (not metabolizable by LDH) activate the ETC
-   - D-lactate suppressed aerobic glycolysis (Warburg effect) **reversibly** and in an ATP-dependent manner
-
-3. **Mechanism:** ATP production via OXPHOS suppresses glycolysis; lactate acts as a **mitochondrial messenger** that switches cells toward oxidative metabolism.
-
-4. **Immunological relevance:** In primary T cells, D-lactate enhanced:
-   - Cell proliferation
-   - Effector function
-
-5. **Oncological significance:** D-lactate suppressed the Warburg effect in tumor cell lines and enabled cell growth on respiration-dependent bioenergetic substrates.
-
-**Schematic summary of the mechanism:**
-
-```
-Extracellular lactate ↑
-        ↓
-Entry into mitochondrial matrix (via MCT + membrane transport)
-        ↓
-ETC activation (complex-independent signaling)
-        ↓
-↑ Mitochondrial ATP synthesis (OXPHOS)
-        ↓
-ATP-mediated suppression of glycolysis
-        ↓
-↑ Pyruvate and alternative substrate utilization
-```
-
-**Relevance for exercise and immunology:**
-- Lactate accumulation during exercise directly activates OXPHOS — independent of substrate delivery
-- Explains why trained athletes can oxidize efficiently even at high lactate concentrations
-- Opens new perspectives on the role of lactate in the activation of immune cells following exercise
-
-### One-Minute-Paper Topics
-<Note>
-  A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
-</Note>
-- How does lactate function as a signaling molecule (lactormone)?
-- Describe one role of lactate in the immune system.
-
-### Key References
-- Cai X et al. (2023). Lactate activates the mitochondrial electron transport chain independently of its metabolism. *Molecular Cell*, 83, 3904–3920. [10.1016/j.molcel.2023.09.034](https://doi.org/10.1016/j.molcel.2023.09.034)
-- Hui S et al. (2017). Glucose feeds the TCA cycle via circulating lactate. *Nature*, 551, 115–118. [10.1038/nature24057](https://doi.org/10.1038/nature24057)
-
----
-
-## 3 Lactate as Dietary Carbon — and the Nutrition Payoff
-
-<Note>
-**Learning objectives:**
-- The two postprandial lactate shuttle phases: enteric and systemic
-- Lactate as a carbon carrier of magnitude comparable to glucose
-- Sports-nutrition implications: why carbohydrate form is secondary
-</Note>
-
-### 3.1 Leija et al. (2024) — *Enteric and Systemic Postprandial Lactate Shuttle Phases and Dietary Carbohydrate Carbon Flow in Humans*
-
-**Nature Metabolism, 6, 670–677**
-
-This human study provides the first direct in vivo evidence for the Postprandial Lactate Shuttle (PLS) in humans — with a striking temporal sequence.
-
-**Study population:** Healthy young men and women (overnight fasted); oral glucose tolerance test (OGTT, 75 g glucose); arterialized blood samples; stable isotope tracers ([3-¹³C]lactate, deuterium-labeled glucose).
-
-**Main Findings – Two Phases of the PLS:**
-
-<Table>
-
-| Phase | Timing | Mechanism | Interpretation |
-|---|---|---|---|
-| **Enteric PLS** | Blood lactate rises **before** blood glucose | Intestinal epithelial cells immediately metabolize glucose to lactate | Gut lumen → portal vein → liver/systemic circulation |
-| **Systemic PLS** | Second lactate rise, synchronous with glucose rise | Hepatic glucose release → peripheral glycolysis → lactate | Liver → muscle/organs → lactate redistribution |
-
-<Fragment slot="caption">
-The two phases of the postprandial lactate shuttle.
-</Fragment>
-</Table>
-
-<Figure src={fig2} srcDark={fig2Dark} alt="Blood lactate and glucose after a 75 g oral glucose load">
-The enteric rise from intestinal metabolism of the ingested carbohydrate appears while blood glucose is still at its fasting value; the larger systemic rise follows, synchronous with the glucose peak, and accounts for roughly 38 % of the 75 g load. Glycolysis is not the emergency route — it is the ordinary one. Schematic after Leija et al. (2024); the ordering and timing of the two rises are the finding.
+<Figure src={fig2} srcDark={fig2Dark} alt="All-cause mortality by fitness category — Cleveland Clinic and Veterans Affairs cohorts">
+All-cause mortality hazard ratios by fitness category on a common logarithmic axis. **Left**: Cleveland Clinic cohort (n = 122,007); the above-average vs. below-average hazard ratio of 1.41 equates to the excess mortality risk of **smoking or diabetes**, and the Low-to-Elite gradient exceeds 5-fold (Mandsager et al. 2018). **Right**: US Veterans Affairs cohort (n = 750,302; mean follow-up 10.2 years) with a ≈4-fold Very-Low to Very-High gradient and no ceiling risk at the top; error bars = 95 % CI (Kokkinos et al. 2022).
 </Figure>
 
-**Quantitative Significance:**
-- The systemic PLS represents approximately **38% of the 75-g glucose load** appearing as lactate in the circulation
-- Following a carbohydrate-containing meal, lactate is a **carbon carrier of similar magnitude as glucose itself**
-
-**Conclusions:**
-- Lactate production is **not a consequence of hypoxia** in skeletal muscles; it occurs in fully aerobic tissues
-- Dietary carbohydrates are routinely distributed and utilized via the lactate shuttle
-- Lactate **buffers** the postprandial glucose surge (together with insulin)
-- The intestinal epithelium is identified as the **first actor** in systemic carbohydrate carbon flux
-
-<Quote 
-  author="Brooks"
-  cite="2024, cited in Berkeley News"
-  quote="Instead of a big glucose surge, we have a lactate and glucose surge after eating." 
-/>
-
-### 3.2 Brooks (2023) — *What the Lactate Shuttle Means for Sports Nutrition*
-
-**Nutrients, 15(9), 2178**
-
-This review draws practical conclusions from the lactate shuttle concept for sports nutrition:
-
-**Central argument:** Regardless of carbohydrate form (glucose, maltodextrin, starch, fructose), the **systemic carbohydrate energy flux** in the body ultimately follows:
-
-```
-Hexose (glucose/glycogen) → Lactate → oxidative utilization OR liver glycogen storage
-```
-
-**Practical Implications:**
-
-<Table>
-
-| Question | Answer Based on the Lactate Shuttle Concept |
-|---|---|
-| Which carbohydrate form is optimal? | The form plays a secondary role; all carbohydrates pass through lactate as an intermediate |
-| Is lactate supplementation sensible? | Lactate salts (e.g., polylactate/calcium lactate) are GRAS-classified; buffer acidosis and provide direct substrate |
-| Why does training increase carbohydrate tolerance? | Increased MCT expression → improved lactate clearance without lactatemia |
-| What is the role of fructose? | Converted to lactate and glucose in the gut; enters systemic circulation primarily as lactate |
-| Ketones as an alternative to lactate? | No advantage when carbohydrates are sufficiently available; lactate and carbohydrates are more efficiently and directly available |
-
-<Fragment slot="caption">
-Sports-nutrition questions answered through the lactate shuttle concept.
-</Fragment>
-</Table>
-
-**Training-Specific Aspects:**
-- Endurance training increases the capacity for simultaneous lactate production and clearance → higher performance without hyperlactatemia
-- Pro Tour cyclists can sustain power outputs for hours at which untrained individuals would already develop hyperlactatemia
-- Lactate threshold training targets a shift in the equilibrium point between production and clearance
+Across all three datasets, the fitness–survival relationship is **graded and continuous with no ceiling**: higher CRF is associated with lower mortality at every level, and the largest absolute gains accrue at the low-fitness end of the spectrum.
 
 ### One-Minute-Paper Topics
 <Note>
   A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
 </Note>
-- Blood lactate rises *before* blood glucose after a 75-g oral glucose load. Name the tissue responsible and explain why this refutes the idea that lactate production signals oxygen deficiency.
-- An athlete asks whether glucose, maltodextrin or fructose is the "best" carbohydrate for a long session. Answer using the lactate shuttle, and say what actually limits how much carbohydrate they can tolerate.
+- The Kodama et al. meta-analysis (n = 102,980) established a graded inverse relationship between CRF and mortality. State the key quantitative finding: what does each 1-MET increment in exercise capacity correspond to in terms of mortality risk reduction?
+- The Cleveland Clinic study (n = 122,007) found a hazard ratio of 1.41 for all-cause mortality when comparing above-average vs. below-average fitness categories. To which two well-known risk factors is this mortality excess equivalent? Is there a ceiling effect at high fitness levels?
+- The Cleveland Clinic data showed that the protective effect of fitness was more pronounced in women than in men at every fitness stratum. Why might this sex difference exist, and what are the practical implications for exercise prescription in women?
+- The Kokkinos et al. cohort (n = 750,302; mean follow-up 10.2 years) reported approximately a 4-fold mortality gradient from Very-Low to Very-High fitness. What does this gradient tell us about the dose–response between fitness and survival?
+- Patients recovering from Long COVID or ME/CFS often show severely reduced exercise capacity (&lt;5 METs). Using the Cleveland Clinic mortality gradient data, explain the clinical urgency of safe, individualised CRF rehabilitation in these populations.
 
 ### Key References
-- Brooks GA (2023). What the Lactate Shuttle Means for Sports Nutrition. *Nutrients*, 15(9), 2178. [10.3390/nu15092178](https://doi.org/10.3390/nu15092178)
-- Leija RG et al. (2024). Enteric and systemic postprandial lactate shuttle phases and dietary carbohydrate carbon flow in humans. *Nature Metabolism*, 6, 670–677. [10.1038/s42255-024-00993-1](https://doi.org/10.1038/s42255-024-00993-1)
+- Kodama S, Saito K, Tanaka S, et al. *Cardiorespiratory fitness as a quantitative predictor of all-cause and cardiovascular mortality in healthy men and women: a meta-analysis.* JAMA 301 (19), 2009: 2024–2035.
+- Kokkinos P, Faselis C, Samuel IBH, et al. *Cardiorespiratory fitness and mortality risk across the spectra of age, race, and sex.* J Am Coll Cardiol 80 (6), 2022: 598–609.
+- Mandsager K, Harb S, Cremer P, et al. *Association of cardiorespiratory fitness with long-term mortality among adults undergoing exercise treadmill testing.* JAMA Netw Open 1 (6), 2018: e183605.
 
 ---
 
-## 4 The Lactate Curve in Practice — Threshold, Zones and the Clinical Shift
+## 3 The VO₂ Max Verdict and Practical Recommendations
 
 <Note>
 **Learning objectives:**
-- The aerobic and individual anaerobic threshold and their %VO₂max positions
-- The lactate-performance curve: dual axes, four training zones, right and left shifts
-- The clinical case of ME/CFS and Long COVID, where zone-based prescription can harm
+- The 2024 CRF-vs-VO₂ max meta-analysis and the 234-fold participant imbalance
+- The similar ~14 % effect as construct validity — and why it does not license wearable VO₂ max
+- Metric-by-metric recommendations, and the clinical niches where direct VO₂ max retains value
 </Note>
 
-### 4.1 Background and rationale
+### 3.1 Meta-Analysis: 42 Studies, CRF vs. VO₂ Max (2024)
 
-Classical exercise testing in the laboratory has long relied on spirometry and the measurement of maximal oxygen uptake (VO₂max) as the gold standard for cardiorespiratory fitness. However, a well-documented discrepancy exists between improvements in sport-specific endurance performance and increases in VO₂max — a limitation that became apparent already in the 1960s and 70s, when elite endurance athletes already exhibited VO₂max values of around or above 80 ml/min/kg. This ceiling effect prompted the development of submaximal performance concepts, particularly those based on blood lactate concentrations and ventilatory responses during graded exercise. Since the 1970s, the anaerobic threshold has become an established construct in international sports science, with firmly recognized roles in performance diagnostics and training load management.
+<Figure src={fig3} srcDark={fig3Dark} alt="Meta-Analysis 2024: METs versus direct VO₂ max — participants, imbalance and effect size">
+Data imbalance between METs-based CRF and direct VO₂ max evidence. **a**: >99 % of outcome-linked participants contributed MET data; &lt;1 % contributed direct VO₂ max data. **b**: The same imbalance as a relative participant count — 234-fold more participants in the MET arm. **c**: Point estimates for cardiovascular mortality reduction are remarkably similar (≈14 %), confirming construct validity — but the evidence base rests almost entirely on METs (Swain and Franklin 2024).
+</Figure>
 
-*Based on: Kindermann W (2004). Anaerobe Schwelle. Deutsche Zeitschrift für Sportmedizin, 55(6), 161–162.*
+> **Critical Finding: Data Imbalance**
+>
+> **234-fold more participants** contributed data via METs than via direct VO₂ max measurement. Over 99 % of all evidence linking fitness to mortality derives from **METs-based CRF** — not VO₂ max.
 
-### 4.2 Definitions: aerobic and anaerobic threshold
+The evidence base is profoundly imbalanced. The 2024 meta-analysis by Swain and Franklin (2024), comparing CRF and VO₂ max across 42 studies, revealed that 234-fold more study participants contributed METs-based CRF data than direct VO₂ max data. This asymmetry reflects both the practical accessibility of METs testing and the specialized requirements for direct VO₂ max measurement. The near-identical ≈14 % effect estimates confirm **construct validity** — the two metrics capture the same underlying aerobic capacity — but this similarity does *not* justify replacing an accessible, well-evidenced measure (METs) with an inaccurate wearable estimate of the other.
 
-From a training-physiological perspective, the aerobic-anaerobic transition zone is of particular significance. This zone is demarcated by two distinct thresholds:
+### 3.2 Specific Clinical Applications of VO₂ Max
 
-**Aerobic Threshold (AeS)**
-Defined as the point of the first lactate rise above resting levels during incremental exercise. It represents the lower boundary of the aerobic-anaerobic transition and corresponds to the first ventilatory threshold (VT1). At this point, accumulated lactic acid begins to be buffered by bicarbonate, releasing excess CO₂ and stimulating a disproportionate increase in ventilation — a phenomenon described by Hollmann as the point of optimal respiratory efficiency.
+In selected clinical populations, direct VO₂ max measurement has demonstrated utility: in heart failure for risk stratification and transplant listing; in pulmonary hypertension as a prognostic marker (Topol 2026); and in pre-operative evaluation for predicting post-surgical cardiopulmonary complications (Older et al. 1993).
 
-**Anaerobic Threshold / Individual Anaerobic Threshold (IAS)**
-Represents the upper boundary of the aerobic-anaerobic transition zone and corresponds to the maximal lactate steady state (MLSS) — the highest exercise intensity at which blood lactate remains stable despite constant effort. On average, the anaerobic threshold is observed around 4 mmol/l blood lactate, though in trained endurance athletes it is typically lower. The corresponding ventilatory marker is the second ventilatory threshold (VT2), also termed the respiratory compensation point (RCP), where hydrogen ions from lactic acid can no longer be fully buffered, driving further stimulation of ventilation via pH-mediated mechanisms. While VT2 and the lactate-derived anaerobic threshold are conceptually related, they are not numerically identical.
-
-### 4.3 Methodological aspects and quality criteria
-
-A wide variety of threshold determination methods exist, and the resulting threshold values are generally not interchangeable between methods, as most threshold models remain inadequately validated. A key methodological distinction concerns fixed versus individual thresholds:
-
-**Fixed lactate thresholds** (e.g., the 4 mmol/l criterion) are straightforward to apply but fail to account for interindividual variation — identical lactate concentrations can reflect markedly different metabolic states in different athletes.
-
-**Individual anaerobic thresholds** are therefore preferable, as they account for sport-specific and training-state-dependent variation in threshold lactate concentrations. The method developed by Stegmann et al. (1981) additionally incorporates lactate kinetics during early recovery, and has been validated as reflecting the MLSS. This approach demonstrates high reliability (test-retest consistency) and is robust to glycogen depletion. Importantly, step duration prolongation does not significantly affect the determined threshold, whereas reducing step height leads to an upward shift — a key consideration in test design.
-
-For ventilatory threshold determination, ramp protocols are recommended over stepwise increments, as abrupt step transitions can introduce artifacts that mimic threshold responses. Lactate thresholds, by contrast, are typically determined using stepwise protocols.
-
-### 4.4 Physiological significance as a breakpoint
-
-The anaerobic threshold is not merely a metabolic marker but represents a genuine physiological breakpoint with multi-system implications. Exceeding the anaerobic threshold triggers disproportionate increases in plasma catecholamines (epinephrine and norepinephrine) and elicits significant changes in immunological parameters — including natural killer cell mobilization and oxidative burst activity. This has direct relevance to exercise immunology, underscoring that intensity relative to the anaerobic threshold is a critical determinant of immune responses to exercise.
-
-The anaerobic threshold is a reliable, motivation-independent marker of endurance capacity. Performance at the anaerobic threshold typically corresponds to approximately 60–85% VO₂max (sport- and training-state dependent), while the aerobic threshold corresponds to approximately 40–65% VO₂max.
-
-### 4.5 Training intensity prescription: the two-threshold model
-
-The dual-threshold model (Kindermann, Simon & Keul, 1979) provides a practical framework for training intensity zonation based on the aerobic-anaerobic transition. Key zones are defined as follows:
+### 3.3 Practical Recommendations
 
 <Table>
 
-| Zone | Intensity (% IAS) | Lactate (mmol/l) | Description |
-|---|---|---|---|
-| Regenerative training | < 70% | < 2 | Below aerobic threshold; recovery-oriented |
-| Basic Endurance I (GA I) | 70–90% | ~1.5–2.5 | Extensive aerobic training |
-| Basic Endurance II (GA II) / Tempo runs (TDL) | 90–100% | ~3–5 | Intensive aerobic with anaerobic contribution |
-| Interval Training (IVT) | > 100% | Variable | Supra-threshold; varies with intensity and recovery |
+| **Metric** | **Recommendation** |
+|---|---|
+| **METs (CRF)** | **Preferred for most healthy adults.** Free, universally accessible, best studied for all-cause and cardiovascular mortality outcomes (>99 % of evidence base). Use treadmill/bicycle speed-incline charts, Bruce protocol, or HR formula. |
+| **VO₂ Max (lab)** | Reserve for: (a) high-performance athletes; (b) heart failure/pulmonary hypertension risk stratification; (c) pre-operative evaluation. |
+| **Wearable VO₂ Max** | **Not recommended** for clinical or lifestyle decision-making. MAPE 7–16 %, directional biases, and extrinsic confounders render it unreliable. |
+| **Strength & Balance** | Include alongside CRF. Combined aerobic + strength training is superior to aerobic training alone for mortality reduction (Kim et al. 2023). |
 
 <Fragment slot="caption">
-Endurance training zones by lactate and % IAS.
+Evidence-based fitness-monitoring recommendations by metric.
 </Fragment>
 </Table>
 
-In applied sport contexts, elite marathon runners compete at approximately their anaerobic threshold, and regional-level marathon athletes (~3:00 h finish time) run at roughly 95% of threshold speed. Training intensity recommendations should be expressed as heart rate targets. Notably, beta-blocker use does not influence the lactate-power curve, enabling accurate training prescription even in this clinical population.
+Topol's bottom line: *"Perhaps the better strategy is to be as physically active as possible and **not worry about any metric**!"* (Topol 2026). The emphasis should be on building a comprehensive, enjoyable activity habit rather than chasing a single number from a device whose accuracy is demonstrably limited.
 
-### 4.6 Anaerobic threshold and fat oxidation
-
-Maximum absolute fat oxidation occurs at approximately 55–72% VO₂max (68–79% HRmax), which corresponds to the aerobic-anaerobic transition zone. Only above the anaerobic threshold does the relative contribution of fat to total energy supply decline substantially. This means that training at approximately 90% of IAS simultaneously achieves maximal fat oxidation — a finding with implications for both athletic performance and preventive/therapeutic exercise programming.
-
-### 4.7 Preventive and rehabilitative applications
-
-In preventive and rehabilitative exercise medicine, training intensity recommendations are similarly anchored to the aerobic-anaerobic transition. Shorter training sessions may be conducted at 90–100% IAS, while longer sessions should remain near the aerobic threshold. Supra-threshold exercise — i.e., above the anaerobic threshold — is not relevant for health-oriented training and carries risks in patient populations. Lactate-based training targets should be validated under field conditions given the potential for biomechanical and coordinative differences between laboratory ergometry and sport-specific movement.
-
-### 4.8 Summary of the threshold concept
-
-The anaerobic threshold — particularly when determined as the individual anaerobic threshold (IAS) corresponding to the maximal lactate steady state — is a reliable, clinically meaningful, and motivation-independent indicator of endurance capacity. It outperforms fixed lactate concentrations (e.g., 4 mmol/l) by accounting for interindividual metabolic variation. The two-threshold model provides a validated framework for training intensity prescription across competitive sport, preventive, and rehabilitative contexts. Its physiological significance extends beyond metabolism to encompass autonomic, hormonal, and immune system responses — the latter being of direct relevance to exercise immunology and research on post-infectious conditions such as ME/CFS and Long COVID.
-
-### 4.9 The lactate performance curve
-
-Fig. 1 of Kindermann (2004) shows a representative lactate performance curve derived from five serial cycle ergometer tests in a single subject (starting at 100 W, incremental steps of 20 W every 3 minutes). Two physiologically distinct thresholds are identified.  
-Link: https://www.germanjournalsportsmedicine.com/fileadmin/content/archiv2004/heft06/Standards_Kindermann.pdf
+### 3.4 Summary Comparison: CRF vs. VO₂ Max
 
 <Table>
 
-| Threshold | Abbreviation | Operational Definition |
+| **Dimension** | **CRF / METs** | **VO₂ Max** |
 |---|---|---|
-| Lactate Threshold | **LT** | First systematic rise in blood lactate above resting baseline; aerobic–anaerobic transition (Wasserman & McIlroy 1964) |
-| Individual Anaerobic Threshold | **IAS** | Maximal lactate steady-state power; highest workload at which lactate production and clearance remain in dynamic equilibrium |
+| Measurement | Treadmill/bike; HR formula | Direct gas exchange in metabolic lab |
+| Cost | Free | ≈$150/test |
+| Accessibility | Universal | Specialist lab only |
+| Wearable estimate | Indirect (step count, HR) | Algorithmic imputation (MAPE 7–16 %) |
+| Evidence base | >750,000 per large study | &lt;1,300 per study (direct measure) |
+| Fraction of outcome data | >99 % | &lt;1 % |
+| AHA recommendation | Clinical vital sign | Niche clinical/sports use |
+| Target population | All healthy adults | Elite athletes; HF/PH patients; pre-op |
+| AI platform misuse | Rare | Frequent |
 
 <Fragment slot="caption">
-Operational definitions of the lactate and individual anaerobic thresholds.
+Head-to-head comparison of CRF/METs and VO₂ max across measurement, cost, evidence base, and application.
 </Fragment>
 </Table>
-
-In this individual, **LT occurred at 200 W** and **IAS at 250 W**, both determined on 22.12.2013.
-
-### 4.10 Dual-axis presentation: lactate and heart rate
-
-The figure employs a dual y-axis layout characteristic of lactate diagnostics in German-speaking sports medicine:
-
-- **Lower curves (red, squares):** Blood lactate in mmol/l — the primary diagnostic variable. The characteristic J-shaped curve (flat aerobic baseline, exponential rise above IAS) is clearly visible, with confidence bands from repeated testing highlighting within-subject variability.
-- **Upper curves (blue, squares):** Heart rate in beats/min — used for transfer of laboratory thresholds into field-based training intensity prescription. Because heart rate is measurable continuously during training, it serves as the *operationalization* of metabolically defined zones.
-
-The simultaneous capture of both signals is considered standard practice in threshold diagnostics and allows real-time training steering via HR-based target ranges.
-
-### 4.11 Training zone architecture
-
-The colored background zones map metabolic states to practical training categories:
-
-<Table>
-
-| Zone | German Label | Physiological Basis |
-|---|---|---|
-| Light green | **Regeneratives Training (KB)** | Below aerobic threshold; active recovery; lactate ≈ 1.5–2.0 mmol/l |
-| Yellow | **Extensive Grundlagen (GA1)** | Aerobic base development; LT to mid-aerobic range; lactate 2–3 mmol/l |
-| Orange | **Intensive Grundlagen (GA2)** | Approach to IAS; highest tolerable steady-state intensity; lactate 3–4 mmol/l |
-| Pale red | **Schwellentraining (EB)** | At or near IAS; maximal lactate steady state; lactate ~4 mmol/l (interindividual variation ±1–2 mmol/l) |
-
-<Fragment slot="caption">
-Colour-coded training zones and their physiological basis.
-</Fragment>
-</Table>
-
-Training above the EB zone leads to progressive lactate accumulation and cannot be sustained beyond minutes — this is the domain of interval and competition training, not base endurance development.
-
-### 4.12 Longitudinal interpretation: right vs. left shift
-
-The core diagnostic value of serial testing lies in detecting **curve shift** as a marker of adaptation:
-
-- **Rechtsverschiebung (right shift, green arrow):** The lactate curve shifts to higher wattage at the same lactate concentration → improved mitochondrial capacity, enhanced lactate clearance (MCT1/MCT4 upregulation), increased fat oxidation at submaximal intensity. Physiologically equivalent to increased capillarization and Type I fiber oxidative capacity. Indicates **improved aerobic endurance performance**.
-- **Linksverschiebung (left shift, red arrow):** The curve shifts leftward → lactate accumulates at lower workloads → detraining, overreaching, infection, or post-infectious deconditioning. In ME/CFS and Long COVID research contexts, persistent left shift patterns at low absolute workloads are consistent with impaired oxidative metabolism and post-exertional malaise (PEM) physiology.
-
-**Clinical note:** In patients with post-infectious syndromes (ME/CFS, Long COVID), lactate curve left-shifts may occur even after minimal effort. The IAS in these populations can fall below 100 W — or even below resting-normalized aerobic threshold — making conventional zone-based training prescription potentially harmful without individualized lactate-guided assessment.
-
-### 4.13 Methodological considerations
-
-1. **Protocol specificity:** The 3-minute step protocol shown here is ergometer-specific. Biomechanical and coordinative differences between cycling and running mean that thresholds cannot be transferred across modalities without sport-specific re-testing.
-2. **Resting lactate variability:** Pre-test resting lactate (baseline) can vary substantially (0.8–2.0 mmol/l) due to prior activity, nutritional status, psychological stress, and circadian effects. This affects the absolute position of the LT but has less influence on the IAS.
-3. **Confidence bands:** The dotted boundary curves in the figure illustrate test-retest variability across five sessions, emphasizing that threshold diagnostics require replication to establish stable reference values for training prescription.
-4. **Wearable integration:** In research contexts using continuous physiological monitoring (e.g., Firstbeat Bodyguard 3, Polar H10, Oura Ring), heart rate–lactate relationships derived from ergometry can be used to approximate metabolic intensity zones from HR alone — a key methodological bridge between laboratory diagnostics and free-living monitoring in studies on training load and recovery.
-
-### 4.14 Integration with lactate shuttle theory (Brooks)
-
-The exponential lactate rise above IAS visible in Fig. 1 of Kindermann (2004) reflects the transition from net lactate *clearance* to net lactate *accumulation* — the point at which production (primarily fast-glycolytic fibers, cytoplasmic) exceeds the oxidative capacity of mitochondria-rich slow-twitch fibers and cardiac muscle to consume lactate via the intracellular and cell-to-cell lactate shuttles (MCT1-mediated import, mitochondrial lactate oxidation complex). Above IAS, circulating lactate serves both as a metabolic substrate (oxidized in heart, liver, slow-twitch muscle) and as a **signaling molecule** (lactormone) — activating PGC-1α, VEGF, BDNF, and fat oxidation gene programs — consistent with the updated lactate shuttle framework described by Brooks (2018, 2022, 2023).
-
-### 4.15 Conceptual overview
-
-```
-Dietary carbohydrates
-        ↓ [Enteric PLS – Leija 2024]
-Lactate (gut/portal vein)
-        ↓
-Systemic circulation
-        ↓ [Hui 2017 – primary TCA substrate]
-TCA cycle (heart, brain, muscle, liver)
-        ↓
-OXPHOS activation
-        ↓ [Cai 2023 – direct ETC activation, independent of metabolism]
-ATP synthesis + suppression of glycolysis
-        ↑
-Exercise-induced lactate
-        ↓ [Brooks 2018/2022 – Cell-Cell, Intracellular, Organ-Organ Shuttle]
-Redistribution via MCT → consumer organs
-```
 
 ### One-Minute-Paper Topics
 <Note>
   A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
 </Note>
-- Define the lactate threshold and explain why it is individualised.
-- Compare maximal lactate steady state (MLSS) and the second lactate threshold (LT2).
-- What does a left- vs. right-shifted lactate curve tell you about training adaptation?
-- Why can resting lactate be elevated in patients with mitochondrial dysfunction?
-- How might lactate kinetics differ between healthy controls and ME/CFS patients?
-- What does delayed lactate clearance suggest about oxidative metabolism?
-- Which methodological factors (sampling site, analyser, protocol) most influence lactate values?
-- Explain why blood lactate alone is insufficient to characterise an athlete's metabolic profile.
-- How would you design a lactate-based diagnostic protocol for a Long COVID patient?
-- Name one limitation of using lactate thresholds in untrained or clinical populations.
+- The 2024 meta-analysis revealed that 234-fold more participants contributed data via METs than via direct VO₂max measurement. Why does this imbalance matter for evidence-based practice, and what does it imply for the popular "VO₂max craze"?
+- Both METs and direct VO₂max show similar cardiovascular mortality reduction (~14%). What does this tell us about construct validity? And why does the similarity NOT justify replacing METs with wearable VO₂max estimates in clinical practice?
+- In which three clinical populations does direct VO₂max measurement retain value according to the lecture (heart failure, pulmonary hypertension, pre-operative evaluation)? For each, state the specific clinical question it addresses.
+- The summary table recommends including strength and balance alongside CRF. What is the evidence for combined aerobic + strength training vs. aerobic training alone for mortality reduction? Name one relevant study cited.
+- Using only a stopwatch and a standard staircase, how could a clinician estimate a patient's METs without laboratory equipment?
+- Topol concludes: "Perhaps the better strategy is to be as physically active as possible and not worry about any metric!" Do you agree with this statement from a public health communication standpoint? What are its advantages and risks?
+- For each of the following scenarios, which fitness metric (METs, direct VO₂max, wearable VO₂max) would you recommend and why: (a) population-level epidemiological study; (b) elite cyclist planning periodisation; (c) heart failure patient pre-transplant listing; (d) healthy middle-aged adult wanting to monitor personal fitness.
+- Topol describes a widespread conflation of VO₂max with CRF in popular health media. Give two concrete examples of how this conflation could harm individual health behaviour, and propose one public communication strategy to correct it.
 
 ### Key References
-- Brooks GA (2018). The Science and Translation of Lactate Shuttle Theory. *Cell Metabolism*, 27, 757–785. [10.1016/j.cmet.2018.03.008](https://doi.org/10.1016/j.cmet.2018.03.008)
-- Kindermann W (2004). Anaerobe Schwelle. *Deutsche Zeitschrift für Sportmedizin*, 55(6), 161–162.
-- Stegmann H, Kindermann W, Schnabel A (1981). Lactate kinetics and individual anaerobic threshold. *International Journal of Sports Medicine*, 2, 160–165.
-- Wasserman K & McIlroy MB (1964). Detecting the threshold of anaerobic metabolism in cardiac patients during exercise. *American Journal of Cardiology*, 14, 844–852. [10.1016/0002-9149(64)90012-8](https://doi.org/10.1016/0002-9149(64)90012-8)
+- Kim J, Park Y, Lee K, et al. *Combined cardiorespiratory fitness and muscle strength in relation to all-cause and cardiovascular mortality: findings from the UK Biobank.* Br J Sports Med, 2023 (Epub ahead of print).
+- Older P, Hall A, Hader R. *Cardiopulmonary exercise testing as a screening test for perioperative management of major surgery in the elderly.* Chest 104 (3), 1993: 701–704.
+- Swain DP, Franklin BA. *Comparison of cardiorespiratory fitness expressed in METs versus measured VO₂ max in the prediction of mortality.* J Sci Med Sport, 2024. (citation to be completed)
+- Topol E. *The flawed VO₂ max craze: conflation with cardiorespiratory fitness.* Ground Truths (Substack), 23 February 2026.
 
 ---
 
 ## References
 
-- Brooks GA (2018). The Science and Translation of Lactate Shuttle Theory. *Cell Metabolism*, 27, 757–785. [10.1016/j.cmet.2018.03.008](https://doi.org/10.1016/j.cmet.2018.03.008)
-- Brooks GA et al. (2022). Tracing the lactate shuttle to the mitochondrial reticulum. *Experimental & Molecular Medicine*, 54, 1332–1347. [10.1038/s12276-022-00802-3](https://doi.org/10.1038/s12276-022-00802-3)
-- Brooks GA (2023). What the Lactate Shuttle Means for Sports Nutrition. *Nutrients*, 15(9), 2178. [10.3390/nu15092178](https://doi.org/10.3390/nu15092178)
-- Cai X et al. (2023). Lactate activates the mitochondrial electron transport chain independently of its metabolism. *Molecular Cell*, 83, 3904–3920. [10.1016/j.molcel.2023.09.034](https://doi.org/10.1016/j.molcel.2023.09.034)
-- Hui S et al. (2017). Glucose feeds the TCA cycle via circulating lactate. *Nature*, 551, 115–118. [10.1038/nature24057](https://doi.org/10.1038/nature24057)
-- Kindermann W (2004). Anaerobe Schwelle. *Deutsche Zeitschrift für Sportmedizin*, 55(6), 161–162.
-- Kindermann W, Simon G, Keul J (1979). The significance of the aerobic-anaerobic transition for the determination of work load intensities during endurance training. *European Journal of Applied Physiology and Occupational Physiology*, 42, 25–34. [10.1007/BF00421101](https://doi.org/10.1007/BF00421101)
-- Leija RG et al. (2024). Enteric and systemic postprandial lactate shuttle phases and dietary carbohydrate carbon flow in humans. *Nature Metabolism*, 6, 670–677. [10.1038/s42255-024-00993-1](https://doi.org/10.1038/s42255-024-00993-1)
-- Stegmann H, Kindermann W, Schnabel A (1981). Lactate kinetics and individual anaerobic threshold. *International Journal of Sports Medicine*, 2, 160–165.
-- Wasserman K & McIlroy MB (1964). Detecting the threshold of anaerobic metabolism in cardiac patients during exercise. *American Journal of Cardiology*, 14, 844–852. [10.1016/0002-9149(64)90012-8](https://doi.org/10.1016/0002-9149(64)90012-8)
+- Kim J, Park Y, Lee K, et al. *Combined cardiorespiratory fitness and muscle strength in relation to all-cause and cardiovascular mortality: findings from the UK Biobank.* Br J Sports Med, 2023 (Epub ahead of print).
+- Kodama S, Saito K, Tanaka S, et al. *Cardiorespiratory fitness as a quantitative predictor of all-cause and cardiovascular mortality in healthy men and women: a meta-analysis.* JAMA 301 (19), 2009: 2024–2035.
+- Kokkinos P, Faselis C, Samuel IBH, et al. *Cardiorespiratory fitness and mortality risk across the spectra of age, race, and sex.* J Am Coll Cardiol 80 (6), 2022: 598–609.
+- Mandsager K, Harb S, Cremer P, et al. *Association of cardiorespiratory fitness with long-term mortality among adults undergoing exercise treadmill testing.* JAMA Netw Open 1 (6), 2018: e183605.
+- Older P, Hall A, Hader R. *Cardiopulmonary exercise testing as a screening test for perioperative management of major surgery in the elderly.* Chest 104 (3), 1993: 701–704.
+- Ross R, Blair SN, Arena R, et al. *Importance of assessing cardiorespiratory fitness in clinical practice: a case for fitness as a clinical vital sign — a scientific statement from the American Heart Association.* Circulation 134 (24), 2016: e653–e699.
+- Swain DP, Franklin BA. *Comparison of cardiorespiratory fitness expressed in METs versus measured VO₂ max in the prediction of mortality.* J Sci Med Sport, 2024. (citation to be completed)
+- Tedesco S, Sica M, Ancillao A, et al. *Accuracy of consumer-grade wearables for VO₂ max estimation: a systematic review.* Electronics 14 (15), 2025: 3081.
+- Topol E. *The flawed VO₂ max craze: conflation with cardiorespiratory fitness.* Ground Truths (Substack), 23 February 2026.
