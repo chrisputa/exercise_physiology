@@ -1,11 +1,11 @@
 // import this alway
 import type {ImageMetadata} from 'astro:assets'; // always import this
 
-// dark logo, this is auto-generated from ../assets/logo.png, you can replace it with your own dark logo if you want, but make sure to keep the same name and path
-import logoDark from '../assets/generated/logo_dark.png';
+// dark logo
+import logoDark from '../assets/logo-exercise-physiology_dark.png';
 
 // light logo
-import logoLight from '../assets/logo.png';
+import logoLight from '../assets/logo-exercise-physiology.png';
 
 
 export type Image = {
